@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T14:51:08.755Z",
+  "generatedAt": "2026-07-22T16:04:21.891Z",
   "note": "信源清单驱动任务矩阵（core 直连 + counties 定向 + 专项源），替代 344 无差别组合。",
   "totalQueries": 153,
   "byType": {
