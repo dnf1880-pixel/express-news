@@ -62,7 +62,7 @@
     <span class="legend" id="wm-legend"></span>
   </div>
   <div id="cats"></div>
-  <div class="foot">⚠ 本页为门禁级保护（前端口令 9527），非服务端鉴权；源码可见口令，仅防误访，不含敏感数据。<br>直连源由自动化抓取时 fetch；聚合源由 WebSearch 按模板检索。</div>
+  <div class="foot">⚠ 本页为门禁级保护（前端口令 9527），非服务端鉴权；源码可见口令，仅防误访，不含敏感数据。<br>核心官方源由自动化每日 fetch；区县定向检索按「市局+区县名」路由；电商/安全走专项源。</div>
 </div>
 
 <script>
@@ -99,25 +99,38 @@ async function load() {
 
   const box = document.getElementById('cats');
   box.innerHTML = '';
-  (data.categories || []).forEach(cat => {
-    const sec = document.createElement('div');
-    sec.className = 'sec';
-    const modeBadge = cat.mode === 'direct'
-      ? '<span class="badge b-direct">直连</span>'
-      : '<span class="badge b-search">聚合</span>';
-    let html = `<h2>${modeBadge} ${cat.label}</h2><div class="desc">${cat.desc || ''}</div>`;
-    (cat.items || []).forEach(it => {
-      const cov = it.coverage ? `<div class="meta">覆盖：${it.coverage.map(c => `<span class="pill">${c}</span>`).join('')}</div>` : '';
-      const q = it.query ? `<div class="meta">检索式：<code style="color:var(--gold)">${it.query}</code></div>` : '';
+
+  const renderSrcSec = (label, badgeClass, badgeText, desc, items) => {
+    const sec = document.createElement('div'); sec.className = 'sec';
+    let html = `<h2><span class="badge ${badgeClass}">${badgeText}</span> ${label}</h2><div class="desc">${desc || ''}</div>`;
+    (items || []).forEach(it => {
       const link = it.url ? `<a href="${it.url}" target="_blank" rel="noopener">${it.url}</a>` : '';
-      html += `<div class="src">
-        <div><div class="nm">${it.name}</div><div class="ds">${it.desc || ''}</div>${cov}${q}<div class="meta">类型：${it.type || '—'} ｜ 范围：${it.scope || '—'}</div></div>
-        <div style="text-align:right;min-width:200px">${link}</div>
-      </div>`;
+      const scope = it.scope ? `<span class="pill">${it.scope}</span>` : '';
+      const ch = it.channel ? `<span class="pill">${it.channel}</span>` : '';
+      const media = it.media ? ` ｜ 融媒：${it.media}` : '';
+      html += `<div class="src"><div><div class="nm">${it.name}</div><div class="ds">${it.desc || ''}</div><div class="meta">${scope}${ch}${media}</div></div><div style="text-align:right;min-width:200px">${link}</div></div>`;
     });
-    sec.innerHTML = html;
-    box.appendChild(sec);
+    sec.innerHTML = html; box.appendChild(sec);
+  };
+
+  renderSrcSec('core 核心官方直连源', 'b-direct', '直连', (data.core && `每日自动 fetch 的官方源，共 ${data.core.length} 个`), data.core);
+
+  // counties 按城市分组展示路由
+  const cities = {};
+  (data.counties || []).forEach(c => { (cities[c.city] = cities[c.city] || []).push(c); });
+  Object.entries(cities).forEach(([city, list]) => {
+    const m = (data.cityBureauMap || {})[city] || {};
+    const sec = document.createElement('div'); sec.className = 'sec';
+    let html = `<h2><span class="badge b-search">路由</span> ${city} 辖区（${list.length} 个）</h2>`;
+    html += `<div class="desc">官方源 = ${m.bureau || '—'} ｜ 政府网：${m.govBase || '—'}（区县级无独立邮管局，由市级统管）</div>`;
+    list.forEach(c => {
+      html += `<div class="src"><div><div class="nm">${c.alias} <span class="pill">${c.admin}</span></div><div class="meta">${c.tier === '城区' ? '城区' : '县级'} ｜ 融媒：${c.media || '—'}（微信/抖音私域，需专项抓取）</div></div></div>`;
+    });
+    sec.innerHTML = html; box.appendChild(sec);
   });
+
+  renderSrcSec('ecom 电商客户线索源', 'b-direct', '专项', (data.ecom && `电商潜在客户线索专项源，共 ${data.ecom.length} 个`), data.ecom);
+  renderSrcSec('safety 安全事件专项源', 'b-direct', '专项', (data.safety && `异常天气/封路/事故专项源，共 ${data.safety.length} 个`), data.safety);
 }
 </script>
 </body>

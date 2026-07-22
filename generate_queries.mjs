@@ -1,56 +1,71 @@
 // generate_queries.mjs
-// 读 regions.json + sources.json 的 43 区县检索模板，生成 "43 区县 × N 关键词" 检索词矩阵。
-// 用法：node generate_queries.mjs > queries.json
-// 或：node generate_queries.mjs --count  （仅输出总条数）
-// 或：node generate_queries.mjs --by-channel ecom  （仅输出电商渠道）
+// 信源清单驱动：读 sources.json（core 直连 + counties 路由 + ecom/safety 专项），生成抓取任务矩阵。
+// 替代旧的「43区县 × 8模板 = 344 无差别组合」。
+// 用法：
+//   node generate_queries.mjs                 生成全部任务到 queries.json
+//   node generate_queries.mjs --count         仅输出总条数
+//   node generate_queries.mjs --by-channel 安全   仅输出安全渠道
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-const regions = JSON.parse(readFileSync(join(__dirname, 'regions.json'), 'utf8')).regions;
 const sources = JSON.parse(readFileSync(join(__dirname, 'sources.json'), 'utf8'));
-const regionCat = sources.categories.find(c => c.id === 'region');
-const templates = regionCat.templates;
 
 const args = process.argv.slice(2);
 const onlyCount = args.includes('--count');
 const channelFilter = (args.find(a => a.startsWith('--by-channel=')) || '').replace('--by-channel=', '').trim();
 
 const queries = [];
-for (const r of regions) {
-  for (const t of templates) {
+
+// 1) core：核心官方直连源（每日 fetch）
+for (const c of sources.core) {
+  if (channelFilter && c.channel !== channelFilter) continue;
+  queries.push({ type: 'fetch', source: c.name, url: c.url, scope: c.scope, channel: c.channel, label: c.desc });
+}
+
+// 2) counties：43 区县定向检索（每区县 3 条：资讯/安全/电商，带市局+区县名，非泛组合）
+const countyTemplates = [
+  { id: 'news', channel: '资讯', build: (r, m) => `${m.bureau} ${r.alias} 快递 通报 整治 投诉 最新` },
+  { id: 'safety', channel: '安全', build: (r) => `${r.alias} 暴雨 封路 事故 交通管制 最新` },
+  { id: 'ecom', channel: '电商', build: (r) => `${r.alias} 电商 产业园 水果 寄递 招商 最新` }
+];
+for (const r of sources.counties) {
+  const m = sources.cityBureauMap[r.city];
+  if (!m) continue;
+  for (const t of countyTemplates) {
     if (channelFilter && t.channel !== channelFilter) continue;
     queries.push({
-      region: r.alias,
-      city: r.city,
-      admin: r.admin,
-      tier: r.tier,
-      channel: t.channel,
-      template: t.id,
-      label: t.label,
-      query: t.query.replace(/\{alias\}/g, r.alias).replace(/\{city\}/g, r.city).replace(/\{admin\}/g, r.admin)
+      type: 'search', region: r.alias, city: r.city, admin: r.admin, tier: r.tier,
+      channel: t.channel, template: t.id, label: t.channel,
+      query: t.build(r, m), bureau: m.bureau, govBase: m.govBase, media: r.media
     });
   }
+}
+
+// 3) ecom / safety：专项源（优先 fetch，失败回退 search）
+for (const e of sources.ecom) {
+  if (channelFilter && e.channel !== '电商') continue;
+  queries.push({ type: 'fetch-or-search', source: e.name, url: e.url, scope: e.scope, channel: '电商', label: e.desc });
+}
+for (const s of sources.safety) {
+  if (channelFilter && s.channel !== '安全') continue;
+  queries.push({ type: 'fetch-or-search', source: s.name, url: s.url, scope: s.scope, channel: '安全', label: s.desc });
 }
 
 if (onlyCount) {
   console.log(queries.length);
 } else {
-  // 统计
-  const byChannel = {};
-  queries.forEach(q => byChannel[q.channel] = (byChannel[q.channel] || 0) + 1);
+  const byType = {}, byChannel = {};
+  queries.forEach(q => { byType[q.type] = (byType[q.type] || 0) + 1; byChannel[q.channel] = (byChannel[q.channel] || 0) + 1; });
   const summary = {
     generatedAt: new Date().toISOString(),
-    regionCount: regions.length,
-    templateCount: templates.length,
+    note: '信源清单驱动任务矩阵（core 直连 + counties 定向 + 专项源），替代 344 无差别组合。',
     totalQueries: queries.length,
-    byChannel,
-    queries
+    byType, byChannel, queries
   };
   writeFileSync(join(__dirname, 'queries.json'), JSON.stringify(summary, null, 2));
-  console.log(`生成 ${queries.length} 条检索词（${regions.length} 区县 × ${templates.length} 模板）`);
+  console.log(`生成 ${queries.length} 条任务（fetch直连 ${byType.fetch || 0} + 定向检索 ${byType.search || 0} + 专项 ${byType['fetch-or-search'] || 0}）`);
   console.log('渠道分布：', JSON.stringify(byChannel));
 }
