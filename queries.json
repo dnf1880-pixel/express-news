@@ -1,12 +1,64 @@
 {
-  "generatedAt": "2026-07-22T14:18:42.568Z",
+  "generatedAt": "2026-07-22T14:22:40.064Z",
   "regionCount": 43,
   "templateCount": 8,
-  "totalQueries": 129,
+  "totalQueries": 344,
   "byChannel": {
+    "资讯": 129,
+    "安全": 86,
     "电商": 129
   },
   "queries": [
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "恩施 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "恩施 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "恩施 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "恩施 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "恩施 快递 物流 火灾 事故 安全 应急"
+    },
     {
       "region": "恩施",
       "city": "恩施市",
@@ -36,6 +88,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "恩施 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "建始 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "建始 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "建始 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "建始 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "建始 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "建始",
@@ -72,6 +174,56 @@
       "city": "恩施市",
       "admin": "利川市",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "利川 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "利川 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "利川 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "利川 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "利川 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -96,6 +248,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "利川 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "宜昌东站 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "宜昌东站 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "宜昌东站 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "宜昌东站 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "宜昌东站 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "宜昌东站",
@@ -132,6 +334,56 @@
       "city": "宜昌市",
       "admin": "猇亭区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "猇亭 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "猇亭 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "猇亭 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "猇亭 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "猇亭 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -156,6 +408,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "猇亭 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "宜昌高新区 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "宜昌高新区 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "宜昌高新区 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "宜昌高新区 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "宜昌高新区 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "宜昌高新区",
@@ -192,6 +494,56 @@
       "city": "宜昌市",
       "admin": "西陵区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "三峡大学 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "三峡大学 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "三峡大学 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "三峡大学 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "三峡大学 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -216,6 +568,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "三峡大学 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "点军区 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "点军区 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "点军区 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "点军区 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "点军区 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "点军区",
@@ -252,6 +654,56 @@
       "city": "宜昌市",
       "admin": "夷陵区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "夷陵 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "夷陵 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "夷陵 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "夷陵 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "夷陵 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -276,6 +728,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "夷陵 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "宜都 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "宜都 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "宜都 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "宜都 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "宜都 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "宜都",
@@ -312,6 +814,56 @@
       "city": "宜昌市",
       "admin": "当阳市",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "当阳 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "当阳 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "当阳 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "当阳 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "当阳 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -336,6 +888,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "当阳 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "枝江 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "枝江 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "枝江 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "枝江 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "枝江 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "枝江",
@@ -372,6 +974,56 @@
       "city": "宜昌市",
       "admin": "秭归县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "�归 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "�归 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "�归 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "�归 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "�归 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -396,6 +1048,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "�归 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "野三关 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "野三关 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "野三关 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "野三关 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "野三关 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "野三关",
@@ -432,6 +1134,56 @@
       "city": "恩施市",
       "admin": "来凤县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "来凤 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "来凤 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "来凤 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "来凤 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "来凤 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -456,6 +1208,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "来凤 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "巴东 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "巴东 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "巴东 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "巴东 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "巴东 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "巴东",
@@ -492,6 +1294,56 @@
       "city": "恩施市",
       "admin": "宣恩县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "宣恩 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "宣恩 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "宣恩 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "宣恩 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "宣恩 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -516,6 +1368,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "宣恩 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "咸丰 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "咸丰 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "咸丰 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "咸丰 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "咸丰 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "咸丰",
@@ -552,6 +1454,56 @@
       "city": "宜昌市",
       "admin": "五峰县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "五峰 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "五峰 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "五峰 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "五峰 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "五峰 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -576,6 +1528,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "五峰 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "远安 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "远安 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "远安 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "远安 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "远安 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "远安",
@@ -612,6 +1614,56 @@
       "city": "宜昌市",
       "admin": "兴山县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "兴山 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "兴山 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "兴山 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "兴山 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "兴山 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -636,6 +1688,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "兴山 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "长阳 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "长阳 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "长阳 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "长阳 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "长阳 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "长阳",
@@ -672,6 +1774,56 @@
       "city": "恩施市",
       "admin": "鹤峰县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "鹤峰 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "鹤峰 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "鹤峰 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "鹤峰 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "鹤峰 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -696,6 +1848,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "鹤峰 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "荆州城区 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "荆州城区 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "荆州城区 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "荆州城区 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "荆州城区 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "荆州城区",
@@ -732,6 +1934,56 @@
       "city": "荆州市",
       "admin": "沙市区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "沙北新区 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "沙北新区 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "沙北新区 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "沙北新区 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "沙北新区 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -756,6 +2008,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "沙北新区 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "古城北 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "古城北 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "古城北 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "古城北 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "古城北 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "古城北",
@@ -792,6 +2094,56 @@
       "city": "荆州市",
       "admin": "沙市区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "长港路 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "长港路 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "长港路 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "长港路 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "长港路 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -816,6 +2168,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "长港路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "荆州大学城 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "荆州大学城 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "荆州大学城 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "荆州大学城 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "荆州大学城 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "荆州大学城",
@@ -852,6 +2254,56 @@
       "city": "荆州市",
       "admin": "荆州区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "江津西路 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "江津西路 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "江津西路 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "江津西路 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "江津西路 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -876,6 +2328,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "江津西路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "武德路 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "武德路 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "武德路 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "武德路 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "武德路 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "武德路",
@@ -912,6 +2414,56 @@
       "city": "荆州市",
       "admin": "沙市区",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "北京路 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "北京路 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "北京路 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "北京路 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "北京路 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -936,6 +2488,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "北京路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "开发区一部 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "开发区一部 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "开发区一部 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "开发区一部 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "开发区一部 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "开发区一部",
@@ -972,6 +2574,56 @@
       "city": "荆州市",
       "admin": "公安县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "公安 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "公安 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "公安 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "公安 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "公安 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -996,6 +2648,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "公安 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "江陵 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "江陵 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "江陵 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "江陵 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "江陵 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "江陵",
@@ -1032,6 +2734,56 @@
       "city": "荆州市",
       "admin": "石首市",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "石首 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "石首 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "石首 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "石首 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "石首 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -1056,6 +2808,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "石首 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "松滋 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "松滋 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "松滋 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "松滋 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "松滋 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "松滋",
@@ -1092,6 +2894,56 @@
       "city": "荆州市",
       "admin": "监利市",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "监利 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "监利 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "监利 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "监利 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "监利 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -1116,6 +2968,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "监利 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "荆门城区 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "荆门城区 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "荆门城区 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "荆门城区 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "荆门城区 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "荆门城区",
@@ -1152,6 +3054,56 @@
       "city": "荆门市",
       "admin": "沙洋县",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "沙洋 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "沙洋 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "沙洋 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "沙洋 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "沙洋 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -1176,6 +3128,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "沙洋 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "钟祥 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "钟祥 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "钟祥 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "钟祥 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "钟祥 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "钟祥",
@@ -1212,6 +3214,56 @@
       "city": "潜江市",
       "admin": "潜江市",
       "tier": "城区",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "潜江 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "潜江 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "潜江 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "潜江 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "潜江 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -1242,6 +3294,56 @@
       "city": "荆州市",
       "admin": "洪湖市",
       "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "洪湖 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "洪湖 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "洪湖 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "洪湖 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "洪湖 快递 物流 火灾 事故 安全 应急"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
       "channel": "电商",
       "template": "ecom-park",
       "label": "电商产业园/新开",
@@ -1266,6 +3368,56 @@
       "template": "ecom-newbiz",
       "label": "新签约/搬迁/扩产",
       "query": "洪湖 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "mail-admin",
+      "label": "邮管/质量/投诉",
+      "query": "京山 邮政管理局 快递 服务质量 投诉 通报 网点"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "branch-move",
+      "label": "网点转让/异动",
+      "query": "京山 中通 圆通 兔喜 转让 招聘 网点 急转"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "资讯",
+      "template": "last-mile",
+      "label": "末端/派送",
+      "query": "京山 快递 末端 派送 驿站 共配"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "weather",
+      "label": "异常天气/封路",
+      "query": "京山 暴雨 暴雪 大雾 高速封路 交通管制"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "安全",
+      "template": "safety",
+      "label": "安全/火灾/事故",
+      "query": "京山 快递 物流 火灾 事故 安全 应急"
     },
     {
       "region": "京山",
