@@ -22,13 +22,14 @@
     --green:#2ED573;
     --blue:#3FA9FF;
     --gold:#f5c542;
+    --teal:#26d4c8;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
   a{color:inherit;text-decoration:none}
 
   /* sidebar */
-  .sidebar{width:210px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border);padding:22px 0;position:sticky;top:0;height:100vh;overflow-y:auto}
+  .sidebar{width:220px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border);padding:22px 0;position:sticky;top:0;height:100vh;overflow-y:auto}
   .logo{display:flex;align-items:center;gap:10px;padding:0 22px 28px;font-weight:800;font-size:18px;letter-spacing:1px}
   .logo .dot{width:10px;height:10px;border-radius:50%;background:var(--grad)}
   .nav-sect{margin-top:18px;padding:0 14px}
@@ -38,22 +39,28 @@
   .nav-item.active{background:var(--card);color:var(--txt);font-weight:600}
   .nav-item.active::before{content:"";position:absolute;width:3px;height:18px;background:var(--grad);border-radius:2px;margin-left:-12px}
   .nav-item svg{width:18px;height:18px;opacity:.8}
+  .nav-item .badge{margin-left:auto;font-size:10.5px;padding:1px 6px;border-radius:3px;background:var(--card-2);color:var(--txt-dim);font-weight:600}
+  .nav-item.ecom .badge{background:rgba(38,212,200,.16);color:var(--teal);border:1px solid rgba(38,212,200,.35)}
+  .nav-item.safety .badge{background:rgba(255,71,87,.16);color:var(--red);border:1px solid rgba(255,71,87,.4)}
 
   /* main */
   .main{flex:1;min-width:0;display:flex;flex-direction:column}
   .topbar{position:sticky;top:0;z-index:40;background:rgba(11,13,20,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;gap:18px}
   .topbar h1{font-size:20px;font-weight:700}
   .topbar .sub{font-size:12.5px;color:var(--txt-dim);margin-left:6px}
-  .tabs{display:flex;gap:4px;flex:1}
-  .tab{padding:6px 14px;border-radius:6px;font-size:13px;color:var(--txt-dim);cursor:pointer;transition:.15s;user-select:none}
+  .tabs{display:flex;gap:4px;flex:1;overflow-x:auto}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:6px 14px;border-radius:6px;font-size:13px;color:var(--txt-dim);cursor:pointer;transition:.15s;user-select:none;white-space:nowrap}
   .tab:hover{color:var(--txt)}
   .tab.active{color:#fff;background:var(--card);font-weight:600}
+  .tab[data-cat="电商"]{color:var(--teal)}
+  .tab[data-cat="安全"]{color:var(--red)}
   .search-box{display:flex;align-items:center;gap:8px}
   .search-box input{width:180px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--txt);font-size:13px;outline:none}
   .search-box input::placeholder{color:var(--txt-faint)}
   .search-box button{background:var(--grad);border:none;border-radius:8px;color:#fff;padding:7px 16px;font-size:13px;cursor:pointer;font-weight:600}
 
-  .content{padding:18px 28px 60px;max-width:940px}
+  .content{padding:18px 28px 60px;max-width:1080px}
 
   /* day group */
   .day-group{margin-bottom:32px}
@@ -63,11 +70,15 @@
   .day-head .count{font-size:12px;color:var(--txt-faint);margin-left:auto}
 
   /* card */
-  .card{display:grid;grid-template-columns:64px 1fr;gap:0;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:.18s}
+  .card{display:grid;grid-template-columns:74px 1fr;gap:0;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:.18s}
   .card:hover{border-color:#2e344e;transform:translateY(-1px)}
-  .time-col{border-right:1px solid var(--border);padding:16px 4px;text-align:center;color:var(--txt-dim);font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;justify-content:center;gap:6px}
-  .time-col .tag-new{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(245,197,66,.16);color:var(--gold);border:1px solid rgba(245,197,66,.35);font-weight:700}
-  .time-col .dot{width:6px;height:6px;border-radius:50%;background:var(--border);margin:0 auto}
+  .time-col{border-right:1px solid var(--border);padding:14px 4px;text-align:center;color:var(--txt-dim);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;justify-content:flex-start;gap:4px;min-height:100%}
+  .time-col .date{font-size:13px;font-weight:700;color:var(--txt)}
+  .time-col .sub-region{font-size:10.5px;color:var(--txt-faint);line-height:1.3;padding:0 2px;margin-top:2px}
+  .time-col .tag-new{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(245,197,66,.16);color:var(--gold);border:1px solid rgba(245,197,66,.35);font-weight:700;margin-top:4px}
+  .time-col .tag-urgent{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(255,71,87,.18);color:var(--red);border:1px solid rgba(255,71,87,.4);font-weight:700;margin-top:4px;animation:pulse 1.5s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  .time-col .dot{width:6px;height:6px;border-radius:50%;background:var(--border);margin:6px auto 0}
   .body{padding:14px 18px}
 
   .meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
@@ -75,6 +86,10 @@
   .src-cat.权威{background:rgba(63,169,255,.15);color:#8fd0ff;border:1px solid rgba(63,169,255,.35)}
   .src-cat.媒体{background:rgba(245,197,66,.14);color:var(--gold);border:1px solid rgba(245,197,66,.32)}
   .src-cat.开放{background:rgba(255,79,176,.13);color:var(--accent);border:1px solid rgba(255,79,176,.3)}
+  .ch{font-size:10.5px;padding:1px 6px;border-radius:3px;font-weight:600}
+  .ch.资讯{background:rgba(63,169,255,.12);color:#8fd0ff}
+  .ch.电商{background:rgba(38,212,200,.14);color:var(--teal);border:1px solid rgba(38,212,200,.3)}
+  .ch.安全{background:rgba(255,71,87,.14);color:var(--red);border:1px solid rgba(255,71,87,.35)}
   .src-name{font-size:12.5px;color:var(--txt);font-weight:600}
   .src-name a{color:inherit;border-bottom:1px dashed transparent;transition:.15s}
   .src-name a:hover{border-bottom-color:var(--accent);color:var(--accent)}
@@ -107,47 +122,45 @@
 
   .empty{text-align:center;color:var(--txt-faint);padding:60px 20px}
 
-  /* ===== Daily view ===== */
-  .daily-head{background:linear-gradient(135deg,#1a1d2e 0%,#15172a 100%);border:1px solid var(--border);border-radius:16px;padding:24px 26px;margin-bottom:24px}
-  .daily-head .vol{font-size:11px;color:var(--txt-faint);letter-spacing:1.5px;text-transform:uppercase}
-  .daily-head h2{font-size:28px;font-weight:800;margin:6px 0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
-  .daily-head .meta{font-size:12.5px;color:var(--txt-dim);margin-top:4px}
-  .daily-head .stats{display:flex;gap:24px;margin-top:16px}
-  .daily-head .stat{font-size:13px}
-  .daily-head .stat b{font-size:18px;color:var(--txt);font-weight:700;margin-right:4px}
-  .daily-head .stat.red b{color:var(--red)}
-  .daily-head .stat.orange b{color:var(--orange)}
-  .daily-head .stat.green b{color:var(--green)}
+  /* ===== Ecom lead table ===== */
+  .lead-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+  .lead-toolbar .info{font-size:12.5px;color:var(--txt-dim);padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;line-height:1.5}
+  .lead-toolbar b{color:var(--teal)}
+  .leadtable{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+  .leadtable th{text-align:left;padding:11px 12px;font-size:11.5px;color:var(--txt-faint);background:var(--card-2);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);font-weight:600}
+  .leadtable td{padding:12px;font-size:13px;border-bottom:1px solid rgba(35,40,56,.6);vertical-align:top}
+  .leadtable tr:last-child td{border-bottom:none}
+  .leadtable tr:hover td{background:rgba(123,47,247,.04)}
+  .leadtable .col-name{font-weight:600;color:var(--txt);min-width:140px}
+  .leadtable .col-name .biz{font-size:11px;color:var(--txt-faint);font-weight:400;margin-top:2px}
+  .leadtable .col-region{color:var(--txt);min-width:100px}
+  .leadtable .col-region .tier{font-size:10.5px;color:var(--txt-faint);display:block}
+  .leadtable .col-contact{font-size:12px;color:var(--txt-dim);min-width:180px}
+  .leadtable .col-reason{font-size:12.5px;color:var(--txt-dim);min-width:240px;line-height:1.5}
+  .leadtable .col-reason b{color:var(--teal);font-weight:600}
+  .leadtable .col-reason .scale{font-size:11px;color:var(--gold);margin-top:3px;display:block}
+  .leadtable .col-source{font-size:11.5px;color:var(--txt-faint);min-width:120px}
+  .leadtable .col-score{text-align:center;min-width:70px}
+  .leadtable .col-score .lv{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:3px;font-weight:600;margin-top:3px}
+  .lv.red{background:rgba(255,71,87,.14);color:var(--red)}
+  .lv.orange{background:rgba(255,165,2,.14);color:var(--orange)}
+  .lv.green{background:rgba(46,213,115,.14);color:var(--green)}
+  .empty-row td{text-align:center;padding:60px 20px;color:var(--txt-faint)}
 
-  .daily-sect{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:18px;overflow:hidden}
-  .daily-sect .sh{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--border);background:var(--card-2)}
-  .daily-sect .sh .num{font-size:11px;font-weight:700;color:var(--txt-faint);background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2px 7px}
-  .daily-sect .sh .ttl{font-size:14px;font-weight:700}
-  .daily-sect .sh .cnt{font-size:12px;color:var(--txt-faint);margin-left:auto}
-  .daily-sect ul{list-style:none;padding:8px 0}
-  .daily-sect li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start;padding:10px 18px;border-bottom:1px solid rgba(35,40,56,.5)}
-  .daily-sect li:last-child{border-bottom:none}
-  .daily-sect li .ix{font-size:11px;color:var(--txt-faint);font-variant-numeric:tabular-nums;padding-top:1px}
-  .daily-sect li .it{font-size:13px;color:var(--txt)}
-  .daily-sect li .it b{font-weight:600}
-  .daily-sect li .it a{color:var(--txt);border-bottom:1px dashed var(--txt-faint);transition:.15s}
-  .daily-sect li .it a:hover{color:var(--accent);border-bottom-color:var(--accent)}
-  .daily-sect li .it .src{font-size:11.5px;color:var(--txt-faint);margin-left:6px}
-  .daily-sect li .it .action{display:block;font-size:12px;color:var(--txt-dim);margin-top:3px;padding-left:8px;border-left:2px solid var(--border)}
-  .daily-sect li .lvl{font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;align-self:start;white-space:nowrap}
-  .daily-sect li .lvl.red{background:rgba(255,71,87,.14);color:var(--red)}
-  .daily-sect li .lvl.orange{background:rgba(255,165,2,.14);color:var(--orange)}
-  .daily-sect li .lvl.green{background:rgba(46,213,115,.14);color:var(--green)}
-
-  .footer-note{margin-top:30px;padding-top:18px;border-top:1px solid var(--border);font-size:11.5px;color:var(--txt-faint);line-height:1.8}
-  .footer-note b{color:var(--txt-dim)}
-  .formula{font-family:ui-monospace,Consolas,monospace;background:var(--card);padding:6px 10px;border-radius:6px;display:inline-block;margin:4px 0}
+  /* ===== Safety alert ===== */
+  .alert-banner{background:linear-gradient(135deg,rgba(255,71,87,.12),rgba(255,71,87,.04));border:1px solid rgba(255,71,87,.4);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+  .alert-banner .ic{font-size:22px}
+  .alert-banner .tx{font-size:13.5px;color:#ff8a96;font-weight:600}
+  .alert-banner .ct{font-size:12px;color:var(--txt-dim);margin-left:auto}
+  .alert-banner .ct b{color:var(--red)}
 
   @media(max-width:900px){
     .sidebar{display:none}
     .topbar{padding:12px 16px;flex-wrap:wrap}
-    .tabs{order:3;width:100%;margin-top:8px;overflow-x:auto}
+    .tabs{order:3;width:100%;margin-top:8px}
     .content{padding:16px}
+    .leadtable{font-size:12px}
+    .leadtable th,.leadtable td{padding:8px 6px}
   }
 </style>
 </head>
@@ -158,19 +171,23 @@
   <div class="nav-sect">
     <div class="nav-item active" data-view="featured">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      精选
+      精选 <span class="badge" id="badgeFeatured">0</span>
     </div>
     <div class="nav-item" data-view="all">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      全部快递动态
+      全部快递动态 <span class="badge" id="badgeAll">0</span>
     </div>
     <div class="nav-item" data-view="daily">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       快递日报
     </div>
-    <div class="nav-item" data-view="topic">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-      主题
+    <div class="nav-item ecom" data-view="ecom">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      每日电商线索 <span class="badge" id="badgeEcom">0</span>
+    </div>
+    <div class="nav-item safety" data-view="safety">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      安全事件预警 <span class="badge" id="badgeSafety">0</span>
     </div>
     <div class="nav-item" data-view="fav">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
@@ -195,6 +212,8 @@
       <div class="tab" data-cat="行业">行业</div>
       <div class="tab" data-cat="湖北">湖北</div>
       <div class="tab" data-cat="荆州辖区">荆州辖区</div>
+      <div class="tab" data-cat="电商">电商</div>
+      <div class="tab" data-cat="安全">安全</div>
       <div class="tab" data-cat="其他">其他</div>
     </div>
     <div class="search-box">
@@ -207,9 +226,9 @@
     <div id="feed"></div>
     <div class="empty" id="empty" style="display:none">没有匹配的内容</div>
 
-    <div class="footer-note">
-      <div><b>数据抓取 / 复核</b> 2026-07-22 ｜ <b>视图说明</b> 精选=权重分≥65 且已核实 ｜ 全部=全量 ｜ 日报=本期重点总结。</div>
-      <div><b>时间原则（绝对）</b> 卡片左侧与分组标题均为<b>事件真实发生日</b>，非抓取日；「待核实」为开放源线索，需二次确认，不计入精选。精准到「时:分」将在自动化接入源 feed（含 pubDate）后自动补齐。</div>
+    <div class="footer-note" id="footer">
+      <div><b>43 区县动态检索</b> 每日由 generate_queries.mjs 生成 43×8=344 条检索词（资讯 129 / 电商 129 / 安全 86），分渠道路由。</div>
+      <div><b>时间原则（绝对）</b> 卡片左侧与分组标题均为<b>事件真实发生日</b>，非抓取日；「待核实」为开放源线索，不计入精选。精准到「时:分」将在自动化接入源 feed（含 pubDate）后自动补齐。</div>
       <div><b>复合分公式</b> <span class="formula">W = 20 × (0.28·G + 0.26·B + 0.20·P + 0.14·C + 0.12·T)</span>，各轴 1–5 分，结果 0–100；🔴≥75 ｜ 🟠55–75 ｜ 🟢&lt;55。</div>
       <div><b>免责声明</b> 内部参考，非操作指令。开放轨单点信号需二次核实。</div>
     </div>
@@ -228,8 +247,9 @@ function weekday(sort){
 }
 function urlFor(d){return d.url?d.url:'https://www.baidu.com/s?wd='+encodeURIComponent(d.title);}
 
-// date=展示标签；sort=真实发生日（用于排序，待核实置底）；warn=开放源待核实
 const DATA = [{"level":"red","cat":"湖北","region":"湖北/鄂西","src":"权威","srcName":"国务院新闻办·极目新闻","title":"国新办：「十五五」基本建成武汉—鄂州—郑州—长沙全球性国际邮政快递枢纽集群，花湖跻身全球货运前30","summary":"7月21日国新办「开局起步十五五」发布会，国家邮政局副局长陈凯明确五大全球集群含武汉—鄂州—郑州—长沙；中国民航局披露鄂州花湖等6家境内机场跻身2025年全球货运前30大机场。","reason":"国家十五五级部署，决定辖区长期业务结构与揽收机会（制造/商贸/生鲜冷链向鄂西外溢），值得周会单独汇报。","action":"→ 周会单报，跟踪湖北局落地细则。","s":{"G":5,"B":5,"P":5,"C":4,"T":5},"tags":["枢纽","十五五","花湖","冷链","揽收"],"date":"7月21日","sort":"2026-07-21","url":"https://www.163.com/dy/article/L2C625HL053469LG.html"},{"level":"red","cat":"湖北","region":"湖北","src":"媒体","srcName":"湖北日报","title":"花湖机场通航4周年：货邮吞吐量突破370万吨、国际航线59条，鄂州进出口破250亿创同期新高","summary":"7月20日湖北日报报道，花湖国际机场通航4周年累计开通货运航线122条（国际59条），货邮吞吐量370万吨稳居中部第一；上半年鄂州进出口破250亿元，对全省增量贡献率飙升。","reason":"轴辐网络持续强化，重塑湖北时效格局，辖区国际/跨省时效对标与揽收机会直接受惠。","action":"→ 对标花湖时效，调整辖区国际件路由与揽收策略。","s":{"G":5,"B":4,"P":2,"C":3,"T":5},"tags":["花湖","货运","时效","鄂州"],"date":"7月20日","sort":"2026-07-20","url":"https://www.toutiao.com/article/7664379814882722313/"},{"level":"red","cat":"行业","region":"全国","src":"权威","srcName":"国家邮政局·中新经纬","title":"国家邮政局深入整治「内卷式」竞争：副局长带队调研五大总部，提法由「综合治理」升级为「深入整治」","summary":"7月3日通报：6月29日至7月2日副局长廖进荣带队赴上海调研中通、圆通、韵达、申通、极兔五大总部，要求摒弃「以价换量」、抵制劣质低价，规范考核管理、保障快递员权益。","reason":"反内卷升级为「深入整治」，监管强度显著提升，直接改善网点单票利润与质量分导向，辖区稳网有强支撑。","action":"→ 稳住网点价格底线，借政策窗口加快招商。","s":{"G":2,"B":5,"P":5,"C":4,"T":4},"tags":["反内卷","质量分","单票收入","用工"],"date":"7月3日","sort":"2026-07-03","url":"https://www.toutiao.com/article/7658306132183613993"},{"level":"orange","cat":"行业","region":"全国","src":"权威","srcName":"圆通速递公告·中国证券报","title":"圆通速递2026半年度业绩预增：净利31–34亿，同比+69%–86%","summary":"6月30日晚披露、7月1日一字涨停；归因反内卷价格修复+AI转型降本，件量162.79亿件(+8.8%)，二季度单票净利环比提升。","reason":"利润与件量双增，下半年派费/网点政策腾挪空间更大，辖区招商与稳网有底气。","action":"→ 利用派费政策窗口加快辖区招商。","s":{"G":2,"B":5,"P":2,"C":4,"T":3},"tags":["圆通","利润","市占","反内卷"],"date":"6月30日","sort":"2026-06-30","url":"https://epaper.cs.com.cn/zgzqb/wap/html/2026-07/01/nw.D110000zgzqb_20260701_6-B020.htm"},{"level":"orange","cat":"行业","region":"全国","src":"媒体","srcName":"每日经济新闻","title":"快递中报分化：圆通领跑、申通狂飙、顺丰稳涨，行业告别内卷转向「价值竞争」","summary":"7月20日每经：上半年圆通163亿票领跑、申通143亿票增速领先、顺丰单票收入连四月回升；反内卷推动价格理性回归，竞争焦点转向成本/网络/技术。","reason":"头部分化印证反内卷成效，辖区可借势优化网点结构与服务质量竞争。","action":"→ 对标头部服务质量，强化辖区网络效率。","s":{"G":2,"B":4,"P":2,"C":4,"T":3},"tags":["中报","格局","反内卷","价值竞争"],"date":"7月20日","sort":"2026-07-20","url":"https://www.mrjjxw.com/articles/2026-07-20/4483663.html"},{"level":"orange","cat":"行业","region":"全国","src":"媒体","srcName":"中国商报","title":"强制性国标《限制快递过度包装要求》落地：大箱小用/层数冗余/胶带缠绕划出量化红线","summary":"7月1日起实施的强制国标聚焦包装箱适配、层数（普通≤2层、易碎≤4层）、封箱胶带用量三项核心指标，7月14日中国商报深度解读执行阻力与责任闭环。","reason":"强制国标落地，网点包装成本与合规操作须自查，避免被抽查通报。","action":"→ 各网点立即开展包装合规自查。","s":{"G":2,"B":4,"P":5,"C":2,"T":4},"tags":["国标","包装","成本","合规"],"date":"7月14日","sort":"2026-07-14","url":"https://www.toutiao.com/article/7662273462690234880"},{"level":"orange","cat":"湖北","region":"湖北","src":"权威","srcName":"湖北省邮政管理局","title":"湖北省邮政半年工作会（7月7日）：聚力打造全球枢纽、深化客货邮融合、快递进村兜底","summary":"总结上半年、部署下半年：宣贯十五五规划、打造全球性国际邮政快递枢纽、深化客货邮融合、快递进村邮政兜底试点，深入整治「内卷式」竞争。","reason":"定义辖区监管重心，直接框定荆州辖区下半年工作重点与考核方向。","action":"→ 同步辖区下半年工作重点与考核口径。","s":{"G":4,"B":4,"P":4,"C":3,"T":2},"tags":["湖北局","进村","客货邮","十五五"],"date":"7月7日","sort":"2026-07-07","url":"https://hb.spb.gov.cn/hubsyzglj/c100057/c100060/202607/749cff3d9889473c8adfee4c210e717d.shtml"},{"level":"orange","cat":"湖北","region":"湖北","src":"权威","srcName":"湖北省农业农村厅等四部门","title":"湖北推动县级分拨中心提档升级（鄂农发〔2026〕46号，2026年底前50%以上）","summary":"7月2日报道，省农业农村厅、省邮政管理局等四部门联合印发通知，按标准化/集约化/智能化/规范化/数智化推动县级分拨中心提档升级，2026年底50%以上、2027全覆盖。","reason":"县级分拨提档直接影响辖区网络效率与进村成本，是下半年基建重心。","action":"→ 关注荆州/荆门/宜昌县级分拨升级机会。","s":{"G":4,"B":4,"P":4,"C":2,"T":3},"tags":["分拨中心","进村","基建","提档"],"date":"7月2日","sort":"2026-07-02","url":"https://ah.spb.gov.cn/gjyzj/c100194/202607/afaa6776c1e9481694d2f4756e52a540.shtml"},{"level":"orange","cat":"湖北","region":"湖北/鄂州","src":"权威","srcName":"鄂州市邮政管理局","title":"鄂州局部署快递行业服务质量专项整治（通报上半年申诉/12305工单）","summary":"鄂州局召开全市快递行业服务质量专项整治部署会，复盘上半年申诉平台及12305热线工单，针对末端投递、快件处置、纠纷处理等突出短板作专项部署。","reason":"省局专项整治传导到辖区，荆州须刚性落实三项制度，直连质量分与申诉率。","action":"→ 刚性落实三项制度，规避申诉率反弹。","s":{"G":4,"B":4,"P":4,"C":2,"T":2},"tags":["鄂州","质量","申诉","三项制度"],"date":"2026年6月","sort":"2026-06-15","url":"https://hb.spb.gov.cn/hubsyzglj/c104797/c104800/202606/0379c17cbb104d5588126495949b656c.shtml"},{"level":"orange","cat":"荆州辖区","region":"荆州","src":"权威","srcName":"荆州市邮政管理局","title":"荆州市邮政管理局发布2026年邮政快递业更贴近民生实事（9项，违规收费动态清零）","summary":"明确年度9项实事：农村领取邮件快件违规收费动态清零、申诉对接12345、实名收寄专项整治、推动快递企业落实劳动合同、培训1800人次以上、友好场景建设等。","reason":"直连辖区网点合规与用工底线，是绩效考核红线，须逐条落地。","action":"→ 对照9项实事逐条自查整改。","s":{"G":5,"B":4,"P":3,"C":2,"T":2},"tags":["荆州","民生","违规收费","劳动合同"],"date":"2026年4月","sort":"2026-04-15","url":"https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202604/1377104635d346b1b95236733ab0950b.shtml"},{"level":"orange","cat":"荆州辖区","region":"荆州","src":"权威","srcName":"荆州市邮政管理局","title":"荆州市邮政管理局开展邮政投递服务质量专项检查（覆盖全市，按址投递到位）","summary":"4月底至6月初「四不两直」检查覆盖所有县市区，实地查城市投递部21个、农村投递部24个、建制村35个，按址投递落实到位，发现问题责令改正并「回头看」。","reason":"投递质量直连群众满意度与申诉率，辖区须保持按址投递合规。","action":"→ 保持按址投递合规，配合回头看复查。","s":{"G":5,"B":4,"P":3,"C":2,"T":2},"tags":["荆州","投递","质量","三项制度"],"date":"2026年6月","sort":"2026-06-10","url":"https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202606/2893ab2c37c4435191e899ffc22219e3.shtml"},{"level":"orange","cat":"荆州辖区","region":"荆州","src":"权威","srcName":"荆州市邮政管理局","title":"荆州市邮政管理局举办2026年申诉处理业务培训（通报1–5月全市申诉情况）","summary":"采取线下集中+线上直播，通报2026年1–5月全市邮政快递用户申诉整体情况，结合正反案例剖析高频问题，要求系统学习《快递市场管理办法》《快递服务》国标。","reason":"申诉压降是质量分核心，辖区客服须提升首诉处置效率。","action":"→ 提升客服首诉处置，压降重复申诉。","s":{"G":5,"B":3,"P":3,"C":2,"T":2},"tags":["荆州","申诉","培训","质量分"],"date":"2026年6月","sort":"2026-06-15","url":"https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202606/1d99f887efe14a73a877fa18ffe2ebf3.shtml"},{"level":"orange","cat":"荆州辖区","region":"荆门/京山","src":"权威","srcName":"荆门市邮政管理局","title":"荆门局协调推进全市「快递进村」：赴沙洋、钟祥、京山实地督导","summary":"荆门局主要负责人带队赴沙洋县、钟祥市、京山市协调推进快递进村，深入京山市雁门口镇太和村、石龙邮政支局、曹武邮政支局等，要求补齐服务质量与网点建设短板。","reason":"直接覆盖京山等县域，辖区进村网络短板整改与网点建设重点。","action":"→ 跟进京山等县域网点补强与进村督导。","s":{"G":5,"B":4,"P":3,"C":2,"T":2},"tags":["荆门","京山","进村","网点"],"date":"2026年6月","sort":"2026-06-15","url":"https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202606/a06300ba2cf7402fba516aa9c029f28e.shtml"},{"level":"orange","cat":"荆州辖区","region":"宜昌","src":"权威","srcName":"宜昌市邮政管理局","title":"宜昌局对接12345热线开展邮政快递业务培训（提升诉求前端化解）","summary":"宜昌局联合12345政务服务便民热线中心开展邮政快递业务专项培训，覆盖百余名话务员，梳理高频投诉类型、成因与责任划分，降低重复投申诉与舆情风险。","reason":"12345联动提升宜昌辖区申诉前端化解效率，降低重复申诉与舆情。","action":"→ 关注宜昌12345联动，压降重复申诉。","s":{"G":4,"B":3,"P":3,"C":2,"T":2},"tags":["宜昌","12345","申诉","培训"],"date":"2026年6月","sort":"2026-06-15","url":"https://hb.spb.gov.cn/hubsyzglj/c104941/c104952/c104954/202606/97b1e119907f41f99c996f2a4eb1babb.shtml"},{"level":"orange","cat":"荆州辖区","region":"恩施","src":"权威","srcName":"恩施州邮政管理局","title":"恩施州局召开2026年二季度政企联席会（部署快递进村/安全/服务质量）","summary":"通报2026年上半年全州邮政普遍服务和特殊服务监管情况，部署高校录取通知书寄递、安全生产、寄递服务质量、农村寄递物流体系建设，推进客货邮融合与县级分拨升级。","reason":"恩施辖区下半年监管重心，直连进村、安全与质量分考核。","action":"→ 同步恩施下半年考核口径与进村重点。","s":{"G":5,"B":4,"P":3,"C":2,"T":3},"tags":["恩施","进村","安全","客货邮"],"date":"2026年7月","sort":"2026-07-10","url":"https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202607/629b1e5eee22435aa36844455594036a.shtml"},{"level":"orange","cat":"荆州辖区","region":"恩施","src":"权威","srcName":"恩施州人民政府·恩施晚报","title":"恩施市七里坪物流园主体完工（智慧物流枢纽，覆盖快递分拨/冷链/云仓）","summary":"6月4日报道主体完工（5月27日主体工程完工），总建筑面积14.3万㎡；将填补恩施大型智慧物流枢纽空白，打通县乡村三级物流。","reason":"多园规划+主体完工，辖区单量增长与分拨机会信号。","action":"→ 评估恩施物流园入驻与揽收机会。","s":{"G":5,"B":4,"P":3,"C":2,"T":3},"tags":["恩施","物流园","单量","电商"],"date":"6月4日","sort":"2026-06-04","url":"http://es.gov.cn/xwdt/bdyw/202606/t20260604_1810003.shtml"},{"level":"orange","cat":"荆州辖区","region":"潜江","src":"权威","srcName":"国家邮政局等四部门·湖北日报","title":"潜江入选全国农村电商快递协同发展示范区（湖北6县市上榜，中部第一）","summary":"5月12日公布，全国100个示范区，湖北潜江、竹山、江陵、当阳、罗田、麻城6县市入选，中部最多；潜江已实现进村全覆盖。","reason":"全国示范区+进村全覆盖，可借鉴其共配降本模式复制到荆州辖区。","action":"→ 复制潜江共配模式到京山/洪湖。","s":{"G":5,"B":3,"P":4,"C":1,"T":2},"tags":["潜江","进村","共配","示范区"],"date":"5月12日","sort":"2026-05-12","url":"https://www.hubei.gov.cn/hbfb/bmdt/202605/t20260512_5934319.shtml"},{"level":"orange","cat":"荆州辖区","region":"洪湖","src":"权威","srcName":"国家邮政局示范项目·荆州市邮政管理局","title":"「洪湖莲藕寄递项目」入选全国快递服务现代农业示范项目","summary":"全国219个/湖北13个示范项目之一；荆州江陵黄桃、洪湖莲藕两项入选，产业寄递标杆，可复制模式带动辖区农产品寄递。","reason":"全国示范项目，产业寄递标杆，可复制模式带动辖区农产品寄递。","action":"→ 复制莲藕模式到小龙虾/柑橘品类。","s":{"G":5,"B":3,"P":3,"C":1,"T":2},"tags":["洪湖","莲藕","产业寄递","示范"],"date":"2026年4月","sort":"2026-04-20","url":"https://www.baidu.com/s?wd=洪湖莲藕寄递项目 入选全国快递服务现代农业示范项目"},{"level":"orange","cat":"其他","region":"全国/电商","src":"媒体","srcName":"湖北日报","title":"淘宝重拳整治「其他物流」通道：终结灰色发货乱象，中小件强制平台合规物流","summary":"淘宝逐步下线大部分实物类目「其他物流公司」发货选项，仅大件保留并需备案，违规将面临限流/封禁；超六成物流投诉源于该黑箱模式。","reason":"平台物流合规收紧，辖区电商客户发货链路与轨迹回传须同步规范，避免被平台处罚连带。","action":"→ 提醒辖区电商客户切换合规物流，保障轨迹回传。","s":{"G":2,"B":4,"P":3,"C":3,"T":3},"tags":["电商","平台规则","物流合规","淘宝"],"date":"2026年6月","sort":"2026-06-15","url":"https://news.hubeidaily.net/pc/c_5570492.html"},{"level":"orange","cat":"其他","region":"全国","src":"媒体","srcName":"海峡网·福州晚报","title":"福建完成首次快递行业省级集体协商：保底工资1.1倍、派费30%直付、反「以罚代管」","summary":"7月14日报道，顺丰、中通、圆通等7家头部在闽省区与一线快递员代表磋商，形成集体合同草案惠及10余万快递员；明确不得单一以客户投诉处罚员工。","reason":"快递员权益保障从口头转向制度，预示全国用工规范趋势，辖区需提前做合规对标。","action":"→ 预判湖北是否跟进，提前做用工合规对标。","s":{"G":2,"B":4,"P":4,"C":2,"T":4},"tags":["快递员","权益","派费","集体协商"],"date":"7月14日","sort":"2026-07-14","url":"https://www.toutiao.com/article/7662214590272520756/"},{"level":"orange","cat":"其他","region":"广东→湖北","src":"权威","srcName":"广东省邮政管理局","title":"广东首部省级《快递条例》7月1日施行（不得低于成本价+快递员权益）","summary":"全国首部省级邮政快递业法规，明确不得低于成本价服务、快递员劳动合同与薪酬保障、恶劣天气停止或延迟收派制度。","reason":"省级示范效应或外溢湖北，关注湖北是否跟进类似合规要求。","action":"→ 预判湖北是否跟进，提前做合规对标。","s":{"G":4,"B":3,"P":4,"C":2,"T":3},"tags":["条例","合规","用工","外溢"],"date":"7月1日","sort":"2026-07-01","url":"https://gd.spb.gov.cn/gdsyzglj/c100057/c100060/202603/acb4b8df4fcd441999c4644d62c79f44.shtml"},{"level":"green","cat":"其他","region":"全国","src":"媒体","srcName":"21世纪经济报道","title":"成品油年内第九次上调（7月17日24时）：柴油+0.25元/升，重卡半月多花443元","summary":"7月17日24时汽柴油每吨分别上调300/290元，折合0号柴油+0.25元/升；月跑1万公里重卡未来半月燃油成本提高约443元，快递干线成本承压。","reason":"成本预警项，建议纳入月度成本监测基线，关注派费传导。","action":"→ 纳入月度成本监测基线。","s":{"G":2,"B":4,"P":1,"C":1,"T":4},"tags":["油价","成本","预警","干线"],"date":"7月17日","sort":"2026-07-17","url":"https://new.qq.com/rain/a/20260717A07LA800"},{"level":"green","cat":"行业","region":"全国","src":"媒体","srcName":"财富中文网","title":"2026《财富》中国500强发布：中国邮政、顺丰、极兔、圆通、申通、韵达、中通7家快递上榜","summary":"7月21日财富中文网发布，7家快递企业上榜；圆通排名240位、中通318位，顺丰居行业首位。","reason":"行业量级参考，对辖区直接业务影响有限，但反映头部集中度与品牌格局。","action":"→ 仅作行业格局参考。","s":{"G":2,"B":3,"P":1,"C":4,"T":3},"tags":["财富500强","格局","圆通"],"date":"7月21日","sort":"2026-07-21","url":"https://www.baidu.com/s?wd=2026财富中国500强 快递 上榜"},{"level":"green","cat":"行业","region":"全国","src":"权威","srcName":"国家邮政局","title":"国家邮政局2026Q1快递服务满意度84.8分、72小时妥投率82.28%","summary":"5月29日通告：一季度公众满意度84.8分（同比-0.1），全程时限54.37小时，72小时妥投率82.28%（同比-0.45pct）；顺丰、中通妥投率居前。","reason":"行业服务质量基线参考，用于辖区质量分对标。","action":"→ 作辖区质量分对标基线。","s":{"G":2,"B":3,"P":2,"C":2,"T":2},"tags":["满意度","妥投率","基线","质量"],"date":"5月29日","sort":"2026-05-29","url":"https://www.spb.gov.cn/gjyzj/c200040/202606/e3a20646cde243cdbf29cf52c32a4839.shtml"},{"level":"orange","cat":"荆州辖区","region":"荆门","src":"开放","srcName":"荆门社区网·荆门市邮政管理局回复","warn":true,"title":"【荆门】掇刀圆通自2025年11月起暂停寄递，邮政管理局确认，论坛反馈近期已恢复","summary":"荆门市邮政管理局6月11日回复：掇刀区圆通因经营困难自2025年11月起暂停寄递（已公告并报告），其他品牌正常；荆门社区网用户近期反馈「已重新开通」。恢复时间待现场核实。","reason":"网点经营异动开放源单点待核实，影响辖区网点稳定与竞争格局，需二次确认恢复时间与范围。","action":"→ 派人现场核实掇刀圆通恢复时间与网络状态。","s":{"G":5,"B":4,"P":2,"C":3,"T":3},"tags":["荆门","网点异动","圆通","待核实"],"date":"待核实","sort":"0000-00-00","url":"https://www.jmbbs.com/forum.php?mod=viewthread&page=1&tid=8297283"},{"level":"green","cat":"荆州辖区","region":"宜昌","src":"开放","srcName":"黑猫投诉","warn":true,"title":"【宜昌】中通西陵区站点私设收货点、罚款快递员投诉（6月24日）","summary":"黑猫投诉6月24日：中通湖北宜昌市西陵区发展大道站点私设收货点、站点承包商纠纷导致快递乱放，并无故处罚快递员30元，要求严查。","reason":"末端服务与承包纠纷开放源单点信号，影响宜昌辖区服务质量与网点稳定，需二次确认。","action":"→ 关注宜昌中通站点承包纠纷，必要时上报。","s":{"G":4,"B":2,"P":2,"C":2,"T":2},"tags":["宜昌","中通","承包纠纷","待核实"],"date":"6月24日","sort":"2026-06-24","url":"https://ah.tousu.sina.com.cn/complaint/view/17398936645"},{"level":"green","cat":"荆州辖区","region":"潜江","src":"开放","srcName":"潜江人才网","warn":true,"title":"【潜江】潜江圆通常态化招聘客服/快递员（网络运转信号）","summary":"潜江圆通速递持续招聘客服（3500–4000+）、快递员（4000–6000），反映园区网络运转正常。","reason":"智慧物流园常态化用工，网络运转正常信号，稳定度参考（待核实）。","action":"→ 稳定性参考。","s":{"G":4,"B":2,"P":1,"C":1,"T":2},"tags":["潜江","圆通","用工","待核实"],"date":"待核实","sort":"0000-00-00","url":"https://www.qjzp.cn/company/297300"},{"level":"green","cat":"荆州辖区","region":"荆门","src":"开放","srcName":"荆门人才网/今日招聘","warn":true,"title":"【荆门】荆门极兔物流中心招聘分拣扫描员（7月11日，网络运转信号）","summary":"7月11日荆门极兔物流中心（掇刀区麻城镇）招聘分拣扫描员包吃住，日转运能力超百万件，反映荆门转运网络运转正常。","reason":"极兔荆门转运中心常态化用工，网络运转正常信号，稳定度参考（待核实）。","action":"→ 稳定性参考。","s":{"G":4,"B":2,"P":1,"C":1,"T":2},"tags":["荆门","极兔","用工","待核实"],"date":"7月11日","sort":"2026-07-11","url":"https://www.jrzp.com/job3393796.shtml"}];
+const LEADS = [];  // 电商线索独立表
+const SAFETY = [];  // 安全事件独立表
 
 const LV = {red:'红线',orange:'重点',green:'一般'};
 let curView='featured', curCat='全部', curQ='';
@@ -237,12 +257,21 @@ const feed=document.getElementById('feed'), empty=document.getElementById('empty
 const tabs=document.getElementById('tabs');
 const topTitle=document.getElementById('topTitle'), topSub=document.getElementById('topSub');
 
+// 侧边栏徽章
+function updateBadges(){
+  document.getElementById('badgeFeatured').textContent = DATA.filter(d=>comp(d.s)>=65 && !d.warn).length;
+  document.getElementById('badgeAll').textContent = DATA.length;
+  document.getElementById('badgeEcom').textContent = LEADS.length;
+  document.getElementById('badgeSafety').textContent = SAFETY.length;
+}
+
 function setTopTitle(){
   const today='2026年7月22日星期三';
   if(curView==='featured'){topTitle.firstChild.textContent='精选 ';topSub.textContent=today+' · 权重分≥65 且已核实';tabs.style.display='';}
   else if(curView==='all'){topTitle.firstChild.textContent='全部快递动态 ';topSub.textContent=today+' · 抓取所有相关联动态（按真实发生日排序）';tabs.style.display='';}
   else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=today+' · 本期重点总结';tabs.style.display='none';}
-  else if(curView==='topic'){topTitle.firstChild.textContent='主题 ';topSub.textContent='按主题归档的快递资讯';tabs.style.display='';}
+  else if(curView==='ecom'){topTitle.firstChild.textContent='每日电商线索 ';topSub.textContent=today+' · 43 区县潜在客户新增（地址/联系人/体量/理由）';tabs.style.display='none';}
+  else if(curView==='safety'){topTitle.firstChild.textContent='安全事件预警 ';topSub.textContent=today+' · 异常天气/高速封堵/火灾事故';tabs.style.display='none';}
   else if(curView==='fav'){topTitle.firstChild.textContent='收藏 ';topSub.textContent='收藏的资讯';tabs.style.display='';}
   else if(curView==='agent'){topTitle.firstChild.textContent='Agent 接入 ';topSub.textContent='自动化接入入口（待上线）';tabs.style.display='none';}
 }
@@ -256,8 +285,8 @@ function groupByDate(list){
 function renderList(){
   let list=DATA.slice();
   if(curView==='featured') list=list.filter(d=>comp(d.s)>=65 && !d.warn);
-  if(curCat!=='全部') list=list.filter(d=>d.cat===curCat);
-  if(curQ){const q=curQ.toLowerCase();list=list.filter(d=>(d.title+d.summary+d.reason+d.tags.join('')+d.region+d.srcName).toLowerCase().includes(q));}
+  if(curCat!=='全部') list=list.filter(d=>d.cat===curCat || d.channel===curCat);
+  if(curQ){const q=curQ.toLowerCase();list=list.filter(d=>(d.title+(d.summary||'')+(d.reason||'')+d.tags.join('')+(d.region||'')+d.srcName).toLowerCase().includes(q));}
   const groups=groupByDate(list);
   if(!groups.length){feed.innerHTML='';empty.style.display='block';return;}else empty.style.display='none';
   feed.innerHTML='';
@@ -268,14 +297,23 @@ function renderList(){
     g.items.forEach(d=>{
       const sc=comp(d.s);
       const isNew = d.sort>='2026-07-15' && d.sort<='2026-07-22';
+      const isUrgent = d.channel==='安全' && sc>=60;
+      const subReg = d.subRegion ? `<div class="sub-region">${d.subRegion}</div>` : '';
       let axhtml='';
       AXES.forEach(a=>{const v=d.s[a.k];const pct=Math.round(v/5*100);axhtml+=`<div class="ax"><span>${a.n}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`;});
+      const chBadge = d.channel && d.channel!=='资讯' ? `<span class="ch ${d.channel}">${d.channel}</span>` : '';
       grp.insertAdjacentHTML('beforeend',`
         <article class="card ${d.level}">
-          <div class="time-col">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}${isNew?`<span class="tag-new">最新</span>`:''}<div class="dot"></div></div>
+          <div class="time-col">
+            <div class="date">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}</div>
+            ${subReg}
+            ${isUrgent?'<span class="tag-urgent">紧急</span>':isNew?'<span class="tag-new">最新</span>':''}
+            <div class="dot"></div>
+          </div>
           <div class="body">
             <div class="meta">
               <span class="src-cat ${d.src}">${d.src}</span>
+              ${chBadge}
               <span class="src-name">${d.srcName}</span>
               ${d.warn?'<span class="warn">待核实</span>':''}
               <span class="score">${sc}</span>
@@ -294,7 +332,94 @@ function renderList(){
   });
 }
 
+function renderEcom(){
+  // 电商线索独立表
+  feed.innerHTML='';
+  if(!LEADS.length){
+    feed.innerHTML='<div class="empty" style="display:block">今日暂无新增电商线索</div>';
+    return;
+  }
+  const sorted = LEADS.slice().sort((a,b)=>b.score-a.score);
+  const red=sorted.filter(d=>d.level==='red').length;
+  feed.insertAdjacentHTML('beforeend',`
+    <div class="lead-toolbar">
+      <div class="info"><b>${sorted.length}</b> 条潜在客户线索 · <b>${red}</b> 条重点跟进<br>按权重重高至低排序 · 同一客户多信号已合并</div>
+    </div>`);
+  let rows='';
+  sorted.forEach(d=>{
+    rows+=`<tr>
+      <td class="col-name">${d.name}${d.biz?`<div class="biz">${d.biz}</div>`:''}</td>
+      <td class="col-region">${d.region}<span class="tier">${d.tier||''} · ${d.admin||''}</span></td>
+      <td class="col-contact">${d.address||'待核实'}<br>${d.contact||'—'}</td>
+      <td class="col-reason"><b>${d.reason||'—'}</b>${d.scale?`<span class="scale">📊 ${d.scale}</span>`:''}${d.seasonal?`<span class="scale">🌱 ${d.seasonal}</span>`:''}</td>
+      <td class="col-source">${d.srcName||'—'}<br>${d.date||''}</td>
+      <td class="col-score">${d.score}<br><span class="lv ${d.level}">${LV[d.level]}</span></td>
+    </tr>`;
+  });
+  feed.insertAdjacentHTML('beforeend',`
+    <table class="leadtable">
+      <thead><tr>
+        <th>企业/项目</th><th>所在区县</th><th>地址/联系人</th>
+        <th>建议联系理由</th><th>信源</th><th>权重</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`);
+}
+
+function renderSafety(){
+  // 安全事件独立表
+  feed.innerHTML='';
+  if(!SAFETY.length){
+    feed.innerHTML='<div class="empty" style="display:block">今日暂无安全事件预警</div>';
+    return;
+  }
+  const sorted = SAFETY.slice().sort((a,b)=>b.score-a.score);
+  const urgent = sorted.filter(d=>d.score>=60).length;
+  feed.insertAdjacentHTML('beforeend',`
+    <div class="alert-banner">
+      <div class="ic">⚠️</div>
+      <div class="tx">安全事件预警</div>
+      <div class="ct">共 <b>${sorted.length}</b> 条 · <b>${urgent}</b> 条紧急（≥60）</div>
+    </div>`);
+  const groups=groupByDate(sorted);
+  groups.forEach(g=>{
+    const wd=weekday(g.sort);
+    feed.insertAdjacentHTML('beforeend',`<div class="day-group"><div class="day-head"><span class="date">${g.date}</span>${wd?`<span class="weekday">${wd}</span>`:''}<span class="count">${g.items.length} 条</span></div></div>`);
+    const grp=feed.lastElementChild;
+    g.items.forEach(d=>{
+      const sc = d.score;
+      const isUrgent = sc>=60;
+      grp.insertAdjacentHTML('beforeend',`
+        <article class="card ${d.level}">
+          <div class="time-col">
+            <div class="date">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}</div>
+            <div class="sub-region">${d.subRegion||d.region||''}</div>
+            ${isUrgent?'<span class="tag-urgent">紧急</span>':''}
+            <div class="dot"></div>
+          </div>
+          <div class="body">
+            <div class="meta">
+              <span class="src-cat ${d.src}">${d.src}</span>
+              <span class="ch 安全">安全</span>
+              <span class="src-name">${d.srcName}</span>
+              ${d.warn?'<span class="warn">待核实</span>':''}
+              <span class="score">${d.score}</span>
+            </div>
+            <h2 class="title"><a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a></h2>
+            <div class="summary">${d.summary}</div>
+            <div class="tags">${(d.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+            <div class="reason">
+              <span class="rlevel ${d.level}">${LV[d.level]}</span>
+              <span class="rtext">${d.reason}</span>
+            </div>
+          </div>
+        </article>`);
+    });
+  });
+}
+
 function renderDaily(){
+  // 既有日报逻辑，保留
   const red=DATA.filter(d=>d.level==='red').sort((a,b)=>b.sort.localeCompare(a.sort));
   const orange=DATA.filter(d=>d.level==='orange').sort((a,b)=>b.sort.localeCompare(a.sort));
   const green=DATA.filter(d=>d.level==='green').sort((a,b)=>b.sort.localeCompare(a.sort));
@@ -309,6 +434,8 @@ function renderDaily(){
         <div class="stat red"><b>${red.length}</b> 红线</div>
         <div class="stat orange"><b>${orange.length}</b> 重点</div>
         <div class="stat green"><b>${green.length}</b> 一般</div>
+        <div class="stat"><b>${LEADS.length}</b> 电商线索</div>
+        <div class="stat"><b>${SAFETY.length}</b> 安全事件</div>
         <div class="stat"><b>${total}</b> 全量信源</div>
       </div>
     </div>`);
@@ -321,7 +448,7 @@ function renderDaily(){
         <span class="ix">${String(i+1).padStart(2,'0')}</span>
         <div class="it">
           <a href="${urlFor(d)}" target="_blank" rel="noopener"><b>${d.title}</b></a>
-          <span class="src">${d.date} · ${d.src} · ${d.srcName} · ${sc} 分</span>
+          <span class="src">${d.date} · ${d.src} · ${d.srcName} · ${sc} 分${d.subRegion?' · '+d.subRegion:''}</span>
           <div class="action">${d.action||d.reason}</div>
         </div>
         <span class="lvl ${d.level}">${LV[d.level]}</span>
@@ -350,7 +477,8 @@ function renderDaily(){
 
 function render(){
   if(curView==='daily'){renderDaily();return;}
-  if(curView==='topic'){feed.innerHTML='<div class="empty" style="display:block">主题归档（开发中）</div>';return;}
+  if(curView==='ecom'){renderEcom();return;}
+  if(curView==='safety'){renderSafety();return;}
   if(curView==='fav'){feed.innerHTML='<div class="empty" style="display:block">暂无收藏</div>';return;}
   if(curView==='agent'){feed.innerHTML='<div class="empty" style="display:block">Agent 接入待上线</div>';return;}
   renderList();
@@ -369,7 +497,7 @@ const doSearch=()=>{curQ=document.getElementById('search').value.trim();render()
 document.getElementById('searchBtn').addEventListener('click',doSearch);
 document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
 
-setTopTitle(); render();
+updateBadges(); setTopTitle(); render();
 </script>
 </body>
 </html>

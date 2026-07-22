@@ -1,0 +1,1301 @@
+{
+  "generatedAt": "2026-07-22T14:18:42.568Z",
+  "regionCount": 43,
+  "templateCount": 8,
+  "totalQueries": 129,
+  "byChannel": {
+    "电商": 129
+  },
+  "queries": [
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "恩施 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "恩施 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "恩施 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "建始 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "建始 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "建始 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "利川 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "利川 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "利川 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "宜昌东站 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "宜昌东站 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "宜昌东站 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "猇亭 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "猇亭 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "猇亭 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "宜昌高新区 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "宜昌高新区 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "宜昌高新区 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "三峡大学 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "三峡大学 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "三峡大学 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "点军区 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "点军区 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "点军区 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "夷陵 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "夷陵 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "夷陵 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "宜都 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "宜都 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "宜都 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "当阳 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "当阳 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "当阳 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "枝江 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "枝江 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "枝江 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "�归 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "�归 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "�归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "�归 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "野三关 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "野三关 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "野三关 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "来凤 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "来凤 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "来凤 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "巴东 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "巴东 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "巴东 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "宣恩 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "宣恩 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "宣恩 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "咸丰 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "咸丰 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "咸丰 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "五峰 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "五峰 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "五峰 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "远安 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "远安 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "远安 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "兴山 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "兴山 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "兴山 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "长阳 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "长阳 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "长阳 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "鹤峰 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "鹤峰 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "鹤峰 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "荆州城区 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "荆州城区 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "荆州城区 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "沙北新区 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "沙北新区 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "沙北新区 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "古城北 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "古城北 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "古城北 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "长港路 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "长港路 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "长港路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "荆州大学城 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "荆州大学城 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "荆州大学城 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "江津西路 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "江津西路 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "江津西路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "武德路 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "武德路 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "武德路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "北京路 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "北京路 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "北京路 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "开发区一部 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "开发区一部 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "开发区一部 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "公安 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "公安 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "公安 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "江陵 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "江陵 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "江陵 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "石首 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "石首 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "石首 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "松滋 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "松滋 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "松滋 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "监利 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "监利 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "监利 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "荆门城区 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "荆门城区 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "荆门城区 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "沙洋 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "沙洋 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "沙洋 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "钟祥 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "钟祥 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "钟祥 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "潜江 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "潜江 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "潜江 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "洪湖 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "洪湖 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "洪湖 工厂 开业 搬迁 扩产 投产 总部 仓"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-park",
+      "label": "电商产业园/新开",
+      "query": "京山 电商 产业园 快递 仓储 开园 签约"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-seasonal",
+      "label": "季节性水果/寄递",
+      "query": "京山 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播"
+    },
+    {
+      "region": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "channel": "电商",
+      "template": "ecom-newbiz",
+      "label": "新签约/搬迁/扩产",
+      "query": "京山 工厂 开业 搬迁 扩产 投产 总部 仓"
+    }
+  ]
+}

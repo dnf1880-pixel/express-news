@@ -22,13 +22,14 @@
     --green:#2ED573;
     --blue:#3FA9FF;
     --gold:#f5c542;
+    --teal:#26d4c8;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
   a{color:inherit;text-decoration:none}
 
   /* sidebar */
-  .sidebar{width:210px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border);padding:22px 0;position:sticky;top:0;height:100vh;overflow-y:auto}
+  .sidebar{width:220px;flex-shrink:0;background:var(--sidebar);border-right:1px solid var(--border);padding:22px 0;position:sticky;top:0;height:100vh;overflow-y:auto}
   .logo{display:flex;align-items:center;gap:10px;padding:0 22px 28px;font-weight:800;font-size:18px;letter-spacing:1px}
   .logo .dot{width:10px;height:10px;border-radius:50%;background:var(--grad)}
   .nav-sect{margin-top:18px;padding:0 14px}
@@ -38,22 +39,28 @@
   .nav-item.active{background:var(--card);color:var(--txt);font-weight:600}
   .nav-item.active::before{content:"";position:absolute;width:3px;height:18px;background:var(--grad);border-radius:2px;margin-left:-12px}
   .nav-item svg{width:18px;height:18px;opacity:.8}
+  .nav-item .badge{margin-left:auto;font-size:10.5px;padding:1px 6px;border-radius:3px;background:var(--card-2);color:var(--txt-dim);font-weight:600}
+  .nav-item.ecom .badge{background:rgba(38,212,200,.16);color:var(--teal);border:1px solid rgba(38,212,200,.35)}
+  .nav-item.safety .badge{background:rgba(255,71,87,.16);color:var(--red);border:1px solid rgba(255,71,87,.4)}
 
   /* main */
   .main{flex:1;min-width:0;display:flex;flex-direction:column}
   .topbar{position:sticky;top:0;z-index:40;background:rgba(11,13,20,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;gap:18px}
   .topbar h1{font-size:20px;font-weight:700}
   .topbar .sub{font-size:12.5px;color:var(--txt-dim);margin-left:6px}
-  .tabs{display:flex;gap:4px;flex:1}
-  .tab{padding:6px 14px;border-radius:6px;font-size:13px;color:var(--txt-dim);cursor:pointer;transition:.15s;user-select:none}
+  .tabs{display:flex;gap:4px;flex:1;overflow-x:auto}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:6px 14px;border-radius:6px;font-size:13px;color:var(--txt-dim);cursor:pointer;transition:.15s;user-select:none;white-space:nowrap}
   .tab:hover{color:var(--txt)}
   .tab.active{color:#fff;background:var(--card);font-weight:600}
+  .tab[data-cat="电商"]{color:var(--teal)}
+  .tab[data-cat="安全"]{color:var(--red)}
   .search-box{display:flex;align-items:center;gap:8px}
   .search-box input{width:180px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--txt);font-size:13px;outline:none}
   .search-box input::placeholder{color:var(--txt-faint)}
   .search-box button{background:var(--grad);border:none;border-radius:8px;color:#fff;padding:7px 16px;font-size:13px;cursor:pointer;font-weight:600}
 
-  .content{padding:18px 28px 60px;max-width:940px}
+  .content{padding:18px 28px 60px;max-width:1080px}
 
   /* day group */
   .day-group{margin-bottom:32px}
@@ -63,11 +70,15 @@
   .day-head .count{font-size:12px;color:var(--txt-faint);margin-left:auto}
 
   /* card */
-  .card{display:grid;grid-template-columns:64px 1fr;gap:0;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:.18s}
+  .card{display:grid;grid-template-columns:74px 1fr;gap:0;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:.18s}
   .card:hover{border-color:#2e344e;transform:translateY(-1px)}
-  .time-col{border-right:1px solid var(--border);padding:16px 4px;text-align:center;color:var(--txt-dim);font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;justify-content:center;gap:6px}
-  .time-col .tag-new{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(245,197,66,.16);color:var(--gold);border:1px solid rgba(245,197,66,.35);font-weight:700}
-  .time-col .dot{width:6px;height:6px;border-radius:50%;background:var(--border);margin:0 auto}
+  .time-col{border-right:1px solid var(--border);padding:14px 4px;text-align:center;color:var(--txt-dim);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;justify-content:flex-start;gap:4px;min-height:100%}
+  .time-col .date{font-size:13px;font-weight:700;color:var(--txt)}
+  .time-col .sub-region{font-size:10.5px;color:var(--txt-faint);line-height:1.3;padding:0 2px;margin-top:2px}
+  .time-col .tag-new{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(245,197,66,.16);color:var(--gold);border:1px solid rgba(245,197,66,.35);font-weight:700;margin-top:4px}
+  .time-col .tag-urgent{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(255,71,87,.18);color:var(--red);border:1px solid rgba(255,71,87,.4);font-weight:700;margin-top:4px;animation:pulse 1.5s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  .time-col .dot{width:6px;height:6px;border-radius:50%;background:var(--border);margin:6px auto 0}
   .body{padding:14px 18px}
 
   .meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
@@ -75,6 +86,10 @@
   .src-cat.权威{background:rgba(63,169,255,.15);color:#8fd0ff;border:1px solid rgba(63,169,255,.35)}
   .src-cat.媒体{background:rgba(245,197,66,.14);color:var(--gold);border:1px solid rgba(245,197,66,.32)}
   .src-cat.开放{background:rgba(255,79,176,.13);color:var(--accent);border:1px solid rgba(255,79,176,.3)}
+  .ch{font-size:10.5px;padding:1px 6px;border-radius:3px;font-weight:600}
+  .ch.资讯{background:rgba(63,169,255,.12);color:#8fd0ff}
+  .ch.电商{background:rgba(38,212,200,.14);color:var(--teal);border:1px solid rgba(38,212,200,.3)}
+  .ch.安全{background:rgba(255,71,87,.14);color:var(--red);border:1px solid rgba(255,71,87,.35)}
   .src-name{font-size:12.5px;color:var(--txt);font-weight:600}
   .src-name a{color:inherit;border-bottom:1px dashed transparent;transition:.15s}
   .src-name a:hover{border-bottom-color:var(--accent);color:var(--accent)}
@@ -107,47 +122,45 @@
 
   .empty{text-align:center;color:var(--txt-faint);padding:60px 20px}
 
-  /* ===== Daily view ===== */
-  .daily-head{background:linear-gradient(135deg,#1a1d2e 0%,#15172a 100%);border:1px solid var(--border);border-radius:16px;padding:24px 26px;margin-bottom:24px}
-  .daily-head .vol{font-size:11px;color:var(--txt-faint);letter-spacing:1.5px;text-transform:uppercase}
-  .daily-head h2{font-size:28px;font-weight:800;margin:6px 0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
-  .daily-head .meta{font-size:12.5px;color:var(--txt-dim);margin-top:4px}
-  .daily-head .stats{display:flex;gap:24px;margin-top:16px}
-  .daily-head .stat{font-size:13px}
-  .daily-head .stat b{font-size:18px;color:var(--txt);font-weight:700;margin-right:4px}
-  .daily-head .stat.red b{color:var(--red)}
-  .daily-head .stat.orange b{color:var(--orange)}
-  .daily-head .stat.green b{color:var(--green)}
+  /* ===== Ecom lead table ===== */
+  .lead-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+  .lead-toolbar .info{font-size:12.5px;color:var(--txt-dim);padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;line-height:1.5}
+  .lead-toolbar b{color:var(--teal)}
+  .leadtable{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+  .leadtable th{text-align:left;padding:11px 12px;font-size:11.5px;color:var(--txt-faint);background:var(--card-2);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);font-weight:600}
+  .leadtable td{padding:12px;font-size:13px;border-bottom:1px solid rgba(35,40,56,.6);vertical-align:top}
+  .leadtable tr:last-child td{border-bottom:none}
+  .leadtable tr:hover td{background:rgba(123,47,247,.04)}
+  .leadtable .col-name{font-weight:600;color:var(--txt);min-width:140px}
+  .leadtable .col-name .biz{font-size:11px;color:var(--txt-faint);font-weight:400;margin-top:2px}
+  .leadtable .col-region{color:var(--txt);min-width:100px}
+  .leadtable .col-region .tier{font-size:10.5px;color:var(--txt-faint);display:block}
+  .leadtable .col-contact{font-size:12px;color:var(--txt-dim);min-width:180px}
+  .leadtable .col-reason{font-size:12.5px;color:var(--txt-dim);min-width:240px;line-height:1.5}
+  .leadtable .col-reason b{color:var(--teal);font-weight:600}
+  .leadtable .col-reason .scale{font-size:11px;color:var(--gold);margin-top:3px;display:block}
+  .leadtable .col-source{font-size:11.5px;color:var(--txt-faint);min-width:120px}
+  .leadtable .col-score{text-align:center;min-width:70px}
+  .leadtable .col-score .lv{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:3px;font-weight:600;margin-top:3px}
+  .lv.red{background:rgba(255,71,87,.14);color:var(--red)}
+  .lv.orange{background:rgba(255,165,2,.14);color:var(--orange)}
+  .lv.green{background:rgba(46,213,115,.14);color:var(--green)}
+  .empty-row td{text-align:center;padding:60px 20px;color:var(--txt-faint)}
 
-  .daily-sect{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:18px;overflow:hidden}
-  .daily-sect .sh{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--border);background:var(--card-2)}
-  .daily-sect .sh .num{font-size:11px;font-weight:700;color:var(--txt-faint);background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2px 7px}
-  .daily-sect .sh .ttl{font-size:14px;font-weight:700}
-  .daily-sect .sh .cnt{font-size:12px;color:var(--txt-faint);margin-left:auto}
-  .daily-sect ul{list-style:none;padding:8px 0}
-  .daily-sect li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start;padding:10px 18px;border-bottom:1px solid rgba(35,40,56,.5)}
-  .daily-sect li:last-child{border-bottom:none}
-  .daily-sect li .ix{font-size:11px;color:var(--txt-faint);font-variant-numeric:tabular-nums;padding-top:1px}
-  .daily-sect li .it{font-size:13px;color:var(--txt)}
-  .daily-sect li .it b{font-weight:600}
-  .daily-sect li .it a{color:var(--txt);border-bottom:1px dashed var(--txt-faint);transition:.15s}
-  .daily-sect li .it a:hover{color:var(--accent);border-bottom-color:var(--accent)}
-  .daily-sect li .it .src{font-size:11.5px;color:var(--txt-faint);margin-left:6px}
-  .daily-sect li .it .action{display:block;font-size:12px;color:var(--txt-dim);margin-top:3px;padding-left:8px;border-left:2px solid var(--border)}
-  .daily-sect li .lvl{font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;align-self:start;white-space:nowrap}
-  .daily-sect li .lvl.red{background:rgba(255,71,87,.14);color:var(--red)}
-  .daily-sect li .lvl.orange{background:rgba(255,165,2,.14);color:var(--orange)}
-  .daily-sect li .lvl.green{background:rgba(46,213,115,.14);color:var(--green)}
-
-  .footer-note{margin-top:30px;padding-top:18px;border-top:1px solid var(--border);font-size:11.5px;color:var(--txt-faint);line-height:1.8}
-  .footer-note b{color:var(--txt-dim)}
-  .formula{font-family:ui-monospace,Consolas,monospace;background:var(--card);padding:6px 10px;border-radius:6px;display:inline-block;margin:4px 0}
+  /* ===== Safety alert ===== */
+  .alert-banner{background:linear-gradient(135deg,rgba(255,71,87,.12),rgba(255,71,87,.04));border:1px solid rgba(255,71,87,.4);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+  .alert-banner .ic{font-size:22px}
+  .alert-banner .tx{font-size:13.5px;color:#ff8a96;font-weight:600}
+  .alert-banner .ct{font-size:12px;color:var(--txt-dim);margin-left:auto}
+  .alert-banner .ct b{color:var(--red)}
 
   @media(max-width:900px){
     .sidebar{display:none}
     .topbar{padding:12px 16px;flex-wrap:wrap}
-    .tabs{order:3;width:100%;margin-top:8px;overflow-x:auto}
+    .tabs{order:3;width:100%;margin-top:8px}
     .content{padding:16px}
+    .leadtable{font-size:12px}
+    .leadtable th,.leadtable td{padding:8px 6px}
   }
 </style>
 </head>
@@ -158,19 +171,23 @@
   <div class="nav-sect">
     <div class="nav-item active" data-view="featured">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      精选
+      精选 <span class="badge" id="badgeFeatured">0</span>
     </div>
     <div class="nav-item" data-view="all">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      全部快递动态
+      全部快递动态 <span class="badge" id="badgeAll">0</span>
     </div>
     <div class="nav-item" data-view="daily">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       快递日报
     </div>
-    <div class="nav-item" data-view="topic">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-      主题
+    <div class="nav-item ecom" data-view="ecom">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      每日电商线索 <span class="badge" id="badgeEcom">0</span>
+    </div>
+    <div class="nav-item safety" data-view="safety">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      安全事件预警 <span class="badge" id="badgeSafety">0</span>
     </div>
     <div class="nav-item" data-view="fav">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
@@ -195,6 +212,8 @@
       <div class="tab" data-cat="行业">行业</div>
       <div class="tab" data-cat="湖北">湖北</div>
       <div class="tab" data-cat="荆州辖区">荆州辖区</div>
+      <div class="tab" data-cat="电商">电商</div>
+      <div class="tab" data-cat="安全">安全</div>
       <div class="tab" data-cat="其他">其他</div>
     </div>
     <div class="search-box">
@@ -207,9 +226,9 @@
     <div id="feed"></div>
     <div class="empty" id="empty" style="display:none">没有匹配的内容</div>
 
-    <div class="footer-note">
-      <div><b>数据抓取 / 复核</b> 2026-07-22 ｜ <b>视图说明</b> 精选=权重分≥65 且已核实 ｜ 全部=全量 ｜ 日报=本期重点总结。</div>
-      <div><b>时间原则（绝对）</b> 卡片左侧与分组标题均为<b>事件真实发生日</b>，非抓取日；「待核实」为开放源线索，需二次确认，不计入精选。精准到「时:分」将在自动化接入源 feed（含 pubDate）后自动补齐。</div>
+    <div class="footer-note" id="footer">
+      <div><b>43 区县动态检索</b> 每日由 generate_queries.mjs 生成 43×8=344 条检索词（资讯 129 / 电商 129 / 安全 86），分渠道路由。</div>
+      <div><b>时间原则（绝对）</b> 卡片左侧与分组标题均为<b>事件真实发生日</b>，非抓取日；「待核实」为开放源线索，不计入精选。精准到「时:分」将在自动化接入源 feed（含 pubDate）后自动补齐。</div>
       <div><b>复合分公式</b> <span class="formula">W = 20 × (0.28·G + 0.26·B + 0.20·P + 0.14·C + 0.12·T)</span>，各轴 1–5 分，结果 0–100；🔴≥75 ｜ 🟠55–75 ｜ 🟢&lt;55。</div>
       <div><b>免责声明</b> 内部参考，非操作指令。开放轨单点信号需二次核实。</div>
     </div>
@@ -228,8 +247,9 @@ function weekday(sort){
 }
 function urlFor(d){return d.url?d.url:'https://www.baidu.com/s?wd='+encodeURIComponent(d.title);}
 
-// date=展示标签；sort=真实发生日（用于排序，待核实置底）；warn=开放源待核实
 const DATA = __DATA__;
+const LEADS = __LEADS__;  // 电商线索独立表
+const SAFETY = __SAFETY__;  // 安全事件独立表
 
 const LV = {red:'红线',orange:'重点',green:'一般'};
 let curView='featured', curCat='全部', curQ='';
@@ -237,12 +257,21 @@ const feed=document.getElementById('feed'), empty=document.getElementById('empty
 const tabs=document.getElementById('tabs');
 const topTitle=document.getElementById('topTitle'), topSub=document.getElementById('topSub');
 
+// 侧边栏徽章
+function updateBadges(){
+  document.getElementById('badgeFeatured').textContent = DATA.filter(d=>comp(d.s)>=65 && !d.warn).length;
+  document.getElementById('badgeAll').textContent = DATA.length;
+  document.getElementById('badgeEcom').textContent = LEADS.length;
+  document.getElementById('badgeSafety').textContent = SAFETY.length;
+}
+
 function setTopTitle(){
   const today='2026年7月22日星期三';
   if(curView==='featured'){topTitle.firstChild.textContent='精选 ';topSub.textContent=today+' · 权重分≥65 且已核实';tabs.style.display='';}
   else if(curView==='all'){topTitle.firstChild.textContent='全部快递动态 ';topSub.textContent=today+' · 抓取所有相关联动态（按真实发生日排序）';tabs.style.display='';}
   else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=today+' · 本期重点总结';tabs.style.display='none';}
-  else if(curView==='topic'){topTitle.firstChild.textContent='主题 ';topSub.textContent='按主题归档的快递资讯';tabs.style.display='';}
+  else if(curView==='ecom'){topTitle.firstChild.textContent='每日电商线索 ';topSub.textContent=today+' · 43 区县潜在客户新增（地址/联系人/体量/理由）';tabs.style.display='none';}
+  else if(curView==='safety'){topTitle.firstChild.textContent='安全事件预警 ';topSub.textContent=today+' · 异常天气/高速封堵/火灾事故';tabs.style.display='none';}
   else if(curView==='fav'){topTitle.firstChild.textContent='收藏 ';topSub.textContent='收藏的资讯';tabs.style.display='';}
   else if(curView==='agent'){topTitle.firstChild.textContent='Agent 接入 ';topSub.textContent='自动化接入入口（待上线）';tabs.style.display='none';}
 }
@@ -256,8 +285,8 @@ function groupByDate(list){
 function renderList(){
   let list=DATA.slice();
   if(curView==='featured') list=list.filter(d=>comp(d.s)>=65 && !d.warn);
-  if(curCat!=='全部') list=list.filter(d=>d.cat===curCat);
-  if(curQ){const q=curQ.toLowerCase();list=list.filter(d=>(d.title+d.summary+d.reason+d.tags.join('')+d.region+d.srcName).toLowerCase().includes(q));}
+  if(curCat!=='全部') list=list.filter(d=>d.cat===curCat || d.channel===curCat);
+  if(curQ){const q=curQ.toLowerCase();list=list.filter(d=>(d.title+(d.summary||'')+(d.reason||'')+d.tags.join('')+(d.region||'')+d.srcName).toLowerCase().includes(q));}
   const groups=groupByDate(list);
   if(!groups.length){feed.innerHTML='';empty.style.display='block';return;}else empty.style.display='none';
   feed.innerHTML='';
@@ -268,14 +297,23 @@ function renderList(){
     g.items.forEach(d=>{
       const sc=comp(d.s);
       const isNew = d.sort>='2026-07-15' && d.sort<='2026-07-22';
+      const isUrgent = d.channel==='安全' && sc>=60;
+      const subReg = d.subRegion ? `<div class="sub-region">${d.subRegion}</div>` : '';
       let axhtml='';
       AXES.forEach(a=>{const v=d.s[a.k];const pct=Math.round(v/5*100);axhtml+=`<div class="ax"><span>${a.n}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`;});
+      const chBadge = d.channel && d.channel!=='资讯' ? `<span class="ch ${d.channel}">${d.channel}</span>` : '';
       grp.insertAdjacentHTML('beforeend',`
         <article class="card ${d.level}">
-          <div class="time-col">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}${isNew?`<span class="tag-new">最新</span>`:''}<div class="dot"></div></div>
+          <div class="time-col">
+            <div class="date">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}</div>
+            ${subReg}
+            ${isUrgent?'<span class="tag-urgent">紧急</span>':isNew?'<span class="tag-new">最新</span>':''}
+            <div class="dot"></div>
+          </div>
           <div class="body">
             <div class="meta">
               <span class="src-cat ${d.src}">${d.src}</span>
+              ${chBadge}
               <span class="src-name">${d.srcName}</span>
               ${d.warn?'<span class="warn">待核实</span>':''}
               <span class="score">${sc}</span>
@@ -294,7 +332,94 @@ function renderList(){
   });
 }
 
+function renderEcom(){
+  // 电商线索独立表
+  feed.innerHTML='';
+  if(!LEADS.length){
+    feed.innerHTML='<div class="empty" style="display:block">今日暂无新增电商线索</div>';
+    return;
+  }
+  const sorted = LEADS.slice().sort((a,b)=>b.score-a.score);
+  const red=sorted.filter(d=>d.level==='red').length;
+  feed.insertAdjacentHTML('beforeend',`
+    <div class="lead-toolbar">
+      <div class="info"><b>${sorted.length}</b> 条潜在客户线索 · <b>${red}</b> 条重点跟进<br>按权重重高至低排序 · 同一客户多信号已合并</div>
+    </div>`);
+  let rows='';
+  sorted.forEach(d=>{
+    rows+=`<tr>
+      <td class="col-name">${d.name}${d.biz?`<div class="biz">${d.biz}</div>`:''}</td>
+      <td class="col-region">${d.region}<span class="tier">${d.tier||''} · ${d.admin||''}</span></td>
+      <td class="col-contact">${d.address||'待核实'}<br>${d.contact||'—'}</td>
+      <td class="col-reason"><b>${d.reason||'—'}</b>${d.scale?`<span class="scale">📊 ${d.scale}</span>`:''}${d.seasonal?`<span class="scale">🌱 ${d.seasonal}</span>`:''}</td>
+      <td class="col-source">${d.srcName||'—'}<br>${d.date||''}</td>
+      <td class="col-score">${d.score}<br><span class="lv ${d.level}">${LV[d.level]}</span></td>
+    </tr>`;
+  });
+  feed.insertAdjacentHTML('beforeend',`
+    <table class="leadtable">
+      <thead><tr>
+        <th>企业/项目</th><th>所在区县</th><th>地址/联系人</th>
+        <th>建议联系理由</th><th>信源</th><th>权重</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`);
+}
+
+function renderSafety(){
+  // 安全事件独立表
+  feed.innerHTML='';
+  if(!SAFETY.length){
+    feed.innerHTML='<div class="empty" style="display:block">今日暂无安全事件预警</div>';
+    return;
+  }
+  const sorted = SAFETY.slice().sort((a,b)=>b.score-a.score);
+  const urgent = sorted.filter(d=>d.score>=60).length;
+  feed.insertAdjacentHTML('beforeend',`
+    <div class="alert-banner">
+      <div class="ic">⚠️</div>
+      <div class="tx">安全事件预警</div>
+      <div class="ct">共 <b>${sorted.length}</b> 条 · <b>${urgent}</b> 条紧急（≥60）</div>
+    </div>`);
+  const groups=groupByDate(sorted);
+  groups.forEach(g=>{
+    const wd=weekday(g.sort);
+    feed.insertAdjacentHTML('beforeend',`<div class="day-group"><div class="day-head"><span class="date">${g.date}</span>${wd?`<span class="weekday">${wd}</span>`:''}<span class="count">${g.items.length} 条</span></div></div>`);
+    const grp=feed.lastElementChild;
+    g.items.forEach(d=>{
+      const sc = d.score;
+      const isUrgent = sc>=60;
+      grp.insertAdjacentHTML('beforeend',`
+        <article class="card ${d.level}">
+          <div class="time-col">
+            <div class="date">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}</div>
+            <div class="sub-region">${d.subRegion||d.region||''}</div>
+            ${isUrgent?'<span class="tag-urgent">紧急</span>':''}
+            <div class="dot"></div>
+          </div>
+          <div class="body">
+            <div class="meta">
+              <span class="src-cat ${d.src}">${d.src}</span>
+              <span class="ch 安全">安全</span>
+              <span class="src-name">${d.srcName}</span>
+              ${d.warn?'<span class="warn">待核实</span>':''}
+              <span class="score">${d.score}</span>
+            </div>
+            <h2 class="title"><a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a></h2>
+            <div class="summary">${d.summary}</div>
+            <div class="tags">${(d.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+            <div class="reason">
+              <span class="rlevel ${d.level}">${LV[d.level]}</span>
+              <span class="rtext">${d.reason}</span>
+            </div>
+          </div>
+        </article>`);
+    });
+  });
+}
+
 function renderDaily(){
+  // 既有日报逻辑，保留
   const red=DATA.filter(d=>d.level==='red').sort((a,b)=>b.sort.localeCompare(a.sort));
   const orange=DATA.filter(d=>d.level==='orange').sort((a,b)=>b.sort.localeCompare(a.sort));
   const green=DATA.filter(d=>d.level==='green').sort((a,b)=>b.sort.localeCompare(a.sort));
@@ -309,6 +434,8 @@ function renderDaily(){
         <div class="stat red"><b>${red.length}</b> 红线</div>
         <div class="stat orange"><b>${orange.length}</b> 重点</div>
         <div class="stat green"><b>${green.length}</b> 一般</div>
+        <div class="stat"><b>${LEADS.length}</b> 电商线索</div>
+        <div class="stat"><b>${SAFETY.length}</b> 安全事件</div>
         <div class="stat"><b>${total}</b> 全量信源</div>
       </div>
     </div>`);
@@ -321,7 +448,7 @@ function renderDaily(){
         <span class="ix">${String(i+1).padStart(2,'0')}</span>
         <div class="it">
           <a href="${urlFor(d)}" target="_blank" rel="noopener"><b>${d.title}</b></a>
-          <span class="src">${d.date} · ${d.src} · ${d.srcName} · ${sc} 分</span>
+          <span class="src">${d.date} · ${d.src} · ${d.srcName} · ${sc} 分${d.subRegion?' · '+d.subRegion:''}</span>
           <div class="action">${d.action||d.reason}</div>
         </div>
         <span class="lvl ${d.level}">${LV[d.level]}</span>
@@ -350,7 +477,8 @@ function renderDaily(){
 
 function render(){
   if(curView==='daily'){renderDaily();return;}
-  if(curView==='topic'){feed.innerHTML='<div class="empty" style="display:block">主题归档（开发中）</div>';return;}
+  if(curView==='ecom'){renderEcom();return;}
+  if(curView==='safety'){renderSafety();return;}
   if(curView==='fav'){feed.innerHTML='<div class="empty" style="display:block">暂无收藏</div>';return;}
   if(curView==='agent'){feed.innerHTML='<div class="empty" style="display:block">Agent 接入待上线</div>';return;}
   renderList();
@@ -369,7 +497,7 @@ const doSearch=()=>{curQ=document.getElementById('search').value.trim();render()
 document.getElementById('searchBtn').addEventListener('click',doSearch);
 document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
 
-setTopTitle(); render();
+updateBadges(); setTopTitle(); render();
 </script>
 </body>
 </html>

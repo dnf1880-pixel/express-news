@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-07-22",
-  "note": "信源管理配置。官方RSS/核心渠道为直连（自动化抓取时直接 fetch），其余为 WebSearch 聚合。权重模式固定不变（v1）。",
+  "note": "信源管理配置。官方RSS/核心渠道为直连（自动化抓取时直接 fetch），其余为 WebSearch 聚合（含 43 区县动态检索）。权重模式固定不变（v1）。",
   "weightModel": {
     "axes": { "G": "地域相关度", "B": "业务影响面", "P": "政策监管强度", "C": "竞争态势", "T": "时效紧迫度" },
     "weights": { "G": 0.28, "B": 0.26, "P": 0.20, "C": 0.14, "T": 0.12 },
@@ -13,7 +13,7 @@
       "id": "official",
       "label": "官方 RSS / 核心渠道（直连）",
       "mode": "direct",
-      "desc": "约束轨：可靠保底线。自动化抓取时直接 fetch 这些源，取真实 URL 与发布时间。",
+      "desc": "约束轨：可靠保底线。",
       "items": [
         { "name": "国家邮政局", "type": "website", "url": "https://www.spb.gov.cn/", "scope": "全国", "desc": "行业政策、全国业务量、反内卷定调" },
         { "name": "湖北省邮政管理局", "type": "website", "url": "https://hb.spb.gov.cn/", "scope": "湖北", "desc": "省局会议、专项整治、进村部署" },
@@ -31,16 +31,37 @@
       ]
     },
     {
+      "id": "region",
+      "label": "43 区县细分检索（动态生成）",
+      "mode": "websearch-dynamic",
+      "desc": "43 个下属分公司覆盖区，由 generate_queries.mjs 读 regions.json 动态生成 {城市}×{关键词模板} 检索矩阵，每日全量跑一遍。",
+      "regionsFile": "regions.json",
+      "queryGenerator": "generate_queries.mjs",
+      "templates": [
+        { "id": "mail-admin", "label": "邮管/质量/投诉", "query": "{alias} 邮政管理局 快递 服务质量 投诉 通报 网点", "channel": "资讯" },
+        { "id": "branch-move", "label": "网点转让/异动", "query": "{alias} 中通 圆通 兔喜 转让 招聘 网点 急转", "channel": "资讯" },
+        { "id": "last-mile", "label": "末端/派送", "query": "{alias} 快递 末端 派送 驿站 共配", "channel": "资讯" },
+        { "id": "weather", "label": "异常天气/封路", "query": "{alias} 暴雨 暴雪 大雾 高速封路 交通管制", "channel": "安全" },
+        { "id": "safety", "label": "安全/火灾/事故", "query": "{alias} 快递 物流 火灾 事故 安全 应急", "channel": "安全" },
+        { "id": "ecom-park", "label": "电商产业园/新开", "query": "{alias} 电商 产业园 快递 仓储 开园 签约", "channel": "电商" },
+        { "id": "ecom-seasonal", "label": "季节性水果/寄递", "query": "{alias} 水果 上市 寄递 橙子 蜜橘 猕猴桃 葡萄 直播", "channel": "电商" },
+        { "id": "ecom-newbiz", "label": "新签约/搬迁/扩产", "query": "{alias} 工厂 开业 搬迁 扩产 投产 总部 仓", "channel": "电商" }
+      ]
+    },
+    {
       "id": "aggregate",
-      "label": "WebSearch 聚合（开放轨）",
+      "label": "WebSearch 聚合（开放轨·市域级）",
       "mode": "websearch",
-      "desc": "开放轨：广撒网保不遗漏。自动化用 WebSearch 按模板检索，单点重大信号标「待核实」不单独升级红线。",
+      "desc": "市域级兜底，主要用于全国/湖北级事件。",
       "items": [
-        { "name": "分市县细分检索", "type": "search", "coverage": ["荆州", "荆门", "宜昌", "恩施", "潜江", "京山", "洪湖"], "query": "{city} 邮政管理局 快递 服务质量 投诉 通报 网点", "desc": "确保不遗漏县域事件" },
-        { "name": "网点转让/用工", "type": "search", "coverage": ["荆门", "荆州", "宜昌", "恩施", "潜江"], "query": "{city} 中通 圆通 兔喜 转让 招聘 网点", "desc": "捕捉网点异动信号" },
-        { "name": "快递黄页/地图", "type": "search", "query": "{city} 快递网点 派送 异常 黄页", "desc": "末端运力变化" },
-        { "name": "本地论坛/政务舆情", "type": "search", "query": "{city} 快递 投诉 物流 微博 贴吧 舆情", "desc": "民间真实反馈" }
+        { "name": "快递黄页/地图", "type": "search", "query": "{city} 快递网点 派送 异常 黄页" },
+        { "name": "本地论坛/政务舆情", "type": "search", "query": "{city} 快递 投诉 物流 微博 贴吧 舆情" }
       ]
     }
-  ]
+  ],
+  "channels": {
+    "资讯": "快递行业资讯（与现有 DATA 资讯流融合）",
+    "电商": "潜在客户新增线索（独立《每日电商线索》视图）",
+    "安全": "安全类事件（异常天气、高速封堵、火灾事故；与资讯流融合但带 🔴 标记）"
+  }
 }
