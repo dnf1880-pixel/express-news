@@ -1,0 +1,46 @@
+{
+  "updatedAt": "2026-07-22",
+  "note": "信源管理配置。官方RSS/核心渠道为直连（自动化抓取时直接 fetch），其余为 WebSearch 聚合。权重模式固定不变（v1）。",
+  "weightModel": {
+    "axes": { "G": "地域相关度", "B": "业务影响面", "P": "政策监管强度", "C": "竞争态势", "T": "时效紧迫度" },
+    "weights": { "G": 0.28, "B": 0.26, "P": 0.20, "C": 0.14, "T": 0.12 },
+    "formula": "W = round(20 × Σ(轴分ᵢ × 权重ᵢ))，范围 0–100",
+    "thresholds": { "red": 75, "orange": 55, "green": 0 },
+    "legend": "🔴 红线 ≥75 ｜ 🟠 重点 55–75 ｜ 🟢 一般 <55"
+  },
+  "categories": [
+    {
+      "id": "official",
+      "label": "官方 RSS / 核心渠道（直连）",
+      "mode": "direct",
+      "desc": "约束轨：可靠保底线。自动化抓取时直接 fetch 这些源，取真实 URL 与发布时间。",
+      "items": [
+        { "name": "国家邮政局", "type": "website", "url": "https://www.spb.gov.cn/", "scope": "全国", "desc": "行业政策、全国业务量、反内卷定调" },
+        { "name": "湖北省邮政管理局", "type": "website", "url": "https://hb.spb.gov.cn/", "scope": "湖北", "desc": "省局会议、专项整治、进村部署" },
+        { "name": "荆州市邮政管理局", "type": "website", "url": "https://www.jingzhou.gov.cn/", "scope": "荆州", "desc": "荆州辖区安全/质量整治" },
+        { "name": "宜昌市邮政管理局", "type": "website", "url": "https://www.yichang.gov.cn/", "scope": "宜昌", "desc": "宜昌物流园/末端" },
+        { "name": "恩施州邮政管理局", "type": "website", "url": "https://www.enshi.gov.cn/", "scope": "恩施", "desc": "恩施物流园/寄递" },
+        { "name": "荆门市邮政管理局", "type": "website", "url": "https://www.jingmen.gov.cn/", "scope": "荆门", "desc": "荆门网点异动" },
+        { "name": "潜江市邮政管理局", "type": "website", "url": "https://www.hbqj.gov.cn/", "scope": "潜江", "desc": "潜江进村/示范区" },
+        { "name": "圆通速递公告", "type": "website", "url": "https://www.yto.net.cn/", "scope": "公司", "desc": "业绩预告/投资者关系" },
+        { "name": "鄂州花湖机场", "type": "website", "url": "https://www.huahuairport.com/", "scope": "湖北", "desc": "货运枢纽动态" },
+        { "name": "国务院新闻办", "type": "website", "url": "http://www.scio.gov.cn/", "scope": "全国", "desc": "枢纽集群等重大发布" },
+        { "name": "财联社", "type": "rss", "url": "https://www.cls.cn/", "scope": "媒体", "desc": "快递/物流快讯" },
+        { "name": "每日经济新闻", "type": "rss", "url": "https://www.nbd.com.cn/", "scope": "媒体", "desc": "行业深度" },
+        { "name": "极目新闻", "type": "rss", "url": "https://www.jimu.com/", "scope": "湖北媒体", "desc": "湖北本地快递事件" }
+      ]
+    },
+    {
+      "id": "aggregate",
+      "label": "WebSearch 聚合（开放轨）",
+      "mode": "websearch",
+      "desc": "开放轨：广撒网保不遗漏。自动化用 WebSearch 按模板检索，单点重大信号标「待核实」不单独升级红线。",
+      "items": [
+        { "name": "分市县细分检索", "type": "search", "coverage": ["荆州", "荆门", "宜昌", "恩施", "潜江", "京山", "洪湖"], "query": "{city} 邮政管理局 快递 服务质量 投诉 通报 网点", "desc": "确保不遗漏县域事件" },
+        { "name": "网点转让/用工", "type": "search", "coverage": ["荆门", "荆州", "宜昌", "恩施", "潜江"], "query": "{city} 中通 圆通 兔喜 转让 招聘 网点", "desc": "捕捉网点异动信号" },
+        { "name": "快递黄页/地图", "type": "search", "query": "{city} 快递网点 派送 异常 黄页", "desc": "末端运力变化" },
+        { "name": "本地论坛/政务舆情", "type": "search", "query": "{city} 快递 投诉 物流 微博 贴吧 舆情", "desc": "民间真实反馈" }
+      ]
+    }
+  ]
+}

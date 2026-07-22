@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信源管理 · 每日快递资讯</title>
+<style>
+  :root{ --bg:#0D0D1A; --panel:#16162A; --panel2:#1E1E38; --line:#2A2A45;
+    --txt:#E8E8F2; --sub:#9A9AC0; --purple:#B14EFF; --pink:#FF4EC7; --blue:#3DA9FC;
+    --red:#FF4757; --orange:#FFA640; --green:#2ED573; --gold:#FFD166; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.6;padding:32px 16px}
+  .wrap{max-width:920px;margin:0 auto}
+  h1{font-size:26px;background:linear-gradient(90deg,var(--purple),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:4px}
+  .sub{color:var(--sub);font-size:13px;margin-bottom:24px}
+  a{color:var(--purple)}
+  /* 门禁 */
+  #gate{max-width:380px;margin:12vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center}
+  #gate h2{font-size:20px;margin-bottom:8px}
+  #gate p{color:var(--sub);font-size:13px;margin-bottom:16px}
+  #pwd{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--txt);font-size:15px;margin-bottom:12px}
+  #ok{padding:11px 22px;border:none;border-radius:10px;background:linear-gradient(90deg,var(--purple),var(--pink));color:#fff;font-size:15px;cursor:pointer;font-weight:600}
+  #err{color:var(--red);font-size:12px;min-height:16px;margin-top:10px}
+  /* 卡片 */
+  .sec{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .sec h2{font-size:17px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .sec .desc{color:var(--sub);font-size:12.5px;margin-bottom:14px}
+  .badge{font-size:11px;padding:2px 9px;border-radius:20px;font-weight:600}
+  .b-direct{background:rgba(61,169,252,.16);color:var(--blue)}
+  .b-search{background:rgba(255,78,199,.16);color:var(--pink)}
+  .src{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+  .src:first-of-type{border-top:none}
+  .src .nm{font-weight:600;font-size:14.5px}
+  .src .ds{color:var(--sub);font-size:12px;margin-top:2px}
+  .src .meta{font-size:11px;color:var(--sub);margin-top:3px}
+  .src a{font-size:12px;word-break:break-all}
+  .pill{font-size:10.5px;padding:2px 7px;border-radius:6px;background:var(--panel2);color:var(--sub);margin-right:5px}
+  .wm{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:18px;font-size:13px}
+  .wm code{background:var(--panel2);padding:2px 7px;border-radius:6px;color:var(--gold)}
+  .legend span{margin-right:14px;font-size:13px}
+  .foot{color:var(--sub);font-size:11.5px;margin-top:24px;text-align:center}
+  .back{display:inline-block;margin-bottom:18px;font-size:13px}
+</style>
+</head>
+<body>
+<div id="gate">
+  <h2>🔒 信源管理</h2>
+  <p>请输入访问口令</p>
+  <input id="pwd" type="password" placeholder="口令" autocomplete="off">
+  <br><button id="ok">进入</button>
+  <p id="err"></p>
+</div>
+
+<div id="app" class="wrap" style="display:none">
+  <a class="back" href="index.html">← 返回资讯首页</a>
+  <h1>信源管理</h1>
+  <div class="sub" id="updated"></div>
+  <div class="wm">
+    <b>权重判定机制（固定不变 v1）</b><br>
+    <span id="wm-axes"></span><br>
+    公式：<code id="wm-formula"></code><br>
+    <span class="legend" id="wm-legend"></span>
+  </div>
+  <div id="cats"></div>
+  <div class="foot">⚠ 本页为门禁级保护（前端口令 9527），非服务端鉴权；源码可见口令，仅防误访，不含敏感数据。<br>直连源由自动化抓取时 fetch；聚合源由 WebSearch 按模板检索。</div>
+</div>
+
+<script>
+// 注意：这是展示级门禁，非真安全（口令在前端）。用户指定口令 9527。
+const PWD = '9527';
+document.getElementById('ok').onclick = () => {
+  const v = document.getElementById('pwd').value;
+  if (v === PWD) {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    load();
+  } else {
+    document.getElementById('err').textContent = '口令错误';
+  }
+};
+document.getElementById('pwd').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('ok').click(); });
+
+async function load() {
+  let data;
+  try {
+    const r = await fetch('sources.json', { cache: 'no-store' });
+    data = await r.json();
+  } catch (e) {
+    document.getElementById('cats').innerHTML = '<p style="color:var(--red)">加载 sources.json 失败：' + e.message + '</p>';
+    return;
+  }
+  document.getElementById('updated').textContent = '配置更新于 ' + (data.updatedAt || '—');
+  const wm = data.weightModel || {};
+  document.getElementById('wm-axes').textContent = wm.axes
+    ? Object.entries(wm.axes).map(([k, v]) => `${k}=${v}(${wm.weights?.[k]})`).join('  ')
+    : '';
+  document.getElementById('wm-formula').textContent = wm.formula || '';
+  document.getElementById('wm-legend').textContent = wm.legend || '';
+
+  const box = document.getElementById('cats');
+  box.innerHTML = '';
+  (data.categories || []).forEach(cat => {
+    const sec = document.createElement('div');
+    sec.className = 'sec';
+    const modeBadge = cat.mode === 'direct'
+      ? '<span class="badge b-direct">直连</span>'
+      : '<span class="badge b-search">聚合</span>';
+    let html = `<h2>${modeBadge} ${cat.label}</h2><div class="desc">${cat.desc || ''}</div>`;
+    (cat.items || []).forEach(it => {
+      const cov = it.coverage ? `<div class="meta">覆盖：${it.coverage.map(c => `<span class="pill">${c}</span>`).join('')}</div>` : '';
+      const q = it.query ? `<div class="meta">检索式：<code style="color:var(--gold)">${it.query}</code></div>` : '';
+      const link = it.url ? `<a href="${it.url}" target="_blank" rel="noopener">${it.url}</a>` : '';
+      html += `<div class="src">
+        <div><div class="nm">${it.name}</div><div class="ds">${it.desc || ''}</div>${cov}${q}<div class="meta">类型：${it.type || '—'} ｜ 范围：${it.scope || '—'}</div></div>
+        <div style="text-align:right;min-width:200px">${link}</div>
+      </div>`;
+    });
+    sec.innerHTML = html;
+    box.appendChild(sec);
+  });
+}
+</script>
+</body>
+</html>
