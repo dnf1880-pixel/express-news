@@ -55,12 +55,32 @@
   .tab.active{color:#fff;background:var(--card);font-weight:600}
   .tab[data-cat="电商"]{color:var(--teal)}
   .tab[data-cat="安全"]{color:var(--red)}
+  .tabs-select{display:none;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--txt);padding:7px 28px 7px 12px;font-size:13px;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b93a7' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
   .search-box{display:flex;align-items:center;gap:8px}
   .search-box input{width:180px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--txt);font-size:13px;outline:none}
   .search-box input::placeholder{color:var(--txt-faint)}
   .search-box button{background:var(--grad);border:none;border-radius:8px;color:#fff;padding:7px 16px;font-size:13px;cursor:pointer;font-weight:600}
 
   .content{padding:18px 28px 60px;max-width:1080px}
+
+  /* mobile header & nav */
+  .mobile-header{display:none;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--sidebar);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+  .mobile-header .logo{padding:0;font-size:17px}
+  .mobile-header .menu-btn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--txt);font-size:18px;cursor:pointer}
+  .mobile-nav{display:none;position:fixed;inset:0;background:rgba(11,13,20,.98);z-index:60;flex-direction:column;padding:16px;overflow-y:auto}
+  .mobile-nav.open{display:flex}
+  .mobile-nav .nav-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .mobile-nav .close-btn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--txt);font-size:16px;cursor:pointer}
+  .mobile-nav .nav-sect{margin-top:0;padding:0}
+  .mobile-nav .nav-item{font-size:15px;padding:12px 14px}
+  .mobile-nav .nav-item.active{background:var(--card)}
+  .mobile-nav .nav-item.active::before{display:none}
+  .mobile-nav .nav-item svg{width:20px;height:20px}
+
+  /* favorite */
+  .favorite-btn{width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:transparent;border:1px solid var(--border);border-radius:50%;color:var(--txt-faint);cursor:pointer;transition:.15s;margin-left:auto;flex-shrink:0}
+  .favorite-btn:hover,.favorite-btn.active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,66,.1)}
+  .favorite-btn svg{width:14px;height:14px;fill:currentColor}
 
   /* day group */
   .day-group{margin-bottom:32px}
@@ -95,7 +115,7 @@
   .src-name a:hover{border-bottom-color:var(--accent);color:var(--accent)}
   .featured{font-size:10.5px;padding:1px 7px;border-radius:4px;background:rgba(245,197,66,.14);color:var(--gold);border:1px solid rgba(245,197,66,.35);font-weight:600}
   .warn{font-size:10.5px;padding:1px 7px;border-radius:4px;background:rgba(255,71,87,.16);color:#ff8a96;border:1px solid rgba(255,71,87,.4);font-weight:600}
-  .score{margin-left:auto;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
+  .score{margin-left:0;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
   .score::before{content:"";width:7px;height:7px;border-radius:50%;display:inline-block}
   .card.red .score{color:var(--red)}.card.red .score::before{background:var(--red)}
   .card.orange .score{color:var(--orange)}.card.orange .score::before{background:var(--orange)}
@@ -156,11 +176,21 @@
 
   @media(max-width:900px){
     .sidebar{display:none}
-    .topbar{padding:12px 16px;flex-wrap:wrap}
-    .tabs{order:3;width:100%;margin-top:8px}
-    .content{padding:16px}
+    .mobile-header{display:flex}
+    .topbar{position:sticky;top:57px;padding:12px 16px;flex-wrap:wrap;gap:10px;align-items:flex-start}
+    .topbar h1{width:100%;font-size:17px;display:flex;flex-direction:column;gap:2px}
+    .topbar .sub{margin-left:0;font-size:11px}
+    .tabs{display:none}
+    .tabs-select{display:block;order:2;min-width:110px;flex-shrink:0}
+    .search-box{order:3;width:100%}
+    .search-box input{flex:1;width:auto}
+    .content{padding:12px 16px 40px}
+    .card{grid-template-columns:60px 1fr}
+    .time-col{padding:12px 2px}
+    .body{padding:12px 14px}
     .leadtable{font-size:12px}
     .leadtable th,.leadtable td{padding:8px 6px}
+    .leadtable .col-contact,.leadtable .col-source{display:none}
   }
 </style>
 </head>
@@ -191,7 +221,7 @@
     </div>
     <div class="nav-item" data-view="fav">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-      收藏
+      收藏 <span class="badge" id="badgeFav">0</span>
     </div>
   </div>
   <div class="nav-sect">
@@ -205,6 +235,23 @@
 </aside>
 
 <div class="main">
+  <header class="mobile-header">
+    <div class="logo"><span class="dot"></span>快递资讯<span style="color:var(--txt-dim);font-weight:400">·鄂西</span></div>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="nav-head">
+      <div class="logo"><span class="dot"></span>快递资讯·鄂西</div>
+      <button class="close-btn" id="closeNav" aria-label="关闭">✕</button>
+    </div>
+    <div class="nav-sect" id="mobileNavItems"></div>
+    <div class="nav-sect">
+      <div class="tit">接入</div>
+      <a class="nav-item" href="sources.html">🔧 信源管理</a>
+    </div>
+  </nav>
+
   <header class="topbar" id="topbar">
     <h1 id="topTitle">精选 <span class="sub" id="topSub">2026年7月22日星期三 · 权重分≥65 的高价值内容</span></h1>
     <div class="tabs" id="tabs">
@@ -216,6 +263,15 @@
       <div class="tab" data-cat="安全">安全</div>
       <div class="tab" data-cat="其他">其他</div>
     </div>
+    <select class="tabs-select" id="tabsSelect" aria-label="分类筛选">
+      <option value="全部">全部</option>
+      <option value="行业">行业</option>
+      <option value="湖北">湖北</option>
+      <option value="荆州辖区">荆州辖区</option>
+      <option value="电商">电商</option>
+      <option value="安全">安全</option>
+      <option value="其他">其他</option>
+    </select>
     <div class="search-box">
       <input id="search" placeholder="搜索标题/摘要/正文…">
       <button id="searchBtn">搜索</button>
@@ -248,32 +304,96 @@ function weekday(sort){
 function urlFor(d){return d.url?d.url:'https://www.baidu.com/s?wd='+encodeURIComponent(d.title);}
 
 const DATA = __DATA__;
-const LEADS = __LEADS__;  // 电商线索独立表
-const SAFETY = __SAFETY__;  // 安全事件独立表
+const LEADS = __LEADS__;
+const SAFETY = __SAFETY__;
 
 const LV = {red:'红线',orange:'重点',green:'一般'};
 let curView='featured', curCat='全部', curQ='';
 const feed=document.getElementById('feed'), empty=document.getElementById('empty');
-const tabs=document.getElementById('tabs');
+const tabs=document.getElementById('tabs'), tabsSelect=document.getElementById('tabsSelect');
 const topTitle=document.getElementById('topTitle'), topSub=document.getElementById('topSub');
+const mobileNav=document.getElementById('mobileNav'), mobileNavItems=document.getElementById('mobileNavItems');
 
-// 侧边栏徽章
+// favorites
+const FAV_KEY='express_news_favs_v1';
+function favId(d){return d.sort+'|'+d.title;}
+function readFavs(){try{return JSON.parse(localStorage.getItem(FAV_KEY)||'[]');}catch(e){return [];}}
+function writeFavs(arr){localStorage.setItem(FAV_KEY,JSON.stringify(arr));}
+let favs=readFavs();
+function isFav(d){return favs.includes(favId(d));}
+function toggleFav(d){
+  const id=favId(d);
+  favs = favs.includes(id) ? favs.filter(x=>x!==id) : [...favs,id];
+  writeFavs(favs);
+  updateBadges();
+  render();
+}
+function setFavBtn(btn, active){
+  btn.classList.toggle('active', active);
+  btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+}
+
+// mobile nav
+const VIEW_DEFS=[
+  {k:'featured',l:'精选',b:'badgeFeatured'},
+  {k:'all',l:'全部快递动态',b:'badgeAll'},
+  {k:'daily',l:'快递日报'},
+  {k:'ecom',l:'每日电商线索',b:'badgeEcom'},
+  {k:'safety',l:'安全事件预警',b:'badgeSafety'},
+  {k:'fav',l:'收藏',b:'badgeFav'},
+  {k:'agent',l:'Agent 接入'}
+];
+function buildMobileNav(){
+  mobileNavItems.innerHTML=VIEW_DEFS.map(v=>{
+    const badge=v.b?`<span class="badge" data-badge="${v.b}">0</span>`:'';
+    return `<div class="nav-item" data-view="${v.k}">${v.l}${badge}</div>`;
+  }).join('');
+  mobileNavItems.querySelectorAll('.nav-item').forEach(n=>n.addEventListener('click',()=>{
+    mobileNav.classList.remove('open');
+    switchView(n.dataset.view);
+  }));
+}
+function switchView(view){
+  curView=view;
+  if(curView==='fav'){curCat='全部';setTab('全部');}
+  setActiveNav(curView);
+  setTopTitle();
+  render();
+}
+function setActiveNav(view){
+  document.querySelectorAll('.nav-item[data-view]').forEach(x=>x.classList.toggle('active', x.dataset.view===view));
+}
+function setTab(cat){
+  curCat=cat;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.cat===cat));
+  if(tabsSelect) tabsSelect.value=cat;
+}
+
 function updateBadges(){
-  document.getElementById('badgeFeatured').textContent = DATA.filter(d=>comp(d.s)>=65 && !d.warn).length;
-  document.getElementById('badgeAll').textContent = DATA.length;
-  document.getElementById('badgeEcom').textContent = LEADS.length;
-  document.getElementById('badgeSafety').textContent = SAFETY.length;
+  const featured=DATA.filter(d=>comp(d.s)>=65 && !d.warn).length;
+  document.getElementById('badgeFeatured').textContent=featured;
+  document.getElementById('badgeAll').textContent=DATA.length;
+  document.getElementById('badgeEcom').textContent=LEADS.length;
+  document.getElementById('badgeSafety').textContent=SAFETY.length;
+  document.getElementById('badgeFav').textContent=favs.length;
+  if(mobileNavItems){
+    mobileNavItems.querySelectorAll('[data-badge]').forEach(b=>{
+      const id=b.dataset.badge;
+      const el=document.getElementById(id);
+      if(el) b.textContent=el.textContent;
+    });
+  }
 }
 
 function setTopTitle(){
   const today='2026年7月22日星期三';
-  if(curView==='featured'){topTitle.firstChild.textContent='精选 ';topSub.textContent=today+' · 权重分≥65 且已核实';tabs.style.display='';}
-  else if(curView==='all'){topTitle.firstChild.textContent='全部快递动态 ';topSub.textContent=today+' · 抓取所有相关联动态（按真实发生日排序）';tabs.style.display='';}
-  else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=today+' · 本期重点总结';tabs.style.display='none';}
-  else if(curView==='ecom'){topTitle.firstChild.textContent='每日电商线索 ';topSub.textContent=today+' · 43 区县潜在客户新增（地址/联系人/体量/理由）';tabs.style.display='none';}
-  else if(curView==='safety'){topTitle.firstChild.textContent='安全事件预警 ';topSub.textContent=today+' · 异常天气/高速封堵/火灾事故';tabs.style.display='none';}
-  else if(curView==='fav'){topTitle.firstChild.textContent='收藏 ';topSub.textContent='收藏的资讯';tabs.style.display='';}
-  else if(curView==='agent'){topTitle.firstChild.textContent='Agent 接入 ';topSub.textContent='自动化接入入口（待上线）';tabs.style.display='none';}
+  if(curView==='featured'){topTitle.firstChild.textContent='精选 ';topSub.textContent=today+' · 权重分≥65 且已核实';tabs.style.display='';tabsSelect.style.display='';}
+  else if(curView==='all'){topTitle.firstChild.textContent='全部快递动态 ';topSub.textContent=today+' · 抓取所有相关联动态（按真实发生日排序）';tabs.style.display='';tabsSelect.style.display='';}
+  else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=today+' · 本期重点总结';tabs.style.display='none';tabsSelect.style.display='none';}
+  else if(curView==='ecom'){topTitle.firstChild.textContent='每日电商线索 ';topSub.textContent=today+' · 43 区县潜在客户新增（地址/联系人/体量/理由）';tabs.style.display='none';tabsSelect.style.display='none';}
+  else if(curView==='safety'){topTitle.firstChild.textContent='安全事件预警 ';topSub.textContent=today+' · 异常天气/高速封堵/火灾事故';tabs.style.display='none';tabsSelect.style.display='none';}
+  else if(curView==='fav'){topTitle.firstChild.textContent='收藏 ';topSub.textContent='有价值的新闻 · 本地保存';tabs.style.display='none';tabsSelect.style.display='none';}
+  else if(curView==='agent'){topTitle.firstChild.textContent='Agent 接入 ';topSub.textContent='自动化接入入口（待上线）';tabs.style.display='none';tabsSelect.style.display='none';}
 }
 
 function groupByDate(list){
@@ -285,6 +405,7 @@ function groupByDate(list){
 function renderList(){
   let list=DATA.slice();
   if(curView==='featured') list=list.filter(d=>comp(d.s)>=65 && !d.warn);
+  else if(curView==='fav') list=list.filter(isFav);
   if(curCat!=='全部') list=list.filter(d=>d.cat===curCat || d.channel===curCat);
   if(curQ){const q=curQ.toLowerCase();list=list.filter(d=>(d.title+(d.summary||'')+(d.reason||'')+d.tags.join('')+(d.region||'')+d.srcName).toLowerCase().includes(q));}
   const groups=groupByDate(list);
@@ -302,6 +423,7 @@ function renderList(){
       let axhtml='';
       AXES.forEach(a=>{const v=d.s[a.k];const pct=Math.round(v/5*100);axhtml+=`<div class="ax"><span>${a.n}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`;});
       const chBadge = d.channel && d.channel!=='资讯' ? `<span class="ch ${d.channel}">${d.channel}</span>` : '';
+      const favActive = isFav(d);
       grp.insertAdjacentHTML('beforeend',`
         <article class="card ${d.level}">
           <div class="time-col">
@@ -316,6 +438,9 @@ function renderList(){
               ${chBadge}
               <span class="src-name">${d.srcName}</span>
               ${d.warn?'<span class="warn">待核实</span>':''}
+              <button class="favorite-btn ${favActive?'active':''}" data-favid="${encodeURIComponent(favId(d))}" aria-label="收藏" aria-pressed="${favActive?'true':'false'}">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </button>
               <span class="score">${sc}</span>
             </div>
             <h2 class="title"><a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a></h2>
@@ -333,7 +458,6 @@ function renderList(){
 }
 
 function renderEcom(){
-  // 电商线索独立表
   feed.innerHTML='';
   if(!LEADS.length){
     feed.innerHTML='<div class="empty" style="display:block">今日暂无新增电商线索</div>';
@@ -367,7 +491,6 @@ function renderEcom(){
 }
 
 function renderSafety(){
-  // 安全事件独立表
   feed.innerHTML='';
   if(!SAFETY.length){
     feed.innerHTML='<div class="empty" style="display:block">今日暂无安全事件预警</div>';
@@ -419,7 +542,6 @@ function renderSafety(){
 }
 
 function renderDaily(){
-  // 既有日报逻辑，保留
   const red=DATA.filter(d=>d.level==='red').sort((a,b)=>b.sort.localeCompare(a.sort));
   const orange=DATA.filter(d=>d.level==='orange').sort((a,b)=>b.sort.localeCompare(a.sort));
   const green=DATA.filter(d=>d.level==='green').sort((a,b)=>b.sort.localeCompare(a.sort));
@@ -479,23 +601,32 @@ function render(){
   if(curView==='daily'){renderDaily();return;}
   if(curView==='ecom'){renderEcom();return;}
   if(curView==='safety'){renderSafety();return;}
-  if(curView==='fav'){feed.innerHTML='<div class="empty" style="display:block">暂无收藏</div>';return;}
   if(curView==='agent'){feed.innerHTML='<div class="empty" style="display:block">Agent 接入待上线</div>';return;}
   renderList();
 }
 
 // nav
-document.querySelectorAll('.nav-item').forEach(n=>n.addEventListener('click',()=>{
-  document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
-  n.classList.add('active');
-  curView=n.dataset.view; setTopTitle(); render();
-}));
+document.querySelectorAll('.sidebar .nav-item[data-view]').forEach(n=>n.addEventListener('click',()=>switchView(n.dataset.view)));
+buildMobileNav();
+document.getElementById('menuBtn').addEventListener('click',()=>mobileNav.classList.add('open'));
+document.getElementById('closeNav').addEventListener('click',()=>mobileNav.classList.remove('open'));
+mobileNav.addEventListener('click',e=>{if(e.target===mobileNav) mobileNav.classList.remove('open');});
 // tabs
-tabs.addEventListener('click',e=>{if(!e.target.classList.contains('tab'))return;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));e.target.classList.add('active');curCat=e.target.dataset.cat;render();});
+tabs.addEventListener('click',e=>{if(!e.target.classList.contains('tab'))return;setTab(e.target.dataset.cat);render();});
+if(tabsSelect) tabsSelect.addEventListener('change',e=>{setTab(e.target.value);render();});
 // search
 const doSearch=()=>{curQ=document.getElementById('search').value.trim();render();};
 document.getElementById('searchBtn').addEventListener('click',doSearch);
 document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
+// favorite delegation
+feed.addEventListener('click',e=>{
+  const btn=e.target.closest('.favorite-btn');
+  if(!btn) return;
+  e.preventDefault();
+  const key=decodeURIComponent(btn.dataset.favid);
+  const d=DATA.find(x=>favId(x)===key);
+  if(d) toggleFav(d);
+});
 
 updateBadges(); setTopTitle(); render();
 </script>
