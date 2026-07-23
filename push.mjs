@@ -5,6 +5,7 @@
 import { execSync } from 'child_process';
 
 const date = process.argv[2] || new Date().toISOString().slice(0, 10);
+const message = process.argv[3] || `每日刷新 ${date}`;
 const MAX = 5;
 const WAIT = 60000; // 1 分钟
 
@@ -27,8 +28,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   catch (e) { changed = true; }
   if (changed) {
     try {
-      exec(`git commit -m "每日刷新 ${date}"`);
-      console.log(`✓ commit: 每日刷新 ${date}`);
+      exec(`git commit -m "${message}"`);
+      console.log(`✓ commit: ${message}`);
     } catch (e) {
       console.log('⚠ commit 失败，继续尝试 push');
     }
