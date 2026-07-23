@@ -42,11 +42,31 @@ function fmtDate(d, fallbackDate) {
   return { date: `${mo}月${da}日`, sort: fb, warn: true };
 }
 
+// 内容相关性判定：党政宣传/文体活动/纯农业招商 无核心业务词则判为不相关
+const CORE_KWS = ['快递', '物流', '寄递', '邮政', '快件', '包裹', '网点', '分拣', '转运', '干线', '末端', '派送', '揽收', '时效', '投递', '邮管', '客货邮', '进村', '出海', '冷链', '跨境'];
+const BIZ_KWS = ['整治', '通报', '投诉', '质量', '安全', '消防', '隐患', '调度', '监管', '政策', '标准', '电商', '直播', '产业带', '水果', '生鲜', '农产品', '村播', '招商', '物流园', '产业园', '基地', '项目'];
+const COMP_KWS = ['圆通', '顺丰', '京东', '中通', '韵达', '极兔', '申通', '德邦', '菜鸟', '丰巢'];
+const NOISE_KWS = ['党建', '党', '支部', '党员', '跟党走', '学习', '贯彻', '精神', '文明', '道德', '典型', '礼遇', '表彰', '工会', '团委', '团建', '志愿者', '志愿服务', '宣讲', '读书', '文化', '体育', '篮球', '足球', '比赛', '运动会', '文艺', '汇演', '演讲', '征文', '竞赛', '扶贫', '振兴', '乡村', '三农', '农业招商', '农业发展', '德者有得'];
+const STRONG_EXEMPT_KWS = [...CORE_KWS, ...COMP_KWS, '安全', '整治', '消防', '隐患', '监管', '通报', '投诉', '质量'];
+
+function has(t, kws) { return kws.some(k => t.includes(k)); }
+function isRelevantNews(title = '', body = '') {
+  const t = title + ' ' + body;
+  const hasCore = has(t, CORE_KWS);
+  const hasBiz = has(t, BIZ_KWS);
+  const hasComp = has(t, COMP_KWS);
+  const hasNoise = has(t, NOISE_KWS);
+  // 党政/文体/纯农业招商等强噪音，必须同时含核心物流/安全/竞争词才算相关
+  if (hasNoise && !(hasCore || hasComp || has(t, STRONG_EXEMPT_KWS))) return false;
+  return hasCore || hasBiz || hasComp;
+}
+
 // 清理明显非新闻的噪音条目
 function isNoiseTitle(title = '') {
   const t = title.toLowerCase();
   return /京公网安备|备案号|icp|版权所有|©|all rights reserved|隐私政策|用户协议|网站地图|联系我们/.test(t);
 }
+
 
 function normalizeEntryDate(n) {
   if (n.sort && /^\d{4}-\d{2}-\d{2}$/.test(n.sort) && n.sort !== '0000-00-00') {
@@ -121,11 +141,13 @@ function srcNameFor(item) {
 const newNews = staging.news
   .filter(x => (x.score >= 65) && inTargetRegion(x.region, x.subRegion) && !existingUrls.has(x.url))
   .filter(x => !isNoiseTitle(x.title))
+  .filter(x => isRelevantNews(x.title, x.snippet || x.summary))
   .filter(x => {
     const sort = parseDate(x.date);
     return sort && sort >= '2026-07-15';
   })
   .slice(0, 15);
+
 
 for (const x of newNews) {
   const fd = fmtDate(x.date);
@@ -228,8 +250,9 @@ for (const s of existing.safety) {
 }
 
 // === 清理历史噪音 ===
-existing.news = existing.news.filter(x => !isNoiseTitle(x.title));
-existing.safety = existing.safety.filter(x => !isNoiseTitle(x.title));
+existing.news = existing.news.filter(x => !isNoiseTitle(x.title) && isRelevantNews(x.title, x.summary || x.snippet || ''));
+existing.safety = existing.safety.filter(x => !isNoiseTitle(x.title) && isRelevantNews(x.title, x.summary || x.snippet || ''));
+
 
 // === 去重 ===
 function dedup(arr, keyFn) {
