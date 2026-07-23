@@ -2,6 +2,7 @@
 archive/raw-*.json
 archive/staging-*.json
 archive/search-todo.json
+archive/search-results-*.json
 archive/watch-alerts-*.json
 node_modules/
 .DS_Store
