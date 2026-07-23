@@ -59,7 +59,7 @@ function extractItems(html, baseUrl, q) {
       region: q.scope || q.city || (q.region || ''),
       subRegion: q.alias || q.admin || '',
       src: q.source || q.bureau || q.src || '权威',
-      srcName: q.source || q.bureau || q.srcName || q.source || '官方源',
+      srcName: q.source || q.bureau || q.srcName || '官方源',
       srcUrl: baseUrl,
       warn: !dateM,
       stage: 'raw'

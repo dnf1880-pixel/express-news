@@ -1,5 +1,5 @@
 // watch.mjs — v2 核心源看守（13 core 源变更检测，逼近准实时）
-// 轻量运行（13:00/18:00）：仅对 core 源 fetch + 与 archive/last-core.json 比对，新条目 → watch-alerts-<date>.json
+// 轻量运行（13:08 / 18:08，由独立 automation 触发）：仅对 core 源 fetch + 与 archive/last-core.json 比对，新条目 → watch-alerts-<date>.json
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -37,12 +37,12 @@ function extract(html, base) {
   return out;
 }
 
-function main() {
+async function main() {
   const lastPath = join(ARCHIVE, 'last-core.json');
   let last = {}; try { last = JSON.parse(readFileSync(lastPath, 'utf8')); } catch {}
   const alerts = [];
   for (const c of sources.core) {
-    const html = fetchHtml(c.url);
+    const html = await fetchHtml(c.url);
     if (!html) continue;
     const items = extract(html, c.url);
     const prev = new Set(last[c.url] || []);
@@ -61,4 +61,4 @@ function main() {
   console.log(`✓ 看守完成：core ${sources.core.length} 源，新条目 ${alerts.length} 条 → ${ap}`);
   return alerts.length;
 }
-main();
+main().catch(e => { console.error('watch.mjs 失败:', e); process.exit(1); });
