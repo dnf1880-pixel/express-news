@@ -5,3 +5,4 @@ archive/search-todo.json
 archive/watch-alerts-*.json
 node_modules/
 .DS_Store
+.workbuddy/
