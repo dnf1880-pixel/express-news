@@ -36,7 +36,7 @@ function fmtDate(d, fallbackDate) {
     const [y, mo, da] = p.split('-');
     return { date: `${mo}月${da}日`, sort: p, warn: false };
   }
-  // 无法确认真实发生日：用数据抓取时间兜底，warn 标待核实
+  // 无法确认真实发生日：用运行时的系统时间兜底，warn 标待核实
   const fb = fallbackDate || DATE;
   const [y, mo, da] = fb.split('-');
   return { date: `${mo}月${da}日`, sort: fb, warn: true };
@@ -156,6 +156,7 @@ const newLeads = staging.leads
   .slice(0, 10);
 
 for (const x of newLeads) {
+  const fd = fmtDate(x.date);
   existing.leads.push({
     name: x.name || x.title || '待核实',
     biz: x.biz || '待核实',
@@ -169,10 +170,19 @@ for (const x of newLeads) {
     seasonal: x.seasonal || '待核实',
     src: x.src || '检索',
     srcName: srcNameFor(x),
-    date: parseDate(x.date) || '2026-07',
+    url: x.url || `https://www.baidu.com/s?wd=${encodeURIComponent(x.name || x.title || '')}`,
+    date: fd.date,
+    sort: fd.sort,
+    warn: fd.warn,
     score: x.score,
     level: scoreToLevel(x.score)
   });
+}
+
+// === 字段补齐 + 日期规范化（旧条目） ===
+for (const l of existing.leads) {
+  normalizeEntryDate(l);
+  if (!('url' in l)) l.url = `https://www.baidu.com/s?wd=${encodeURIComponent(l.name || '')}`;
 }
 
 // === 新增安全事件 ===

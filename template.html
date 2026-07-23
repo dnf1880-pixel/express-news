@@ -43,6 +43,16 @@
   .nav-item.ecom .badge{background:rgba(38,212,200,.16);color:var(--teal);border:1px solid rgba(38,212,200,.35)}
   .nav-item.safety .badge{background:rgba(255,71,87,.16);color:var(--red);border:1px solid rgba(255,71,87,.4)}
 
+  /* date nav for daily */
+  .date-nav{margin-top:10px}
+  .date-list{display:flex;flex-direction:column;gap:3px;padding:0 8px}
+  .date-item{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-radius:6px;font-size:12px;color:var(--txt-dim);cursor:pointer;transition:.15s}
+  .date-item:hover{background:var(--card);color:var(--txt)}
+  .date-item.active{background:var(--card);color:var(--txt);font-weight:600}
+  .date-item .wd{font-size:10.5px;color:var(--txt-faint)}
+  .date-item.active .wd{color:var(--txt-dim)}
+  #dailyDateSelect{display:none;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--txt);padding:6px 28px 6px 12px;font-size:13px;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b93a7' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;margin-top:12px}
+
   /* main */
   .main{flex:1;min-width:0;display:flex;flex-direction:column}
   .topbar{position:sticky;top:0;z-index:40;background:rgba(11,13,20,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;gap:18px}
@@ -95,7 +105,6 @@
   .time-col{border-right:1px solid var(--border);padding:14px 4px;text-align:center;color:var(--txt-dim);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;justify-content:flex-start;gap:4px;min-height:100%}
   .time-col .date{font-size:13px;font-weight:700;color:var(--txt)}
   .time-col .sub-region{font-size:10.5px;color:var(--txt-faint);line-height:1.3;padding:0 2px;margin-top:2px}
-  .time-col .tag-new{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(245,197,66,.16);color:var(--gold);border:1px solid rgba(245,197,66,.35);font-weight:700;margin-top:4px}
   .time-col .tag-urgent{font-size:9.5px;padding:1px 5px;border-radius:3px;background:rgba(255,71,87,.18);color:var(--red);border:1px solid rgba(255,71,87,.4);font-weight:700;margin-top:4px;animation:pulse 1.5s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
   .time-col .dot{width:6px;height:6px;border-radius:50%;background:var(--border);margin:6px auto 0}
@@ -245,6 +254,7 @@
     .leadtable{font-size:12px}
     .leadtable th,.leadtable td{padding:8px 6px}
     .leadtable .col-contact,.leadtable .col-source{display:none}
+    #dailyDateSelect{display:block;margin:10px auto 0;min-width:180px}
   }
 </style>
 </head>
@@ -278,6 +288,11 @@
       收藏 <span class="badge" id="badgeFav">0</span>
     </div>
   </div>
+  <div class="nav-sect date-nav" id="dateNav">
+    <div class="tit">日报日期</div>
+    <div class="date-list" id="dateList"></div>
+  </div>
+
   <div class="nav-sect">
     <div class="tit">接入</div>
     <div class="nav-item" data-view="agent">
@@ -383,8 +398,9 @@ const LEADS = __LEADS__;
 const SAFETY = __SAFETY__;
 
 const LV = {red:'红线',orange:'重点',green:'一般'};
-let curView='featured', curCat='全部', curQ='';
+let curView='featured', curCat='全部', curQ='', curDailyDate='';
 const feed=document.getElementById('feed'), empty=document.getElementById('empty');
+const dateNav=document.getElementById('dateNav'), dateList=document.getElementById('dateList');
 const tabs=document.getElementById('tabs'), tabsSelect=document.getElementById('tabsSelect');
 const topTitle=document.getElementById('topTitle'), topSub=document.getElementById('topSub');
 const mobileNav=document.getElementById('mobileNav'), mobileNavItems=document.getElementById('mobileNavItems');
@@ -431,8 +447,10 @@ function buildMobileNav(){
 function switchView(view){
   curView=view;
   if(curView==='fav'){curCat='全部';setTab('全部');}
+  if(curView==='daily') initDailyDate();
   setActiveNav(curView);
   setTopTitle();
+  renderDateNav();
   render();
 }
 function setActiveNav(view){
@@ -464,7 +482,7 @@ function setTopTitle(){
   const today='2026年7月22日星期三';
   if(curView==='featured'){topTitle.firstChild.textContent='精选 ';topSub.textContent=today+' · 权重分≥65 且已核实';tabs.style.display='';tabsSelect.style.display='';}
   else if(curView==='all'){topTitle.firstChild.textContent='全部快递动态 ';topSub.textContent=today+' · 抓取所有相关联动态（按真实发生日排序）';tabs.style.display='';tabsSelect.style.display='';}
-  else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=today+' · 本期重点总结';tabs.style.display='none';tabsSelect.style.display='none';}
+  else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=(curDailyDate?fmtChineseDate(curDailyDate):today)+' · 本期重点总结';tabs.style.display='none';tabsSelect.style.display='none';}
   else if(curView==='ecom'){topTitle.firstChild.textContent='每日电商线索 ';topSub.textContent=today+' · 43 区县潜在客户新增（地址/联系人/体量/理由）';tabs.style.display='none';tabsSelect.style.display='none';}
   else if(curView==='safety'){topTitle.firstChild.textContent='安全事件预警 ';topSub.textContent=today+' · 异常天气/高速封堵/火灾事故';tabs.style.display='none';tabsSelect.style.display='none';}
   else if(curView==='fav'){topTitle.firstChild.textContent='收藏 ';topSub.textContent='有价值的新闻 · 本地保存';tabs.style.display='none';tabsSelect.style.display='none';}
@@ -475,6 +493,28 @@ function groupByDate(list){
   const g={}, sortOf={};
   list.forEach(d=>{if(!g[d.date]){g[d.date]=[];sortOf[d.date]=d.sort;}g[d.date].push(d);});
   return Object.keys(g).sort((a,b)=>sortOf[b].localeCompare(sortOf[a])).map(k=>({date:k,sort:sortOf[k],items:g[k]}));
+}
+function getDailyDates(){
+  const set=new Set();
+  DATA.forEach(d=>{if(/^\d{4}-\d{2}-\d{2}$/.test(d.sort)) set.add(d.sort);});
+  return Array.from(set).sort().reverse();
+}
+function renderDateNav(){
+  const dates=getDailyDates();
+  if(curView!=='daily' || !dates.length){dateNav.style.display='none';return;}
+  dateNav.style.display='';
+  dateList.innerHTML=dates.map(s=>{
+    const m=s.match(/-(\d{2})-(\d{2})$/);
+    const label=m?`${+m[1]}月${+m[2]}日`:s;
+    const active=s===curDailyDate;
+    return `<div class="date-item ${active?'active':''}" data-sort="${s}"><span>${label}</span><span class="wd">${weekday(s)}</span></div>`;
+  }).join('');
+  dateList.querySelectorAll('.date-item').forEach(el=>{
+    el.addEventListener('click',()=>{curDailyDate=el.dataset.sort;renderDateNav();render();});
+  });
+}
+function initDailyDate(){
+  if(!curDailyDate) curDailyDate=getDailyDates()[0] || getTodayStr();
 }
 
 function renderList(){
@@ -492,7 +532,6 @@ function renderList(){
     const grp=feed.lastElementChild;
     g.items.forEach(d=>{
       const sc=comp(d.s);
-      const isNew = d.sort>='2026-07-15' && d.sort<='2026-07-22';
       const isUrgent = d.channel==='安全' && sc>=60;
       const subReg = `<div class="sub-region">${d.subRegion || d.region || ''}</div>`;
       let axhtml='';
@@ -504,7 +543,7 @@ function renderList(){
           <div class="time-col">
             <div class="date">${fmtDate(d.sort)}</div>
             ${subReg}
-            ${isUrgent?'<span class="tag-urgent">紧急</span>':isNew?'<span class="tag-new">最新</span>':''}
+            ${isUrgent?'<span class="tag-urgent">紧急</span>':''}
             <div class="dot"></div>
           </div>
           <div class="body">
@@ -544,27 +583,45 @@ function renderEcom(){
   const red=sorted.filter(d=>d.level==='red').length;
   feed.insertAdjacentHTML('beforeend',`
     <div class="lead-toolbar">
-      <div class="info"><b>${sorted.length}</b> 条潜在客户线索 · <b>${red}</b> 条重点跟进<br>按权重重高至低排序 · 同一客户多信号已合并</div>
+      <div class="info"><b>${sorted.length}</b> 条潜在客户线索 · <b>${red}</b> 条重点跟进<br>按日期分组 · 同一客户多信号已合并</div>
     </div>`);
-  let rows='';
-  sorted.forEach(d=>{
-    rows+=`<tr>
-      <td class="col-name"><a href="${urlForLead(d)}" target="_blank" rel="noopener">${d.name}</a>${d.biz?`<div class="biz">${d.biz}</div>`:''}</td>
-      <td class="col-region">${d.region}<span class="tier">${d.tier||''} · ${d.admin||''}</span></td>
-      <td class="col-contact">${d.address||'待核实'}<br>${d.contact||'—'}</td>
-      <td class="col-reason"><b>${d.reason||'—'}</b>${d.scale?`<span class="scale">📊 ${d.scale}</span>`:''}${d.seasonal?`<span class="scale">🌱 ${d.seasonal}</span>`:''}</td>
-      <td class="col-source">${d.srcName||'—'}<br>${d.date||''}</td>
-      <td class="col-score">${d.score}<br><span class="lv ${d.level}">${LV[d.level]}</span></td>
-    </tr>`;
+  const groups=groupByDate(sorted);
+  groups.forEach(g=>{
+    const wd=weekday(g.sort);
+    feed.insertAdjacentHTML('beforeend',`<div class="day-group"><div class="day-head"><span class="date">${g.date}</span>${wd?`<span class="weekday">${wd}</span>`:''}<span class="count">${g.items.length} 条</span></div></div>`);
+    const grp=feed.lastElementChild;
+    g.items.forEach(d=>{
+      const subReg=`<div class="sub-region">${d.admin||d.region||''}</div>`;
+      grp.insertAdjacentHTML('beforeend',`
+        <article class="card ${d.level}">
+          <div class="time-col">
+            <div class="date">${fmtDate(d.sort)}</div>
+            ${subReg}
+            <div class="dot"></div>
+          </div>
+          <div class="body">
+            <div class="meta">
+              <span class="src-cat 开放">线索</span>
+              <span class="src-name">${d.srcName||'—'}</span>
+              ${d.warn?'<span class="warn">待核实</span>':''}
+              <span class="score">${d.score}</span>
+            </div>
+            <h2 class="title"><a href="${urlForLead(d)}" target="_blank" rel="noopener">${d.name}</a></h2>
+            <div class="summary">${d.biz||'业务待核实'} · ${d.region} · ${d.tier||''} · ${d.admin||''}</div>
+            <div class="tags">
+              <span class="tag">地址：${d.address||'待核实'}</span>
+              <span class="tag">联系人：${d.contact||'待核实'}</span>
+              ${d.scale?`<span class="tag">📊 ${d.scale}</span>`:''}
+              ${d.seasonal?`<span class="tag">🌱 ${d.seasonal}</span>`:''}
+            </div>
+            <div class="reason">
+              <span class="rlevel ${d.level}">${LV[d.level]}</span>
+              <span class="rtext">${d.reason||'—'}</span>
+            </div>
+          </div>
+        </article>`);
+    });
   });
-  feed.insertAdjacentHTML('beforeend',`
-    <table class="leadtable">
-      <thead><tr>
-        <th>企业/项目</th><th>所在区县</th><th>地址/联系人</th>
-        <th>建议联系理由</th><th>信源</th><th>权重</th>
-      </tr></thead>
-      <tbody>${rows}</tbody>
-    </table>`);
 }
 
 function renderSafety(){
@@ -619,34 +676,41 @@ function renderSafety(){
 }
 
 function renderDaily(){
-  const todaySort=getTodayStr();
-  const red=DATA.filter(d=>d.level==='red').sort((a,b)=>b.sort.localeCompare(a.sort));
-  const orange=DATA.filter(d=>d.level==='orange').sort((a,b)=>b.sort.localeCompare(a.sort));
-  const green=DATA.filter(d=>d.level==='green').sort((a,b)=>b.sort.localeCompare(a.sort));
-  const total=DATA.length;
+  initDailyDate();
+  const ds=curDailyDate;
+  const dayNews=DATA.filter(d=>d.sort===ds).sort((a,b)=>comp(b.s)-comp(a.s));
+  const red=dayNews.filter(d=>d.level==='red');
+  const orange=dayNews.filter(d=>d.level==='orange');
+  const green=dayNews.filter(d=>d.level==='green');
+  const dayLeads=LEADS.filter(d=>d.sort===ds).sort((a,b)=>b.score-a.score);
+  const daySafety=SAFETY.filter(d=>d.sort===ds).sort((a,b)=>b.score-a.score);
+  const dateOptions=getDailyDates().map(s=>`<option value="${s}" ${s===ds?'selected':''}>${fmtChineseDate(s)}</option>`).join('');
   feed.innerHTML='';
 
   // Hero
   feed.insertAdjacentHTML('beforeend',`
     <div class="daily-head">
-      <div class="vol">${fmtVolDate(todaySort)} · ${total} STORIES · EXPRESS DAILY</div>
+      <div class="vol">${fmtVolDate(ds)} · ${dayNews.length} STORIES · EXPRESS DAILY</div>
       <h2>快递日报</h2>
-      <div class="meta">${fmtChineseDate(todaySort)} · DAILY · 圆通鄂西区域专享</div>
+      <div class="meta">${fmtChineseDate(ds)} · DAILY · 圆通鄂西区域专享</div>
+      <select id="dailyDateSelect" class="daily-date-select" aria-label="选择日报日期">${dateOptions}</select>
       <div class="stats">
         <div class="stat red"><b>${red.length}</b> 红线</div>
         <div class="stat orange"><b>${orange.length}</b> 重点</div>
         <div class="stat green"><b>${green.length}</b> 一般</div>
-        <div class="stat"><b>${LEADS.length}</b> 电商线索</div>
-        <div class="stat"><b>${SAFETY.length}</b> 安全事件</div>
+        <div class="stat"><b>${dayLeads.length}</b> 电商线索</div>
+        <div class="stat"><b>${daySafety.length}</b> 安全事件</div>
       </div>
     </div>`);
+  const sel=document.getElementById('dailyDateSelect');
+  if(sel) sel.addEventListener('change',e=>{curDailyDate=e.target.value;renderDateNav();render();});
 
   // 今日看点目录
   const toc=[
     {n:'01',t:'红线必读',e:'REDLINE',c:red.length},
     {n:'02',t:'重点动态',e:'FOCUS',c:orange.length},
     {n:'03',t:'一般资讯',e:'BRIEF',c:green.length},
-    {n:'04',t:'线索与安全',e:'LEADS & SAFETY',c:LEADS.length+SAFETY.length}
+    {n:'04',t:'线索与安全',e:'LEADS & SAFETY',c:dayLeads.length+daySafety.length}
   ].filter(x=>x.c>0);
   if(toc.length){
     const items=toc.map(x=>`
@@ -672,12 +736,12 @@ function renderDaily(){
   const mkSect=(num,title,en,list)=>{
     if(!list.length) return '';
     const items=list.map((d,i)=>{
-      const sc=comp(d.s);
+      const sc=comp(d.s)||d.score;
       return `<li>
         <span class="ix">${String(i+1).padStart(2,'0')}</span>
         <div class="it">
-          <a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a>
-          <span class="src">${d.date} · ${d.src} · ${d.srcName} · ${sc} 分${d.subRegion?' · '+d.subRegion:''}</span>
+          <a href="${d.url||urlFor(d)}" target="_blank" rel="noopener">${d.title||d.name}</a>
+          <span class="src">${d.date} · ${d.src||d.srcName} · ${d.srcName||''} · ${sc} 分${d.subRegion?' · '+d.subRegion:''}</span>
           <div class="action">${d.action||d.reason}</div>
         </div>
         <span class="lvl ${d.level}">${LV[d.level]}</span>
@@ -705,8 +769,8 @@ function renderDaily(){
   html+=mkSect(String(idx++).padStart(2,'0'),'🟢 一般 · 扫读','BRIEF',green);
 
   // 线索与安全合并为一个板块
-  if(LEADS.length || SAFETY.length){
-    const leadItems=LEADS.slice().sort((a,b)=>b.score-a.score).map((d,i)=>`
+  if(dayLeads.length || daySafety.length){
+    const leadItems=dayLeads.map((d,i)=>`
       <li>
         <span class="ix">${String(i+1).padStart(2,'0')}</span>
         <div class="it">
@@ -716,9 +780,9 @@ function renderDaily(){
         </div>
         <span class="lvl ${d.level}">${LV[d.level]}</span>
       </li>`).join('');
-    const safeItems=SAFETY.slice().sort((a,b)=>b.score-a.score).map((d,i)=>`
+    const safeItems=daySafety.map((d,i)=>`
       <li>
-        <span class="ix">${String(LEADS.length+i+1).padStart(2,'0')}</span>
+        <span class="ix">${String(dayLeads.length+i+1).padStart(2,'0')}</span>
         <div class="it">
           <a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a>
           <span class="src">${d.date||''} · ${d.src} · ${d.srcName} · ${d.score} 分</span>
@@ -731,7 +795,7 @@ function renderDaily(){
         <span class="num">04</span>
         <span class="ttl">📦 电商线索 · ⚠️ 安全预警</span>
         <span class="en">LEADS & SAFETY</span>
-        <span class="cnt">${LEADS.length+SAFETY.length} 条</span>
+        <span class="cnt">${dayLeads.length+daySafety.length} 条</span>
       </div>
       <ul>${leadItems}${safeItems}</ul>
     </div>`;
