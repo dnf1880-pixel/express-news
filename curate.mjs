@@ -61,6 +61,14 @@ function isRelevantNews(title = '', body = '') {
   return hasCore || hasBiz || hasComp;
 }
 
+// 安全事件白名单：天气/地震/台风/违禁品寄递/人车/消防事件即使不含快递词也保留
+const SAFETY_EVENT_KWS = ['台风', '暴雨', '暴雪', '大雾', '寒潮', '冰冻', '高温', '雷电', '大风', '洪涝', '内涝', '地质灾害', '山洪', '地震', '震感', '预警', '封路', '封闭', '管制', '事故', '火灾', '消防', '爆炸', '危化', '违禁品', '禁寄', '查获', '涉毒', '易燃', '易爆', '交通安全', '车辆'];
+function isRelevantSafety(title = '', body = '') {
+  const t = title + ' ' + body;
+  if (has(t, NOISE_KWS) && !has(t, [...SAFETY_EVENT_KWS, ...CORE_KWS, ...COMP_KWS])) return false;
+  return has(t, SAFETY_EVENT_KWS) || isRelevantNews(title, body);
+}
+
 // 清理明显非新闻的噪音条目
 function isNoiseTitle(title = '') {
   const t = title.toLowerCase();
@@ -251,7 +259,7 @@ for (const s of existing.safety) {
 
 // === 清理历史噪音 ===
 existing.news = existing.news.filter(x => !isNoiseTitle(x.title) && isRelevantNews(x.title, x.summary || x.snippet || ''));
-existing.safety = existing.safety.filter(x => !isNoiseTitle(x.title) && isRelevantNews(x.title, x.summary || x.snippet || ''));
+existing.safety = existing.safety.filter(x => !isNoiseTitle(x.title) && isRelevantSafety(x.title, x.summary || x.snippet || ''));
 
 
 // === 去重 ===

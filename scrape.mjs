@@ -109,6 +109,10 @@ async function main() {
       return [];
     }
     const items = extractItems(res.html, q.url, q);
+    // JS 渲染页（如地震台网）fetch 成功但提取 0 条 → 同样降级为搜索
+    if (items.length === 0 && q.type === 'fetch-or-search') {
+      searchQs.push({ ...q, degraded: true, query: `${q.source} ${q.scope} 最新 ${q.channel === '安全' ? '预警 事故' : '动态'}` });
+    }
     console.log(`  ✓ ${q.source || q.url}: ${items.length} 条`);
     return items;
   });

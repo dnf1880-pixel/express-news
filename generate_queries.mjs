@@ -66,6 +66,12 @@ for (const s of sources.safety) {
   queries.push({ type: 'fetch-or-search', source: s.name, url: s.url, scope: s.scope, channel: '安全', label: s.desc });
 }
 
+// 4) safetySearches：安全专项定向检索（台风/地震/违禁品寄递/人车事故/消防），纯 search 型
+for (const s of sources.safetySearches || []) {
+  if (channelFilter && channelFilter !== '安全') continue;
+  queries.push({ type: 'search', source: `安全专项-${s.id}`, scope: '湖北', channel: '安全', template: s.id, label: s.desc, query: s.query });
+}
+
 if (onlyCount) {
   console.log(queries.length);
 } else {

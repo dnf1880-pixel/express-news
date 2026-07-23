@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22",
+  "updatedAt": "2026-07-23",
   "note": "信源清单（官方源优先，替代无差别组合检索）。v1 权重模型固定不变。counties 为 43 区县官方源路由：区县级无独立邮管局，官方源=所属市邮管局 + 区县政府网 + 区县融媒号；融媒多为微信/抖音私域，自动化硬抓不到，标注为专项/人工层。",
   "weightModel": {
     "axes": { "G": "地域相关度", "B": "业务影响面", "P": "政策监管强度", "C": "竞争态势", "T": "时效紧迫度" },
@@ -86,9 +86,20 @@
   ],
   "safety": [
     { "name": "湖北气象", "url": "http://hb.cma.gov.cn/", "scope": "湖北", "desc": "暴雨/暴雪/大雾预警信号" },
+    { "name": "中央气象台", "url": "http://www.nmc.cn/", "scope": "全国", "desc": "台风路径/暴雨寒潮大雾预警（全国口径）" },
+    { "name": "中国天气网-湖北", "url": "http://www.weather.com.cn/hubei/index.shtml", "scope": "湖北", "desc": "湖北天气实况/灾害性天气资讯" },
+    { "name": "中国地震台网", "url": "http://www.ceic.ac.cn/", "scope": "全国", "desc": "地震速报（关注湖北及周边震情）" },
     { "name": "应急管理部", "url": "https://www.mem.gov.cn/", "scope": "全国", "desc": "安全事故/应急响应" },
     { "name": "湖北交警", "url": "https://hb.122.gov.cn/", "scope": "湖北", "desc": "高速封路/交通管制" },
-    { "name": "湖北应急管理", "url": "https://yjgl.hubei.gov.cn/", "scope": "湖北", "desc": "省内突发事件/灾害预警" }
+    { "name": "湖北应急管理", "url": "https://yjgl.hubei.gov.cn/", "scope": "湖北", "desc": "省内突发事件/灾害预警" },
+    { "name": "国家消防救援局", "url": "https://www.119.gov.cn/", "scope": "全国", "desc": "火灾事故通报/消防安全整治" }
+  ],
+  "safetySearches": [
+    { "id": "typhoon", "query": "湖北 台风 暴雨 预警 快递 物流 影响 最新", "desc": "台风/极端天气对鄂西物流影响" },
+    { "id": "quake", "query": "湖北 地震 最新 震感", "desc": "湖北及周边震情" },
+    { "id": "contraband", "query": "快递 违禁品 寄递 查获 湖北 最新", "desc": "违禁品寄递/禁寄物品查获" },
+    { "id": "courier-accident", "query": "快递员 三轮车 交通事故 湖北 最新", "desc": "人员/车辆安全事件" },
+    { "id": "depot-fire", "query": "快递 网点 仓库 火灾 消防 隐患 湖北 最新", "desc": "网点/仓库消防安全" }
   ],
   "channels": {
     "资讯": "快递行业资讯（与现有 DATA 资讯流融合）",

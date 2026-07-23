@@ -1,18 +1,18 @@
 {
   "meta": {
-    "sourcesUpdatedAt": "2026-07-22"
+    "sourcesUpdatedAt": "2026-07-23"
   },
-  "generatedAt": "2026-07-23T01:23:08.687Z",
+  "generatedAt": "2026-07-23T12:20:27.185Z",
   "note": "信源清单驱动任务矩阵（core 直连 + counties 定向 + 专项源），替代 344 无差别组合。",
-  "totalQueries": 153,
+  "totalQueries": 162,
   "byType": {
     "fetch": 13,
-    "search": 129,
-    "fetch-or-search": 11
+    "search": 134,
+    "fetch-or-search": 15
   },
   "byChannel": {
     "资讯": 56,
-    "安全": 47,
+    "安全": 56,
     "电商": 50
   },
   "queries": [
@@ -1992,6 +1992,30 @@
     },
     {
       "type": "fetch-or-search",
+      "source": "中央气象台",
+      "url": "http://www.nmc.cn/",
+      "scope": "全国",
+      "channel": "安全",
+      "label": "台风路径/暴雨寒潮大雾预警（全国口径）"
+    },
+    {
+      "type": "fetch-or-search",
+      "source": "中国天气网-湖北",
+      "url": "http://www.weather.com.cn/hubei/index.shtml",
+      "scope": "湖北",
+      "channel": "安全",
+      "label": "湖北天气实况/灾害性天气资讯"
+    },
+    {
+      "type": "fetch-or-search",
+      "source": "中国地震台网",
+      "url": "http://www.ceic.ac.cn/",
+      "scope": "全国",
+      "channel": "安全",
+      "label": "地震速报（关注湖北及周边震情）"
+    },
+    {
+      "type": "fetch-or-search",
       "source": "应急管理部",
       "url": "https://www.mem.gov.cn/",
       "scope": "全国",
@@ -2013,6 +2037,59 @@
       "scope": "湖北",
       "channel": "安全",
       "label": "省内突发事件/灾害预警"
+    },
+    {
+      "type": "fetch-or-search",
+      "source": "国家消防救援局",
+      "url": "https://www.119.gov.cn/",
+      "scope": "全国",
+      "channel": "安全",
+      "label": "火灾事故通报/消防安全整治"
+    },
+    {
+      "type": "search",
+      "source": "安全专项-typhoon",
+      "scope": "湖北",
+      "channel": "安全",
+      "template": "typhoon",
+      "label": "台风/极端天气对鄂西物流影响",
+      "query": "湖北 台风 暴雨 预警 快递 物流 影响 最新"
+    },
+    {
+      "type": "search",
+      "source": "安全专项-quake",
+      "scope": "湖北",
+      "channel": "安全",
+      "template": "quake",
+      "label": "湖北及周边震情",
+      "query": "湖北 地震 最新 震感"
+    },
+    {
+      "type": "search",
+      "source": "安全专项-contraband",
+      "scope": "湖北",
+      "channel": "安全",
+      "template": "contraband",
+      "label": "违禁品寄递/禁寄物品查获",
+      "query": "快递 违禁品 寄递 查获 湖北 最新"
+    },
+    {
+      "type": "search",
+      "source": "安全专项-courier-accident",
+      "scope": "湖北",
+      "channel": "安全",
+      "template": "courier-accident",
+      "label": "人员/车辆安全事件",
+      "query": "快递员 三轮车 交通事故 湖北 最新"
+    },
+    {
+      "type": "search",
+      "source": "安全专项-depot-fire",
+      "scope": "湖北",
+      "channel": "安全",
+      "template": "depot-fire",
+      "label": "网点/仓库消防安全",
+      "query": "快递 网点 仓库 火灾 消防 隐患 湖北 最新"
     }
   ]
 }
