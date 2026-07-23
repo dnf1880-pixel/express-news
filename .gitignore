@@ -1,0 +1,7 @@
+# 原始抓取存档（本地全量，不入仓避免膨胀）；last-core.json 需保留供看守变更检测
+archive/raw-*.json
+archive/staging-*.json
+archive/search-todo.json
+archive/watch-alerts-*.json
+node_modules/
+.DS_Store

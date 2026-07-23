@@ -14,6 +14,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const sources = JSON.parse(readFileSync(join(__dirname, 'sources.json'), 'utf8'));
 
 const args = process.argv.slice(2);
+const forceRegen = args.includes('--force');
+
+// 守卫生成：信源未变更则跳过（queries.json 为 sources.json 的派生产物，无需每日重生）
+let skip = false;
+try {
+  const prev = JSON.parse(readFileSync(join(__dirname, 'queries.json'), 'utf8'));
+  if (!forceRegen && prev?.meta?.sourcesUpdatedAt === sources.updatedAt) {
+    console.log(`↷ 跳过生成：信源未变更（updatedAt=${sources.updatedAt}），queries.json 保持不变`);
+    skip = true;
+  }
+} catch { /* queries.json 不存在或解析失败 → 重新生成 */ }
+if (skip) process.exit(0);
 const onlyCount = args.includes('--count');
 const channelFilter = (args.find(a => a.startsWith('--by-channel=')) || '').replace('--by-channel=', '').trim();
 
@@ -60,6 +72,7 @@ if (onlyCount) {
   const byType = {}, byChannel = {};
   queries.forEach(q => { byType[q.type] = (byType[q.type] || 0) + 1; byChannel[q.channel] = (byChannel[q.channel] || 0) + 1; });
   const summary = {
+    meta: { sourcesUpdatedAt: sources.updatedAt },
     generatedAt: new Date().toISOString(),
     note: '信源清单驱动任务矩阵（core 直连 + counties 定向 + 专项源），替代 344 无差别组合。',
     totalQueries: queries.length,
