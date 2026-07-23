@@ -152,6 +152,8 @@
   .leadtable tr:last-child td{border-bottom:none}
   .leadtable tr:hover td{background:rgba(123,47,247,.04)}
   .leadtable .col-name{font-weight:600;color:var(--txt);min-width:140px}
+  .leadtable .col-name a{color:var(--txt);border-bottom:1px dashed transparent;transition:.15s}
+  .leadtable .col-name a:hover{color:var(--accent);border-bottom-color:var(--accent)}
   .leadtable .col-name .biz{font-size:11px;color:var(--txt-faint);font-weight:400;margin-top:2px}
   .leadtable .col-region{color:var(--txt);min-width:100px}
   .leadtable .col-region .tier{font-size:10.5px;color:var(--txt-faint);display:block}
@@ -174,7 +176,59 @@
   .alert-banner .ct{font-size:12px;color:var(--txt-dim);margin-left:auto}
   .alert-banner .ct b{color:var(--red)}
 
+  /* ===== Daily hero (AIHOT style) ===== */
+  .daily-head{text-align:center;padding:38px 28px 30px;border-bottom:1px solid var(--border);margin-bottom:28px}
+  .daily-head .vol{font-size:11.5px;letter-spacing:2px;color:var(--txt-faint);text-transform:uppercase;margin-bottom:10px}
+  .daily-head h2{font-size:42px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px;letter-spacing:2px}
+  .daily-head .meta{font-size:13px;color:var(--txt-dim);margin-bottom:22px}
+  .daily-head .stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+  .daily-head .stat{font-size:12px;padding:7px 14px;border-radius:20px;background:var(--card);border:1px solid var(--border);color:var(--txt-dim)}
+  .daily-head .stat b{font-size:14px;color:var(--txt);margin-right:3px}
+  .daily-head .stat.red{border-color:rgba(255,71,87,.4);background:rgba(255,71,87,.1)}
+  .daily-head .stat.orange{border-color:rgba(255,165,2,.4);background:rgba(255,165,2,.1)}
+  .daily-head .stat.green{border-color:rgba(46,213,115,.4);background:rgba(46,213,115,.1)}
+
+  .today-view{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:28px}
+  .today-view .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .today-view .hd b{font-size:15px;color:var(--txt)}
+  .today-view .hd span{font-size:12px;color:var(--txt-faint)}
+  .today-view .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+  .today-view .item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;background:var(--card-2);border:1px solid var(--border);cursor:pointer;transition:.15s}
+  .today-view .item:hover{border-color:var(--primary);background:rgba(123,47,247,.08)}
+  .today-view .item .num{font-size:15px;font-weight:800;color:var(--primary);min-width:28px}
+  .today-view .item .tx{flex:1;font-size:13px;color:var(--txt)}
+  .today-view .item .cn{font-size:10.5px;color:var(--txt-faint);display:block}
+  .today-view .item .cnt{font-size:12px;color:var(--txt-dim);font-weight:600}
+
+  .daily-sect{margin-bottom:30px}
+  .daily-sect .sh{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+  .daily-sect .sh .num{font-size:26px;font-weight:800;color:var(--primary);font-variant-numeric:tabular-nums;line-height:1}
+  .daily-sect .sh .ttl{font-size:17px;font-weight:700;color:var(--txt)}
+  .daily-sect .sh .en{font-size:11px;color:var(--txt-faint);text-transform:uppercase;letter-spacing:1px;margin-left:4px}
+  .daily-sect .sh .cnt{font-size:12px;color:var(--txt-faint);margin-left:auto;background:var(--card);padding:2px 10px;border-radius:12px;border:1px solid var(--border)}
+  .daily-sect ul{list-style:none}
+  .daily-sect li{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid rgba(35,40,56,.6)}
+  .daily-sect li:last-child{border-bottom:none}
+  .daily-sect li .ix{font-size:13px;font-weight:700;color:var(--txt-faint);min-width:26px;padding-top:2px}
+  .daily-sect li .it{flex:1;min-width:0}
+  .daily-sect li .it a{color:var(--txt);font-size:15px;font-weight:700;line-height:1.45}
+  .daily-sect li .it a:hover{color:var(--accent)}
+  .daily-sect li .it .src{display:block;font-size:12px;color:var(--txt-dim);margin:4px 0 6px}
+  .daily-sect li .it .action{font-size:13px;color:var(--txt-dim);line-height:1.55}
+  .daily-sect li .lvl{flex-shrink:0;font-size:11px;padding:3px 8px;border-radius:4px;font-weight:700}
+  .daily-sect li .lvl.red{background:rgba(255,71,87,.14);color:var(--red)}
+  .daily-sect li .lvl.orange{background:rgba(255,165,2,.14);color:var(--orange)}
+  .daily-sect li .lvl.green{background:rgba(46,213,115,.14);color:var(--green)}
+
   @media(max-width:900px){
+    .daily-head{padding:24px 16px 20px}
+    .daily-head h2{font-size:30px}
+    .daily-head .stats{gap:8px}
+    .daily-head .stat{padding:5px 10px}
+    .today-view{padding:14px 16px}
+    .today-view .grid{grid-template-columns:1fr}
+    .daily-sect .sh .num{font-size:22px}
+    .daily-sect .sh .ttl{font-size:15px}
     .sidebar{display:none}
     .mobile-header{display:flex}
     .topbar{position:sticky;top:57px;padding:12px 16px;flex-wrap:wrap;gap:10px;align-items:flex-start}
@@ -259,8 +313,6 @@
       <div class="tab" data-cat="行业">行业</div>
       <div class="tab" data-cat="湖北">湖北</div>
       <div class="tab" data-cat="荆州辖区">荆州辖区</div>
-      <div class="tab" data-cat="电商">电商</div>
-      <div class="tab" data-cat="安全">安全</div>
       <div class="tab" data-cat="其他">其他</div>
     </div>
     <select class="tabs-select" id="tabsSelect" aria-label="分类筛选">
@@ -268,8 +320,6 @@
       <option value="行业">行业</option>
       <option value="湖北">湖北</option>
       <option value="荆州辖区">荆州辖区</option>
-      <option value="电商">电商</option>
-      <option value="安全">安全</option>
       <option value="其他">其他</option>
     </select>
     <div class="search-box">
@@ -307,6 +357,26 @@ function fmtDate(sort){
   return `${m[2]}/${m[3]}`;
 }
 function urlFor(d){return d.url?d.url:'https://www.baidu.com/s?wd='+encodeURIComponent(d.title);}
+function fmtVolDate(sort){
+  const m=sort.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(!m) return '';
+  return `VOL.${m[1]}.${m[2]}.${m[3]}`;
+}
+function fmtChineseDate(sort){
+  const m=sort.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(!m) return '';
+  const cn=['〇','一','二','三','四','五','六','七','八','九'];
+  const y=m[1].split('').map(c=>cn[+c]).join('');
+  const mo=+m[2];
+  const da=+m[3];
+  const mon=mo<=10?cn[mo]:'十'+cn[mo-10];
+  const day=da<=10?cn[da]:(da<20?'十'+cn[da-10]:(da===20?'二十':(da<30?'二十'+cn[da-20]:'三十'+cn[da-30])));
+  return `${y}年${mon}月${day}日 ${weekday(sort)}`;
+}
+function getTodayStr(){
+  if(!DATA.length) return new Date().toISOString().slice(0,10);
+  return DATA.map(d=>d.sort).filter(s=>/^\d{4}-\d{2}-\d{2}$/.test(s)).sort().pop() || new Date().toISOString().slice(0,10);
+}
 
 const DATA = __DATA__;
 const LEADS = __LEADS__;
@@ -462,6 +532,8 @@ function renderList(){
   });
 }
 
+function urlForLead(d){return d.url?d.url:'https://www.baidu.com/s?wd='+encodeURIComponent(d.name);}
+
 function renderEcom(){
   feed.innerHTML='';
   if(!LEADS.length){
@@ -477,7 +549,7 @@ function renderEcom(){
   let rows='';
   sorted.forEach(d=>{
     rows+=`<tr>
-      <td class="col-name">${d.name}${d.biz?`<div class="biz">${d.biz}</div>`:''}</td>
+      <td class="col-name"><a href="${urlForLead(d)}" target="_blank" rel="noopener">${d.name}</a>${d.biz?`<div class="biz">${d.biz}</div>`:''}</td>
       <td class="col-region">${d.region}<span class="tier">${d.tier||''} · ${d.admin||''}</span></td>
       <td class="col-contact">${d.address||'待核实'}<br>${d.contact||'—'}</td>
       <td class="col-reason"><b>${d.reason||'—'}</b>${d.scale?`<span class="scale">📊 ${d.scale}</span>`:''}${d.seasonal?`<span class="scale">🌱 ${d.seasonal}</span>`:''}</td>
@@ -547,58 +619,124 @@ function renderSafety(){
 }
 
 function renderDaily(){
+  const todaySort=getTodayStr();
   const red=DATA.filter(d=>d.level==='red').sort((a,b)=>b.sort.localeCompare(a.sort));
   const orange=DATA.filter(d=>d.level==='orange').sort((a,b)=>b.sort.localeCompare(a.sort));
   const green=DATA.filter(d=>d.level==='green').sort((a,b)=>b.sort.localeCompare(a.sort));
   const total=DATA.length;
   feed.innerHTML='';
+
+  // Hero
   feed.insertAdjacentHTML('beforeend',`
     <div class="daily-head">
-      <div class="vol">VOL.2026.07.22 · ${DATA.length} STORIES · DAILY</div>
+      <div class="vol">${fmtVolDate(todaySort)} · ${total} STORIES · EXPRESS DAILY</div>
       <h2>快递日报</h2>
-      <div class="meta">数据截至 2026 年 7 月 22 日 · 圆通鄂西区域专享 · 按事件真实发生日</div>
+      <div class="meta">${fmtChineseDate(todaySort)} · DAILY · 圆通鄂西区域专享</div>
       <div class="stats">
         <div class="stat red"><b>${red.length}</b> 红线</div>
         <div class="stat orange"><b>${orange.length}</b> 重点</div>
         <div class="stat green"><b>${green.length}</b> 一般</div>
         <div class="stat"><b>${LEADS.length}</b> 电商线索</div>
         <div class="stat"><b>${SAFETY.length}</b> 安全事件</div>
-        <div class="stat"><b>${total}</b> 全量信源</div>
       </div>
     </div>`);
 
-  const mkSect=(num,title,list)=>{
+  // 今日看点目录
+  const toc=[
+    {n:'01',t:'红线必读',e:'REDLINE',c:red.length},
+    {n:'02',t:'重点动态',e:'FOCUS',c:orange.length},
+    {n:'03',t:'一般资讯',e:'BRIEF',c:green.length},
+    {n:'04',t:'线索与安全',e:'LEADS & SAFETY',c:LEADS.length+SAFETY.length}
+  ].filter(x=>x.c>0);
+  if(toc.length){
+    const items=toc.map(x=>`
+      <div class="item" data-anchor="sec-${x.n}">
+        <span class="num">${x.n}</span>
+        <div class="tx">${x.t}<span class="cn">${x.e}</span></div>
+        <span class="cnt">${x.c} 条</span>
+      </div>`).join('');
+    feed.insertAdjacentHTML('beforeend',`
+      <div class="today-view">
+        <div class="hd"><b>今日看点</b><span>快速定位重点板块</span></div>
+        <div class="grid">${items}</div>
+      </div>`);
+    feed.querySelectorAll('.today-view .item').forEach(el=>{
+      el.addEventListener('click',()=>{
+        const id=el.dataset.anchor;
+        const sec=document.getElementById(id);
+        if(sec) sec.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  }
+
+  const mkSect=(num,title,en,list)=>{
     if(!list.length) return '';
     const items=list.map((d,i)=>{
       const sc=comp(d.s);
       return `<li>
         <span class="ix">${String(i+1).padStart(2,'0')}</span>
         <div class="it">
-          <a href="${urlFor(d)}" target="_blank" rel="noopener"><b>${d.title}</b></a>
+          <a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a>
           <span class="src">${d.date} · ${d.src} · ${d.srcName} · ${sc} 分${d.subRegion?' · '+d.subRegion:''}</span>
           <div class="action">${d.action||d.reason}</div>
         </div>
         <span class="lvl ${d.level}">${LV[d.level]}</span>
       </li>`;
     }).join('');
-    return `<div class="daily-sect">
+    return `<div class="daily-sect" id="sec-${num}">
       <div class="sh">
         <span class="num">${num}</span>
         <span class="ttl">${title}</span>
+        <span class="en">${en}</span>
         <span class="cnt">${list.length} 条</span>
       </div>
       <ul>${items}</ul>
     </div>`;
   };
 
-  let html=mkSect('01','🔴 红线 · 必读 + 可能要动作',red);
+  let html='';
+  html+=mkSect('01','🔴 红线 · 必读 + 可能要动作','REDLINE',red);
   const grp={};
   orange.forEach(d=>{if(!grp[d.cat])grp[d.cat]=[];grp[d.cat].push(d);});
   const order=['行业','湖北','荆州辖区','其他'];
   const titles={行业:'行业动态',湖北:'湖北区域',荆州辖区:'荆州辖区',其他:'其他重点'};
   let idx=2;
-  order.forEach(k=>{if(grp[k]&&grp[k].length) html+=mkSect(String(idx++).padStart(2,'0'),'🟠 重点 · '+titles[k],grp[k]);});
-  html+=mkSect(String(idx++).padStart(2,'0'),'🟢 一般 · 扫读',green);
+  order.forEach(k=>{if(grp[k]&&grp[k].length) html+=mkSect(String(idx++).padStart(2,'0'),'🟠 重点 · '+titles[k],'FOCUS',grp[k]);});
+  html+=mkSect(String(idx++).padStart(2,'0'),'🟢 一般 · 扫读','BRIEF',green);
+
+  // 线索与安全合并为一个板块
+  if(LEADS.length || SAFETY.length){
+    const leadItems=LEADS.slice().sort((a,b)=>b.score-a.score).map((d,i)=>`
+      <li>
+        <span class="ix">${String(i+1).padStart(2,'0')}</span>
+        <div class="it">
+          <a href="${urlForLead(d)}" target="_blank" rel="noopener">${d.name}</a>
+          <span class="src">${d.date||''} · ${d.region} · ${d.tier||''} · ${d.score} 分</span>
+          <div class="action">${d.reason}</div>
+        </div>
+        <span class="lvl ${d.level}">${LV[d.level]}</span>
+      </li>`).join('');
+    const safeItems=SAFETY.slice().sort((a,b)=>b.score-a.score).map((d,i)=>`
+      <li>
+        <span class="ix">${String(LEADS.length+i+1).padStart(2,'0')}</span>
+        <div class="it">
+          <a href="${urlFor(d)}" target="_blank" rel="noopener">${d.title}</a>
+          <span class="src">${d.date||''} · ${d.src} · ${d.srcName} · ${d.score} 分</span>
+          <div class="action">${d.reason}</div>
+        </div>
+        <span class="lvl ${d.level}">${LV[d.level]}</span>
+      </li>`).join('');
+    html+=`<div class="daily-sect" id="sec-04">
+      <div class="sh">
+        <span class="num">04</span>
+        <span class="ttl">📦 电商线索 · ⚠️ 安全预警</span>
+        <span class="en">LEADS & SAFETY</span>
+        <span class="cnt">${LEADS.length+SAFETY.length} 条</span>
+      </div>
+      <ul>${leadItems}${safeItems}</ul>
+    </div>`;
+  }
+
   feed.insertAdjacentHTML('beforeend',html);
 }
 
