@@ -4,33 +4,6 @@
   "news": [
     {
       "level": "red",
-      "cat": "湖北",
-      "region": "湖北媒体",
-      "subRegion": "湖北媒体",
-      "channel": "资讯",
-      "src": "极目新闻",
-      "srcName": "极目新闻",
-      "title": "京公网安备11010502030854",
-      "summary": "京公网安备11010502030854",
-      "reason": "湖北媒体最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 5,
-        "B": 3,
-        "P": 3,
-        "C": 3,
-        "T": 5
-      },
-      "tags": [
-        "资讯"
-      ],
-      "date": "08月05日",
-      "sort": "2030-08-05",
-      "url": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030854",
-      "warn": false
-    },
-    {
-      "level": "red",
       "cat": "荆门",
       "region": "荆门",
       "subRegion": "荆门",
@@ -166,6 +139,66 @@
     },
     {
       "level": "red",
+      "cat": "荆州辖区",
+      "region": "恩施",
+      "subRegion": "恩施",
+      "src": "权威",
+      "srcName": "恩施州邮政管理局",
+      "title": "恩施局开展邮政投递服务问题专项整治（虚假签收/未按址投递）",
+      "summary": "恩施州邮政管理局聚焦虚假签收、未按址投递、投递频次不达标、日戳不规范等突出问题开展专项整治，采取「四不两直」直插一线，强化申诉与执法联动。",
+      "reason": "投递质量整治绑定三项制度，辖区须保持按址投递合规。",
+      "action": "→ 对照恩施整治口径自查末端投递合规。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 4,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "恩施",
+        "投递",
+        "专项整治",
+        "三项制度"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "warn": true,
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c105013/c105016/202605/73cbd44ba9d548f78b33f150b0501fc4.shtml",
+      "channel": "资讯"
+    },
+    {
+      "level": "red",
+      "cat": "荆州辖区",
+      "region": "荆州",
+      "subRegion": "荆州城区",
+      "src": "权威",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州局召开全市邮政快递业安全生产和服务质量专项整治部署会",
+      "summary": "荆州市邮政管理局组织召开全市邮政快递业安全生产和服务质量专项整治部署会，通报2026年1–5月申诉、信访及安全生产情况，要求刚性落实实名收寄、收寄验视、过机安检三项制度，做好汛期防汛准备。",
+      "reason": "核心辖区安全生产+服务质量双专项整治，直连质量分与汛期安全红线。",
+      "action": "→ 对照专项整治清单落实三项制度与防汛。",
+      "s": {
+        "G": 5,
+        "B": 5,
+        "P": 4,
+        "C": 3,
+        "T": 4
+      },
+      "tags": [
+        "荆州",
+        "安全生产",
+        "服务质量",
+        "三项制度"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "warn": true,
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202606/667664c1a5e94ec6a1bf29c070bd199c.shtml",
+      "channel": "资讯"
+    },
+    {
+      "level": "red",
       "cat": "荆门",
       "region": "荆门",
       "subRegion": "荆门",
@@ -242,7 +275,7 @@
         "冷链",
         "揽收"
       ],
-      "date": "7月21日",
+      "date": "07月21日",
       "sort": "2026-07-21",
       "url": "https://www.163.com/dy/article/L2C625HL053469LG.html",
       "subRegion": "",
@@ -380,7 +413,7 @@
         "时效",
         "鄂州"
       ],
-      "date": "7月20日",
+      "date": "07月20日",
       "sort": "2026-07-20",
       "url": "https://www.toutiao.com/article/7664379814882722313/",
       "subRegion": "",
@@ -437,7 +470,7 @@
         "单票收入",
         "用工"
       ],
-      "date": "7月3日",
+      "date": "07月03日",
       "sort": "2026-07-03",
       "url": "https://www.toutiao.com/article/7658306132183613993",
       "subRegion": "",
@@ -472,6 +505,636 @@
       "warn": false
     },
     {
+      "level": "orange",
+      "cat": "荆州辖区",
+      "region": "荆门",
+      "src": "开放",
+      "srcName": "荆门社区网·荆门市邮政管理局回复",
+      "warn": true,
+      "title": "【荆门】掇刀圆通自2025年11月起暂停寄递，邮政管理局确认，论坛反馈近期已恢复",
+      "summary": "荆门市邮政管理局6月11日回复：掇刀区圆通因经营困难自2025年11月起暂停寄递（已公告并报告），其他品牌正常；荆门社区网用户近期反馈「已重新开通」。恢复时间待现场核实。",
+      "reason": "网点经营异动开放源单点待核实，影响辖区网点稳定与竞争格局，需二次确认恢复时间与范围。",
+      "action": "→ 派人现场核实掇刀圆通恢复时间与网络状态。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 2,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "荆门",
+        "网点异动",
+        "圆通",
+        "待核实"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jmbbs.com/forum.php?mod=viewthread&page=1&tid=8297283",
+      "subRegion": "",
+      "channel": "资讯"
+    },
+    {
+      "level": "green",
+      "cat": "荆州辖区",
+      "region": "潜江",
+      "src": "开放",
+      "srcName": "潜江人才网",
+      "warn": true,
+      "title": "【潜江】潜江圆通常态化招聘客服/快递员（网络运转信号）",
+      "summary": "潜江圆通速递持续招聘客服（3500–4000+）、快递员（4000–6000），反映园区网络运转正常。",
+      "reason": "智慧物流园常态化用工，网络运转正常信号，稳定度参考（待核实）。",
+      "action": "→ 稳定性参考。",
+      "s": {
+        "G": 4,
+        "B": 2,
+        "P": 1,
+        "C": 1,
+        "T": 2
+      },
+      "tags": [
+        "潜江",
+        "圆通",
+        "用工",
+        "待核实"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.qjzp.cn/company/297300",
+      "subRegion": "",
+      "channel": "资讯"
+    },
+    {
+      "level": "orange",
+      "cat": "荆州辖区",
+      "region": "恩施",
+      "subRegion": "恩施",
+      "src": "权威",
+      "srcName": "恩施州邮政管理局",
+      "title": "恩施局召开快递服务质量提升集中约谈会（旺季申诉量较大企业参会）",
+      "summary": "恩施州邮政管理局组织召开快递服务质量提升集中约谈会，通报岁末年初业务旺季申诉平台及12345热线申诉受理情况，针对延误、投递服务、丢失短少等高频问题提出整改举措。",
+      "reason": "服务质量整治直连辖区申诉率与质量分，恩施辖区须压降重复投诉。",
+      "action": "→ 关注恩施辖区服务质量整改，压降旺季申诉。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "恩施",
+        "服务质量",
+        "约谈",
+        "申诉"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "warn": true,
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c105013/c105016/202603/9674e811769144e3a2ba7e31a45119c8.shtml",
+      "channel": "资讯"
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州经开区打响水体污染整治攻坚战",
+      "summary": "荆州经开区打响水体污染整治攻坚战",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202607/t20260723_1123661.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "全市和美乡村整镇推进暨秸秆综合利用工作电视电话会议召开",
+      "summary": "全市和美乡村整镇推进暨秸秆综合利用工作电视电话会议召开",
+      "reason": "监管层面新动向，影响辖区合规导向与考核重点，需周会传达。",
+      "action": "→ 周会传达，对齐合规与质量分要求。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "监管"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260723_1123648.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "2026年7月23日-24日停水通知",
+      "summary": "2026年7月23日-24日停水通知",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmtx/202607/t20260723_1123679.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "宜昌",
+      "region": "宜昌",
+      "subRegion": "宜昌",
+      "channel": "资讯",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
+      "title": "黄剑雄主持召开市委常委会会议",
+      "summary": "黄剑雄主持召开市委常委会会议",
+      "reason": "监管层面新动向，影响辖区合规导向与考核重点，需周会传达。",
+      "action": "→ 周会传达，对齐合规与质量分要求。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "监管"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/zhongyaoxinwen/2026/0723/1078374.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "宜昌",
+      "region": "宜昌",
+      "subRegion": "宜昌",
+      "channel": "资讯",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
+      "title": "宜昌出台关爱礼遇道德典型实施办法 让“德者有得”",
+      "summary": "宜昌出台关爱礼遇道德典型实施办法 让“德者有得”",
+      "reason": "宜昌最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2026/0723/1078378.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "湖北",
+      "region": "湖北",
+      "subRegion": "湖北",
+      "channel": "资讯",
+      "src": "湖北省邮政管理局",
+      "srcName": "湖北省邮政管理局",
+      "title": "同心筑梦跟党走 创新聚力建中心",
+      "summary": "同心筑梦跟党走 创新聚力建中心",
+      "reason": "湖北最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100071/202607/235d2e5744be41969c2eb2de61561e0c.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "全市三季度农业招商和产业发展现场会召开",
+      "summary": "全市三季度农业招商和产业发展现场会召开",
+      "reason": "荆州电商/产业带释放寄递增量，值得网点主动揽收。",
+      "action": "→ 联系属地网点上门对接，测算揽收潜力。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260723_1123646.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "增长5.3% 上半年全市经济运行稳中有进 进中向好",
+      "summary": "增长5.3% 上半年全市经济运行稳中有进 进中向好",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260723_1123650.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "查看更多...",
+      "summary": "查看更多...",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "上海财经大学“千村讲习所”授牌公安 搭建高校智库与县域乡村振兴实践协作平台",
+      "summary": "上海财经大学“千村讲习所”授牌公安 搭建高校智库与县域乡村振兴实践协作平台",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202607/t20260723_1123666.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "石首“四减一优”赋能市场主体发展",
+      "summary": "石首“四减一优”赋能市场主体发展",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202607/t20260723_1123664.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州市12345热线公开招募“观察员”",
+      "summary": "荆州市12345热线公开招募“观察员”",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmdt/202607/t20260723_1123656.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "上半年荆州发行新增专项债券逾31亿元",
+      "summary": "上半年荆州发行新增专项债券逾31亿元",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmdt/202607/t20260723_1123651.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "查看更多...",
+      "summary": "查看更多...",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月23日",
+      "sort": "2026-07-23",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/gsgg/",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州区交通运输局以货运审批“减法”换发展“加法”",
+      "summary": "荆州区交通运输局以货运审批“减法”换发展“加法”",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月22日",
+      "sort": "2026-07-22",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202607/t20260722_1123494.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "工业和信息化部办公厅关于组织开展国家级零碳工厂建设工作的通知",
+      "summary": "工业和信息化部办公厅关于组织开展国家级零碳工厂建设工作的通知",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月22日",
+      "sort": "2026-07-22",
+      "url": "https://www.hbqj.gov.cn/xxgk/zc/qtwj/gsgg/202607/t20260722_5981417.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "习近平对基础教育工作作出重要指示",
+      "summary": "习近平对基础教育工作作出重要指示",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月22日",
+      "sort": "2026-07-22",
+      "url": "http://www.hubei.gov.cn/2019/ttxw/zsj/202607/t20260722_5981850.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "汪元程调研大学生就业创业工作",
+      "summary": "汪元程调研大学生就业创业工作",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月22日",
+      "sort": "2026-07-22",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260722_1123634.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "查看更多...",
+      "summary": "查看更多...",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月22日",
+      "sort": "2026-07-22",
+      "url": "https://www.hubei.gov.cn/szyw",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "石首聚力开展治理欠薪工作",
+      "summary": "石首聚力开展治理欠薪工作",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月22日",
+      "sort": "2026-07-22",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202607/t20260722_1123491.shtml",
+      "warn": false
+    },
+    {
       "level": "green",
       "cat": "行业",
       "region": "全国",
@@ -493,11 +1156,93 @@
         "格局",
         "圆通"
       ],
-      "date": "7月21日",
+      "date": "07月21日",
       "sort": "2026-07-21",
       "url": "https://www.baidu.com/s?wd=2026财富中国500强 快递 上榜",
       "subRegion": "",
       "channel": "资讯",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "汪元程主持召开端午节文旅复盘和“十一”期间文旅商体活动谋划专题会议",
+      "summary": "汪元程主持召开端午节文旅复盘和“十一”期间文旅商体活动谋划专题会议",
+      "reason": "监管层面新动向，影响辖区合规导向与考核重点，需周会传达。",
+      "action": "→ 周会传达，对齐合规与质量分要求。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "监管"
+      ],
+      "date": "07月21日",
+      "sort": "2026-07-21",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260721_1123465.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "李迎伟调研高温天气企业安全生产、调度电力迎峰度夏保供工作并慰问一线职工",
+      "summary": "李迎伟调研高温天气企业安全生产、调度电力迎峰度夏保供工作并慰问一线职工",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全",
+        "监管"
+      ],
+      "date": "07月21日",
+      "sort": "2026-07-21",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260721_1123452.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "汪元程调研高温天气安全生产并慰问一线职工",
+      "summary": "汪元程调研高温天气安全生产并慰问一线职工",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "07月21日",
+      "sort": "2026-07-21",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202607/t20260721_1123425.shtml",
       "warn": false
     },
     {
@@ -523,7 +1268,7 @@
         "反内卷",
         "价值竞争"
       ],
-      "date": "7月20日",
+      "date": "07月20日",
       "sort": "2026-07-20",
       "url": "https://www.mrjjxw.com/articles/2026-07-20/4483663.html",
       "subRegion": "",
@@ -558,6 +1303,114 @@
       "warn": false
     },
     {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州最新通告！8月1日起专项整治",
+      "summary": "荆州最新通告！8月1日起专项整治",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "07月20日",
+      "sort": "2026-07-20",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmtx/202607/t20260720_1123114.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "买绘宇领衔督办市政协重点提案工作",
+      "summary": "买绘宇领衔督办市政协重点提案工作",
+      "reason": "荆门最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 4
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月20日",
+      "sort": "2026-07-20",
+      "url": "http://www.jingmen.gov.cn/art/2026/7/20/art_438_1228638.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "谭建国率队赴粤港澳大湾区开展招商考察活动",
+      "summary": "谭建国率队赴粤港澳大湾区开展招商考察活动",
+      "reason": "荆门电商/产业带释放寄递增量，值得网点主动揽收。",
+      "action": "→ 联系属地网点上门对接，测算揽收潜力。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 4
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月19日",
+      "sort": "2026-07-19",
+      "url": "http://www.jingmen.gov.cn/art/2026/7/19/art_19993_1228623.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "2026年7月20日（星期一）停气通知",
+      "summary": "2026年7月20日（星期一）停气通知",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月18日",
+      "sort": "2026-07-18",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmtx/202607/t20260718_1122982.shtml",
+      "warn": false
+    },
+    {
       "level": "green",
       "cat": "其他",
       "region": "全国",
@@ -580,7 +1433,7 @@
         "预警",
         "干线"
       ],
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "url": "https://new.qq.com/rain/a/20260717A07LA800",
       "subRegion": "",
@@ -610,7 +1463,7 @@
         "收入",
         "半年"
       ],
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "url": "https://www.cls.cn/subject/1310",
       "subRegion": "",
@@ -640,11 +1493,92 @@
         "分拨二期",
         "共配"
       ],
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104687/c104691/202607/a91a71b02961465491ab7cfd38478665.shtml",
       "subRegion": "",
       "channel": "资讯",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "查看更多...",
+      "summary": "查看更多...",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月17日",
+      "sort": "2026-07-17",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmdt/",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州市12345政务服务便民热线开展“领导干部走进话务间”活动的通告（2026年第六期）",
+      "summary": "荆州市12345政务服务便民热线开展“领导干部走进话务间”活动的通告（2026年第六期）",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月17日",
+      "sort": "2026-07-17",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/gsgg/202607/t20260717_1122766.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "荆门至越南铁海联运新线开通",
+      "summary": "荆门至越南铁海联运新线开通",
+      "reason": "荆门最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月16日",
+      "sort": "2026-07-16",
+      "url": "http://www.jingmen.gov.cn/art/2026/7/16/art_438_1228268.html",
       "warn": false
     },
     {
@@ -670,7 +1604,7 @@
         "市占",
         "业绩"
       ],
-      "date": "7月",
+      "date": "07月15日",
       "sort": "2026-07-15",
       "url": "https://www.cnstock.com/commonDetail/741566",
       "subRegion": "",
@@ -700,7 +1634,7 @@
         "韵达",
         "反内卷"
       ],
-      "date": "7月15日",
+      "date": "07月15日",
       "sort": "2026-07-15",
       "url": "https://www.163.com/dy/article/L1RC8OG8053469RG.html",
       "subRegion": "",
@@ -730,7 +1664,7 @@
         "成本",
         "合规"
       ],
-      "date": "7月14日",
+      "date": "07月14日",
       "sort": "2026-07-14",
       "url": "https://www.toutiao.com/article/7662273462690234880",
       "subRegion": "",
@@ -760,7 +1694,7 @@
         "派费",
         "集体协商"
       ],
-      "date": "7月14日",
+      "date": "07月14日",
       "sort": "2026-07-14",
       "url": "https://www.toutiao.com/article/7662214590272520756/",
       "subRegion": "",
@@ -790,7 +1724,7 @@
         "悉尼",
         "货运"
       ],
-      "date": "7月14日",
+      "date": "07月14日",
       "sort": "2026-07-14",
       "url": "https://www.toutiao.com/article/7662540995271885355/",
       "subRegion": "",
@@ -820,7 +1754,7 @@
         "物流园",
         "进村"
       ],
-      "date": "7月",
+      "date": "07月12日",
       "sort": "2026-07-12",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202607/37571a29c3814f7ab0cd8e03a0a26ece.shtml",
       "subRegion": "",
@@ -851,7 +1785,7 @@
         "用工",
         "待核实"
       ],
-      "date": "7月11日",
+      "date": "07月11日",
       "sort": "2026-07-11",
       "url": "https://www.jrzp.com/job3393796.shtml",
       "subRegion": "",
@@ -880,7 +1814,7 @@
         "安全",
         "客货邮"
       ],
-      "date": "2026年7月",
+      "date": "07月10日",
       "sort": "2026-07-10",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202607/629b1e5eee22435aa36844455594036a.shtml",
       "subRegion": "",
@@ -910,7 +1844,7 @@
         "时效",
         "客诉"
       ],
-      "date": "7月10日",
+      "date": "07月10日",
       "sort": "2026-07-10",
       "url": "https://www.163.com/dy/article/L1G47PGS0512D3VJ.html",
       "subRegion": "",
@@ -940,7 +1874,7 @@
         "权益",
         "安全"
       ],
-      "date": "7月8日",
+      "date": "07月08日",
       "sort": "2026-07-08",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202607/1bb9cf66c5ee413cb4c0970773e3ef43.shtml",
       "subRegion": "",
@@ -970,7 +1904,7 @@
         "客货邮",
         "十五五"
       ],
-      "date": "7月7日",
+      "date": "07月07日",
       "sort": "2026-07-07",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100060/202607/749cff3d9889473c8adfee4c210e717d.shtml",
       "subRegion": "",
@@ -1000,7 +1934,7 @@
         "融合",
         "政策"
       ],
-      "date": "7月7日",
+      "date": "07月07日",
       "sort": "2026-07-07",
       "url": "https://society.people.com.cn/n1/2026/0707/c1008-40754599.html",
       "subRegion": "",
@@ -1030,7 +1964,7 @@
         "基建",
         "提档"
       ],
-      "date": "7月2日",
+      "date": "07月02日",
       "sort": "2026-07-02",
       "url": "https://ah.spb.gov.cn/gjyzj/c100194/202607/afaa6776c1e9481694d2f4756e52a540.shtml",
       "subRegion": "",
@@ -1060,7 +1994,7 @@
         "用工",
         "外溢"
       ],
-      "date": "7月1日",
+      "date": "07月01日",
       "sort": "2026-07-01",
       "url": "https://gd.spb.gov.cn/gdsyzglj/c100057/c100060/202603/acb4b8df4fcd441999c4644d62c79f44.shtml",
       "subRegion": "",
@@ -1090,7 +2024,7 @@
         "市占",
         "反内卷"
       ],
-      "date": "6月30日",
+      "date": "06月30日",
       "sort": "2026-06-30",
       "url": "https://epaper.cs.com.cn/zgzqb/wap/html/2026-07/01/nw.D110000zgzqb_20260701_6-B020.htm",
       "subRegion": "",
@@ -1121,7 +2055,7 @@
         "承包纠纷",
         "待核实"
       ],
-      "date": "6月24日",
+      "date": "06月24日",
       "sort": "2026-06-24",
       "url": "https://ah.tousu.sina.com.cn/complaint/view/17398936645",
       "subRegion": "",
@@ -1150,7 +2084,7 @@
         "申诉",
         "三项制度"
       ],
-      "date": "2026年6月",
+      "date": "06月15日",
       "sort": "2026-06-15",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104797/c104800/202606/0379c17cbb104d5588126495949b656c.shtml",
       "subRegion": "",
@@ -1180,7 +2114,7 @@
         "培训",
         "质量分"
       ],
-      "date": "2026年6月",
+      "date": "06月15日",
       "sort": "2026-06-15",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202606/1d99f887efe14a73a877fa18ffe2ebf3.shtml",
       "subRegion": "",
@@ -1210,7 +2144,7 @@
         "进村",
         "网点"
       ],
-      "date": "2026年6月",
+      "date": "06月15日",
       "sort": "2026-06-15",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202606/a06300ba2cf7402fba516aa9c029f28e.shtml",
       "subRegion": "",
@@ -1240,7 +2174,7 @@
         "申诉",
         "培训"
       ],
-      "date": "2026年6月",
+      "date": "06月15日",
       "sort": "2026-06-15",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104941/c104952/c104954/202606/97b1e119907f41f99c996f2a4eb1babb.shtml",
       "subRegion": "",
@@ -1270,7 +2204,7 @@
         "物流合规",
         "淘宝"
       ],
-      "date": "2026年6月",
+      "date": "06月15日",
       "sort": "2026-06-15",
       "url": "https://news.hubeidaily.net/pc/c_5570492.html",
       "subRegion": "",
@@ -1300,7 +2234,7 @@
         "质量",
         "三项制度"
       ],
-      "date": "2026年6月",
+      "date": "06月10日",
       "sort": "2026-06-10",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202606/2893ab2c37c4435191e899ffc22219e3.shtml",
       "subRegion": "",
@@ -1330,7 +2264,7 @@
         "单量",
         "电商"
       ],
-      "date": "6月4日",
+      "date": "06月04日",
       "sort": "2026-06-04",
       "url": "http://es.gov.cn/xwdt/bdyw/202606/t20260604_1810003.shtml",
       "subRegion": "",
@@ -1360,7 +2294,7 @@
         "基线",
         "质量"
       ],
-      "date": "5月29日",
+      "date": "05月29日",
       "sort": "2026-05-29",
       "url": "https://www.spb.gov.cn/gjyzj/c200040/202606/e3a20646cde243cdbf29cf52c32a4839.shtml",
       "subRegion": "",
@@ -1390,7 +2324,7 @@
         "共配",
         "示范区"
       ],
-      "date": "5月12日",
+      "date": "05月12日",
       "sort": "2026-05-12",
       "url": "https://www.hubei.gov.cn/hbfb/bmdt/202605/t20260512_5934319.shtml",
       "subRegion": "",
@@ -1421,7 +2355,7 @@
         "欺诈",
         "安全"
       ],
-      "date": "5月9日",
+      "date": "05月09日",
       "sort": "2026-05-09",
       "url": "https://new.qq.com/rain/a/20260509A06PJA00",
       "channel": "资讯",
@@ -1450,7 +2384,7 @@
         "产业寄递",
         "示范"
       ],
-      "date": "2026年4月",
+      "date": "04月20日",
       "sort": "2026-04-20",
       "url": "https://www.baidu.com/s?wd=洪湖莲藕寄递项目 入选全国快递服务现代农业示范项目",
       "subRegion": "",
@@ -1480,7 +2414,7 @@
         "违规收费",
         "劳动合同"
       ],
-      "date": "2026年4月",
+      "date": "04月15日",
       "sort": "2026-04-15",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104905/c104908/202604/1377104635d346b1b95236733ab0950b.shtml",
       "subRegion": "",
@@ -1511,7 +2445,7 @@
         "安全",
         "实名收寄"
       ],
-      "date": "3月22日",
+      "date": "03月22日",
       "sort": "2026-03-22",
       "url": "https://m-jianshi.cjyun.org/p/54273.html",
       "channel": "资讯",
@@ -1541,7 +2475,7 @@
         "三级物流",
         "进村"
       ],
-      "date": "3月18日",
+      "date": "03月18日",
       "sort": "2026-03-18",
       "url": "https://news.hubeidaily.net/pc/c_5280148.html",
       "channel": "资讯",
@@ -1571,7 +2505,7 @@
         "行政约谈",
         "安全"
       ],
-      "date": "3月12日",
+      "date": "03月12日",
       "sort": "2026-03-12",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c104687/c104693/202603/9845bc3af85946318edddcb73efb5aa0.shtml",
       "channel": "资讯",
@@ -1601,7 +2535,7 @@
         "春节",
         "时效"
       ],
-      "date": "2月4日",
+      "date": "02月04日",
       "sort": "2026-02-04",
       "url": "https://yule.sohu.com/a/983920080_646073",
       "channel": "资讯",
@@ -1631,161 +2565,11 @@
         "投诉",
         "末端"
       ],
-      "date": "1月22日",
+      "date": "01月22日",
       "sort": "2026-01-22",
       "url": "https://tousu.sina.cn/complaint/view/17392751008",
       "channel": "资讯",
       "warn": false
-    },
-    {
-      "level": "red",
-      "cat": "荆州辖区",
-      "region": "恩施",
-      "subRegion": "恩施",
-      "src": "权威",
-      "srcName": "恩施州邮政管理局",
-      "title": "恩施局开展邮政投递服务问题专项整治（虚假签收/未按址投递）",
-      "summary": "恩施州邮政管理局聚焦虚假签收、未按址投递、投递频次不达标、日戳不规范等突出问题开展专项整治，采取「四不两直」直插一线，强化申诉与执法联动。",
-      "reason": "投递质量整治绑定三项制度，辖区须保持按址投递合规。",
-      "action": "→ 对照恩施整治口径自查末端投递合规。",
-      "s": {
-        "G": 5,
-        "B": 4,
-        "P": 4,
-        "C": 3,
-        "T": 3
-      },
-      "tags": [
-        "恩施",
-        "投递",
-        "专项整治",
-        "三项制度"
-      ],
-      "date": "待核实",
-      "sort": "0000-00-00",
-      "warn": true,
-      "url": "https://hb.spb.gov.cn/hubsyzglj/c105013/c105016/202605/73cbd44ba9d548f78b33f150b0501fc4.shtml",
-      "channel": "资讯"
-    },
-    {
-      "level": "red",
-      "cat": "荆州辖区",
-      "region": "荆州",
-      "subRegion": "荆州城区",
-      "src": "权威",
-      "srcName": "荆州市邮政管理局",
-      "title": "荆州局召开全市邮政快递业安全生产和服务质量专项整治部署会",
-      "summary": "荆州市邮政管理局组织召开全市邮政快递业安全生产和服务质量专项整治部署会，通报2026年1–5月申诉、信访及安全生产情况，要求刚性落实实名收寄、收寄验视、过机安检三项制度，做好汛期防汛准备。",
-      "reason": "核心辖区安全生产+服务质量双专项整治，直连质量分与汛期安全红线。",
-      "action": "→ 对照专项整治清单落实三项制度与防汛。",
-      "s": {
-        "G": 5,
-        "B": 5,
-        "P": 4,
-        "C": 3,
-        "T": 4
-      },
-      "tags": [
-        "荆州",
-        "安全生产",
-        "服务质量",
-        "三项制度"
-      ],
-      "date": "待核实",
-      "sort": "0000-00-00",
-      "warn": true,
-      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202606/667664c1a5e94ec6a1bf29c070bd199c.shtml",
-      "channel": "资讯"
-    },
-    {
-      "level": "orange",
-      "cat": "荆州辖区",
-      "region": "荆门",
-      "src": "开放",
-      "srcName": "荆门社区网·荆门市邮政管理局回复",
-      "warn": true,
-      "title": "【荆门】掇刀圆通自2025年11月起暂停寄递，邮政管理局确认，论坛反馈近期已恢复",
-      "summary": "荆门市邮政管理局6月11日回复：掇刀区圆通因经营困难自2025年11月起暂停寄递（已公告并报告），其他品牌正常；荆门社区网用户近期反馈「已重新开通」。恢复时间待现场核实。",
-      "reason": "网点经营异动开放源单点待核实，影响辖区网点稳定与竞争格局，需二次确认恢复时间与范围。",
-      "action": "→ 派人现场核实掇刀圆通恢复时间与网络状态。",
-      "s": {
-        "G": 5,
-        "B": 4,
-        "P": 2,
-        "C": 3,
-        "T": 3
-      },
-      "tags": [
-        "荆门",
-        "网点异动",
-        "圆通",
-        "待核实"
-      ],
-      "date": "待核实",
-      "sort": "0000-00-00",
-      "url": "https://www.jmbbs.com/forum.php?mod=viewthread&page=1&tid=8297283",
-      "subRegion": "",
-      "channel": "资讯"
-    },
-    {
-      "level": "green",
-      "cat": "荆州辖区",
-      "region": "潜江",
-      "src": "开放",
-      "srcName": "潜江人才网",
-      "warn": true,
-      "title": "【潜江】潜江圆通常态化招聘客服/快递员（网络运转信号）",
-      "summary": "潜江圆通速递持续招聘客服（3500–4000+）、快递员（4000–6000），反映园区网络运转正常。",
-      "reason": "智慧物流园常态化用工，网络运转正常信号，稳定度参考（待核实）。",
-      "action": "→ 稳定性参考。",
-      "s": {
-        "G": 4,
-        "B": 2,
-        "P": 1,
-        "C": 1,
-        "T": 2
-      },
-      "tags": [
-        "潜江",
-        "圆通",
-        "用工",
-        "待核实"
-      ],
-      "date": "待核实",
-      "sort": "0000-00-00",
-      "url": "https://www.qjzp.cn/company/297300",
-      "subRegion": "",
-      "channel": "资讯"
-    },
-    {
-      "level": "orange",
-      "cat": "荆州辖区",
-      "region": "恩施",
-      "subRegion": "恩施",
-      "src": "权威",
-      "srcName": "恩施州邮政管理局",
-      "title": "恩施局召开快递服务质量提升集中约谈会（旺季申诉量较大企业参会）",
-      "summary": "恩施州邮政管理局组织召开快递服务质量提升集中约谈会，通报岁末年初业务旺季申诉平台及12345热线申诉受理情况，针对延误、投递服务、丢失短少等高频问题提出整改举措。",
-      "reason": "服务质量整治直连辖区申诉率与质量分，恩施辖区须压降重复投诉。",
-      "action": "→ 关注恩施辖区服务质量整改，压降旺季申诉。",
-      "s": {
-        "G": 5,
-        "B": 4,
-        "P": 3,
-        "C": 3,
-        "T": 2
-      },
-      "tags": [
-        "恩施",
-        "服务质量",
-        "约谈",
-        "申诉"
-      ],
-      "date": "待核实",
-      "sort": "0000-00-00",
-      "warn": true,
-      "url": "https://hb.spb.gov.cn/hubsyzglj/c105013/c105016/202603/9674e811769144e3a2ba7e31a45119c8.shtml",
-      "channel": "资讯"
     }
   ],
   "leads": [
@@ -2235,7 +3019,7 @@
       "region": "荆门",
       "src": "权威",
       "srcName": "荆门市气象台",
-      "date": "7月22日",
+      "date": "07月22日",
       "sort": "2026-07-22",
       "s": {
         "G": 5,
@@ -2263,7 +3047,7 @@
       "region": "潜江",
       "src": "权威",
       "srcName": "潜江市气象台/中央气象台",
-      "date": "7月22日",
+      "date": "07月22日",
       "sort": "2026-07-22",
       "s": {
         "G": 4,
@@ -2309,7 +3093,7 @@
       "region": "恩施",
       "src": "权威",
       "srcName": "恩施日报/新浪",
-      "date": "7月19日",
+      "date": "07月19日",
       "sort": "2026-07-19",
       "s": {
         "G": 5,
@@ -2355,7 +3139,7 @@
       "region": "潜江",
       "src": "权威",
       "srcName": "潜江市气象台/长江委",
-      "date": "7月18日",
+      "date": "07月18日",
       "sort": "2026-07-18",
       "s": {
         "G": 4,
@@ -2420,7 +3204,7 @@
       "region": "恩施",
       "src": "权威",
       "srcName": "来凤县气象台/中央气象台",
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "s": {
         "G": 5,
@@ -2448,7 +3232,7 @@
       "region": "宜昌",
       "src": "权威",
       "srcName": "宜都市气象台/长江海事局",
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "s": {
         "G": 5,
@@ -2476,7 +3260,7 @@
       "region": "宜昌",
       "src": "权威",
       "srcName": "远安县气象台/中央气象台",
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "s": {
         "G": 4,
@@ -2504,7 +3288,7 @@
       "region": "宜昌",
       "src": "权威",
       "srcName": "宜昌交警·湖北交警",
-      "date": "7月17日",
+      "date": "07月17日",
       "sort": "2026-07-17",
       "s": {
         "G": 5,
@@ -2586,7 +3370,7 @@
       "region": "荆州",
       "src": "权威",
       "srcName": "荆州市气象台·荆州新闻网",
-      "date": "7月15日",
+      "date": "07月15日",
       "sort": "2026-07-15",
       "s": {
         "G": 5,
@@ -2614,7 +3398,7 @@
       "region": "恩施",
       "src": "权威",
       "srcName": "建始县气象台/中央气象台",
-      "date": "7月13日",
+      "date": "07月13日",
       "sort": "2026-07-13",
       "s": {
         "G": 5,
@@ -2642,7 +3426,7 @@
       "region": "恩施",
       "src": "权威",
       "srcName": "巴东县公安局交管大队/长江巴东网",
-      "date": "7月10日",
+      "date": "07月10日",
       "sort": "2026-07-10",
       "s": {
         "G": 4,
@@ -2670,7 +3454,7 @@
       "region": "恩施",
       "src": "权威",
       "srcName": "巴东县人民政府",
-      "date": "7月9日",
+      "date": "07月09日",
       "sort": "2026-07-09",
       "s": {
         "G": 4,
@@ -2698,7 +3482,7 @@
       "region": "恩施",
       "src": "权威",
       "srcName": "湖北日报/恩施台",
-      "date": "7月7日",
+      "date": "07月07日",
       "sort": "2026-07-07",
       "s": {
         "G": 5,
@@ -2726,7 +3510,7 @@
       "region": "荆州",
       "src": "权威",
       "srcName": "湖北省气象台/湖北广电",
-      "date": "7月6日",
+      "date": "07月06日",
       "sort": "2026-07-06",
       "s": {
         "G": 5,

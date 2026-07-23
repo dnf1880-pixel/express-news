@@ -301,6 +301,11 @@ function weekday(sort){
   const days=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
   return days[new Date(+m[1],+m[2]-1,+m[3]).getDay()];
 }
+function fmtDate(sort){
+  const m=sort.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(!m) return '—';
+  return `${m[2]}/${m[3]}`;
+}
 function urlFor(d){return d.url?d.url:'https://www.baidu.com/s?wd='+encodeURIComponent(d.title);}
 
 const DATA = __DATA__;
@@ -419,7 +424,7 @@ function renderList(){
       const sc=comp(d.s);
       const isNew = d.sort>='2026-07-15' && d.sort<='2026-07-22';
       const isUrgent = d.channel==='安全' && sc>=60;
-      const subReg = d.subRegion ? `<div class="sub-region">${d.subRegion}</div>` : '';
+      const subReg = `<div class="sub-region">${d.subRegion || d.region || ''}</div>`;
       let axhtml='';
       AXES.forEach(a=>{const v=d.s[a.k];const pct=Math.round(v/5*100);axhtml+=`<div class="ax"><span>${a.n}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`;});
       const chBadge = d.channel && d.channel!=='资讯' ? `<span class="ch ${d.channel}">${d.channel}</span>` : '';
@@ -427,7 +432,7 @@ function renderList(){
       grp.insertAdjacentHTML('beforeend',`
         <article class="card ${d.level}">
           <div class="time-col">
-            <div class="date">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}</div>
+            <div class="date">${fmtDate(d.sort)}</div>
             ${subReg}
             ${isUrgent?'<span class="tag-urgent">紧急</span>':isNew?'<span class="tag-new">最新</span>':''}
             <div class="dot"></div>
@@ -515,7 +520,7 @@ function renderSafety(){
       grp.insertAdjacentHTML('beforeend',`
         <article class="card ${d.level}">
           <div class="time-col">
-            <div class="date">${d.date.replace(/年/g,'').replace(/月/g,'/').replace(/日/g,'')}</div>
+            <div class="date">${fmtDate(d.sort)}</div>
             <div class="sub-region">${d.subRegion||d.region||''}</div>
             ${isUrgent?'<span class="tag-urgent">紧急</span>':''}
             <div class="dot"></div>

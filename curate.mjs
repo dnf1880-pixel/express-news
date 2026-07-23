@@ -30,11 +30,35 @@ function parseDate(d) {
   return `${y}-${mo}-${da}`;
 }
 
-function fmtDate(d) {
+function fmtDate(d, fallbackDate) {
   const p = parseDate(d);
-  if (!p) return { date: '待核实', sort: '0000-00-00', warn: true };
-  const [y, mo, da] = p.split('-');
-  return { date: `${mo}月${da}日`, sort: p, warn: false };
+  if (p) {
+    const [y, mo, da] = p.split('-');
+    return { date: `${mo}月${da}日`, sort: p, warn: false };
+  }
+  // 无法确认真实发生日：用数据抓取时间兜底，warn 标待核实
+  const fb = fallbackDate || DATE;
+  const [y, mo, da] = fb.split('-');
+  return { date: `${mo}月${da}日`, sort: fb, warn: true };
+}
+
+// 清理明显非新闻的噪音条目
+function isNoiseTitle(title = '') {
+  const t = title.toLowerCase();
+  return /京公网安备|备案号|icp|版权所有|©|all rights reserved|隐私政策|用户协议|网站地图|联系我们/.test(t);
+}
+
+function normalizeEntryDate(n) {
+  if (n.sort && /^\d{4}-\d{2}-\d{2}$/.test(n.sort) && n.sort !== '0000-00-00') {
+    const [y, mo, da] = n.sort.split('-');
+    n.date = `${mo}月${da}日`;
+  } else if (n.sort === '0000-00-00' || !n.sort) {
+    // 旧数据：用抓取日期兜底并标记待核实
+    n.sort = DATE;
+    n.warn = true;
+    const [y, mo, da] = DATE.split('-');
+    n.date = `${mo}月${da}日`;
+  }
 }
 
 function scoreToLevel(score) {
@@ -96,6 +120,7 @@ function srcNameFor(item) {
 // === 新增资讯 ===
 const newNews = staging.news
   .filter(x => (x.score >= 65) && inTargetRegion(x.region, x.subRegion) && !existingUrls.has(x.url))
+  .filter(x => !isNoiseTitle(x.title))
   .filter(x => {
     const sort = parseDate(x.date);
     return sort && sort >= '2026-07-15';
@@ -153,6 +178,7 @@ for (const x of newLeads) {
 // === 新增安全事件 ===
 const newSafety = staging.safety
   .filter(x => (x.score >= 65) && inTargetRegion(x.region, x.subRegion) && !existingUrls.has(x.url))
+  .filter(x => !isNoiseTitle(x.title))
   .filter(x => {
     const sort = parseDate(x.date);
     return sort && sort >= '2026-07-15';
@@ -179,15 +205,21 @@ for (const x of newSafety) {
   });
 }
 
-// === 字段补齐（旧条目） ===
+// === 字段补齐 + 日期规范化（旧条目） ===
 for (const n of existing.news) {
   if (!('subRegion' in n)) n.subRegion = '';
   if (!('channel' in n)) n.channel = '资讯';
-  if (!('warn' in n)) n.warn = n.sort === '0000-00-00';
+  normalizeEntryDate(n);
+  if (!('warn' in n)) n.warn = n.sort === DATE;
 }
 for (const s of existing.safety) {
-  if (!('warn' in s)) s.warn = s.sort === '0000-00-00';
+  normalizeEntryDate(s);
+  if (!('warn' in s)) s.warn = s.sort === DATE;
 }
+
+// === 清理历史噪音 ===
+existing.news = existing.news.filter(x => !isNoiseTitle(x.title));
+existing.safety = existing.safety.filter(x => !isNoiseTitle(x.title));
 
 // === 去重 ===
 function dedup(arr, keyFn) {
