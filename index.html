@@ -480,7 +480,8 @@ function updateBadges(){
 
 function setTopTitle(){
   const now=new Date();
-  const todayStr=`${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日${'日一二三四五六'[now.getDay()]} `;
+  const week=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'][now.getDay()];
+  const todayStr=`${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日${week}`;
   if(curView==='featured'){topTitle.firstChild.textContent='精选 ';topSub.textContent=todayStr.trim()+' · 权重分≥65 且已核实';tabs.style.display='';tabsSelect.style.display='';}
   else if(curView==='all'){topTitle.firstChild.textContent='全部快递动态 ';topSub.textContent=todayStr.trim()+' · 抓取所有相关联动态（按真实发生日排序）';tabs.style.display='';tabsSelect.style.display='';}
   else if(curView==='daily'){topTitle.firstChild.textContent='快递日报 ';topSub.textContent=(curDailyDate?fmtChineseDate(curDailyDate):todayStr.trim())+' · 本期重点总结';tabs.style.display='none';tabsSelect.style.display='none';}
