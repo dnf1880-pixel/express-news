@@ -1,133 +1,149 @@
 [
  {
-  "idx": 125,
-  "region": "洪湖",
-  "city": "荆州市",
-  "admin": "洪湖市",
-  "tier": "县级",
+  "idx": 120,
+  "query": "潜江市邮政管理局 潜江 快递 通报 整治 投诉 最新",
+  "region": "潜江",
+  "subRegion": "潜江市",
+  "channel": "资讯",
+  "template": "news",
+  "srcName": "潜江发布"
+ },
+ {
+  "idx": 121,
+  "query": "潜江 暴雨 封路 事故 交通管制 最新",
+  "region": "潜江",
+  "subRegion": "潜江市",
+  "channel": "安全",
+  "template": "safety",
+  "srcName": "潜江发布"
+ },
+ {
+  "idx": 122,
+  "query": "潜江 电商 产业园 水果 寄递 招商 最新",
+  "region": "潜江",
+  "subRegion": "潜江市",
   "channel": "电商",
   "template": "ecom",
+  "srcName": "潜江发布"
+ },
+ {
+  "idx": 123,
+  "query": "荆州市邮政管理局 洪湖 快递 通报 整治 投诉 最新",
+  "region": "洪湖",
+  "subRegion": "荆州市",
+  "channel": "资讯",
+  "template": "news",
+  "srcName": "洪湖融媒"
+ },
+ {
+  "idx": 124,
+  "query": "洪湖 暴雨 封路 事故 交通管制 最新",
+  "region": "洪湖",
+  "subRegion": "荆州市",
+  "channel": "安全",
+  "template": "safety",
+  "srcName": "洪湖融媒"
+ },
+ {
+  "idx": 125,
   "query": "洪湖 电商 产业园 水果 寄递 招商 最新",
-  "bureau": "荆州市邮政管理局",
-  "govBase": "https://www.jingzhou.gov.cn/",
-  "media": "洪湖融媒"
+  "region": "洪湖",
+  "subRegion": "荆州市",
+  "channel": "电商",
+  "template": "ecom",
+  "srcName": "洪湖融媒"
  },
  {
   "idx": 126,
+  "query": "荆门市邮政管理局 京山 快递 通报 整治 投诉 最新",
   "region": "京山",
-  "city": "荆门市",
-  "admin": "京山县",
-  "tier": "县级",
+  "subRegion": "荆门市",
   "channel": "资讯",
   "template": "news",
-  "query": "荆门市邮政管理局 京山 快递 通报 整治 投诉 最新",
-  "bureau": "荆门市邮政管理局",
-  "govBase": "https://www.jingmen.gov.cn/",
-  "media": "京山融媒"
+  "srcName": "京山融媒"
  },
  {
   "idx": 127,
+  "query": "京山 暴雨 封路 事故 交通管制 最新",
   "region": "京山",
-  "city": "荆门市",
-  "admin": "京山县",
-  "tier": "县级",
+  "subRegion": "荆门市",
   "channel": "安全",
   "template": "safety",
-  "query": "京山 暴雨 封路 事故 交通管制 最新",
-  "bureau": "荆门市邮政管理局",
-  "govBase": "https://www.jingmen.gov.cn/",
-  "media": "京山融媒"
+  "srcName": "京山融媒"
  },
  {
   "idx": 128,
+  "query": "京山 电商 产业园 水果 寄递 招商 最新",
   "region": "京山",
-  "city": "荆门市",
-  "admin": "京山县",
-  "tier": "县级",
+  "subRegion": "荆门市",
   "channel": "电商",
   "template": "ecom",
-  "query": "京山 电商 产业园 水果 寄递 招商 最新",
-  "bureau": "荆门市邮政管理局",
-  "govBase": "https://www.jingmen.gov.cn/",
-  "media": "京山融媒"
+  "srcName": "京山融媒"
  },
  {
   "idx": 129,
+  "query": "湖北 台风 暴雨 预警 快递 物流 影响 最新",
   "channel": "安全",
-  "template": "typhoon",
-  "query": "湖北 台风 暴雨 预警 快递 物流 影响 最新"
+  "template": "typhoon"
  },
  {
   "idx": 130,
+  "query": "湖北 地震 最新 震感",
   "channel": "安全",
-  "template": "quake",
-  "query": "湖北 地震 最新 震感"
+  "template": "quake"
  },
  {
   "idx": 131,
+  "query": "快递 违禁品 寄递 查获 湖北 最新",
   "channel": "安全",
-  "template": "contraband",
-  "query": "快递 违禁品 寄递 查获 湖北 最新"
+  "template": "contraband"
  },
  {
   "idx": 132,
+  "query": "快递员 三轮车 交通事故 湖北 最新",
   "channel": "安全",
-  "template": "courier-accident",
-  "query": "快递员 三轮车 交通事故 湖北 最新"
+  "template": "courier-accident"
  },
  {
   "idx": 133,
+  "query": "快递 网点 仓库 火灾 消防 隐患 湖北 最新",
   "channel": "安全",
-  "template": "depot-fire",
-  "query": "快递 网点 仓库 火灾 消防 隐患 湖北 最新"
+  "template": "depot-fire"
  },
  {
   "idx": 134,
-  "channel": "资讯",
-  "query": "恩施州邮政管理局 恩施 最新公告 快递"
+  "query": "恩施州邮政管理局 恩施 最新公告 快递",
+  "channel": "资讯"
  },
  {
   "idx": 135,
-  "channel": "资讯",
-  "query": "国务院新闻办 全国 最新公告 快递"
+  "query": "国务院新闻办 全国 最新公告 快递",
+  "channel": "资讯"
  },
  {
   "idx": 136,
-  "channel": "资讯",
-  "query": "财联社 媒体 最新公告 快递"
+  "query": "鄂州花湖机场 湖北 最新公告 快递",
+  "channel": "资讯"
  },
  {
   "idx": 137,
-  "channel": "资讯",
-  "query": "鄂州花湖机场 湖北 最新公告 快递"
+  "channel": "电商"
  },
  {
   "idx": 138,
-  "channel": "电商"
+  "query": "中国地震台网 全国 最新 预警 事故",
+  "channel": "安全"
  },
  {
   "idx": 139,
-  "channel": "电商"
+  "channel": "安全"
  },
  {
   "idx": 140,
-  "channel": "电商"
+  "channel": "安全"
  },
  {
   "idx": 141,
-  "channel": "安全"
- },
- {
-  "idx": 142,
-  "channel": "安全",
-  "query": "中国地震台网 全国 最新 预警 事故"
- },
- {
-  "idx": 143,
-  "channel": "安全"
- },
- {
-  "idx": 144,
   "channel": "安全"
  }
 ]
