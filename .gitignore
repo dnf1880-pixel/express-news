@@ -7,3 +7,5 @@ archive/watch-alerts-*.json
 node_modules/
 .DS_Store
 .workbuddy/
+
+archive/search-batch-input-*.json
