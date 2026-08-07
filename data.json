@@ -24,10 +24,10 @@
       "tags": [
         "资讯"
       ],
-      "date": "08月31日",
-      "sort": "2026-08-31",
+      "date": "2026-08-07",
+      "sort": "2026-08-07",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100071/202608/31e8bebb2aa94cda8018f732c08c187f.shtml",
-      "warn": false
+      "warn": true
     },
     {
       "level": "red",
@@ -1199,10 +1199,10 @@
       "tags": [
         "资讯"
       ],
-      "date": "08月15日",
-      "sort": "2026-08-15",
+      "date": "2026-08-07",
+      "sort": "2026-08-07",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100060/202608/1555bffb12ee41eb80cc3f874116c9ef.shtml",
-      "warn": false
+      "warn": true
     },
     {
       "level": "orange",
