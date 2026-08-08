@@ -9,3 +9,4 @@ node_modules/
 .workbuddy/
 
 archive/search-batch-input-*.json
+archive/part*.json
