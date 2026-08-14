@@ -62,6 +62,33 @@
       "level": "red",
       "cat": "荆门",
       "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "谭建国专题研究重点行业领域安全生产工作",
+      "summary": "谭建国专题研究重点行业领域安全生产工作",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "http://www.jingmen.gov.cn/art/2026/8/13/art_19993_1233108.html",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
       "subRegion": "",
       "channel": "资讯",
       "src": "权威",
@@ -84,6 +111,60 @@
       "date": "08月12日",
       "sort": "2026-08-12",
       "url": "http://www.jingmen.gov.cn/art/2026/8/12/art_4814_1232932.html",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "钟祥市：从严从细落实举措 全力筑牢安全防线",
+      "summary": "钟祥市：从严从细落实举措 全力筑牢安全防线",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月12日",
+      "sort": "2026-08-12",
+      "url": "https://www.jingmen.gov.cn/art/2026/8/12/art_439_1232971.html",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "我市多措并举织密交通运输安全“防控网”",
+      "summary": "我市多措并举织密交通运输安全“防控网”",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月12日",
+      "sort": "2026-08-12",
+      "url": "https://www.jingmen.gov.cn/art/2026/8/12/art_440_1232926.html",
       "warn": false
     },
     {
@@ -247,6 +328,33 @@
       "date": "08月07日",
       "sort": "2026-08-07",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202608/7d1847b76f5242be883273f2c9c56944.shtml",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "我市延续实施社保补贴扩围政策",
+      "summary": "我市延续实施社保补贴扩围政策",
+      "reason": "监管层面新动向，影响辖区合规导向与考核重点，需周会传达。",
+      "action": "→ 周会传达，对齐合规与质量分要求。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 4
+      },
+      "tags": [
+        "监管"
+      ],
+      "date": "08月07日",
+      "sort": "2026-08-07",
+      "url": "http://www.jingmen.gov.cn/art/2026/8/7/art_438_1232255.html",
       "warn": false
     },
     {
@@ -1080,6 +1188,87 @@
       "channel": "资讯",
       "src": "宜昌市邮政管理局",
       "srcName": "宜昌市邮政管理局",
+      "title": "防范“晴后灾” 全面排查雨后道路隐患",
+      "summary": "防范“晴后灾” 全面排查雨后道路隐患",
+      "reason": "宜昌安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月14日",
+      "sort": "2026-08-14",
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2026/0814/1078747.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "宜昌",
+      "region": "宜昌",
+      "subRegion": "宜昌",
+      "channel": "资讯",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
+      "title": "喇叭叫卖吵得慌 城区启动高音喇叭扰民专项整治行动",
+      "summary": "喇叭叫卖吵得慌 城区启动高音喇叭扰民专项整治行动",
+      "reason": "宜昌安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2026/0813/1078719.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "宜昌",
+      "region": "宜昌",
+      "subRegion": "宜昌",
+      "channel": "资讯",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
+      "title": "总投资10.75亿元 AI创新创业中心项目通过预验收",
+      "summary": "总投资10.75亿元 AI创新创业中心项目通过预验收",
+      "reason": "宜昌最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2026/0813/1078715.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "宜昌",
+      "region": "宜昌",
+      "subRegion": "宜昌",
+      "channel": "资讯",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
       "title": "因江面大风临时禁航 多部门联动转运200余名旅客",
       "summary": "因江面大风临时禁航 多部门联动转运200余名旅客",
       "reason": "宜昌最新监管/市场动态，建议纳入日常关注和网点通报。",
@@ -1097,6 +1286,87 @@
       "date": "08月13日",
       "sort": "2026-08-13",
       "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2026/0813/1078716.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "市住房和城市更新局：精准培训补短板 筑牢安全防火墙",
+      "summary": "市住房和城市更新局：精准培训补短板 筑牢安全防火墙",
+      "reason": "潜江安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "https://www.hbqj.gov.cn/xwzx/jrqj/smsh/202608/t20260813_5994535.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "全市招商引资和重大项目建设推进会召开",
+      "summary": "全市招商引资和重大项目建设推进会召开",
+      "reason": "荆州电商/产业带释放寄递增量，值得网点主动揽收。",
+      "action": "→ 联系属地网点上门对接，测算揽收潜力。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202608/t20260813_1127668.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州高新区筑牢安全防线",
+      "summary": "荆州高新区筑牢安全防线",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202608/t20260813_1127431.shtml",
       "warn": false
     },
     {
@@ -1156,6 +1426,87 @@
     },
     {
       "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "潜江市北台生态农业有限公司年出栏7000头生猪建设项目 环境影响报告书征求意见稿公示",
+      "summary": "潜江市北台生态农业有限公司年出栏7000头生猪建设项目 环境影响报告书征求意见稿公示",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "url": "https://www.hbqj.gov.cn/xxgk/zc/qtwj/gsgg/202608/t20260813_5994287.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "李迎伟主持研究“推动高质量发展改革创新系列行动”",
+      "summary": "李迎伟主持研究“推动高质量发展改革创新系列行动”",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月12日",
+      "sort": "2026-08-12",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202608/t20260812_1127415.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州交警：24小时在岗 守护路网安全畅通",
+      "summary": "荆州交警：24小时在岗 守护路网安全畅通",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月12日",
+      "sort": "2026-08-12",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmdt/202608/t20260812_1127190.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "荆州",
       "region": "荆州",
       "subRegion": "荆州",
@@ -1179,6 +1530,87 @@
       "date": "08月12日",
       "sort": "2026-08-12",
       "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202608/t20260812_1127210.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "听证公告（潜江市四季友农产品市场有限公司涉嫌价格违法行为案）",
+      "summary": "听证公告（潜江市四季友农产品市场有限公司涉嫌价格违法行为案）",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月12日",
+      "sort": "2026-08-12",
+      "url": "https://www.hbqj.gov.cn/xxgk/zc/qtwj/gsgg/202608/t20260812_5993766.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "全市“伪新能源加注站”专项整治工作方案",
+      "summary": "全市“伪新能源加注站”专项整治工作方案",
+      "reason": "潜江安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月11日",
+      "sort": "2026-08-11",
+      "url": "https://www.hbqj.gov.cn/xxgk/xxgkml/szfxxgkml/qtzdgknr/zdzcls/202608/t20260811_5992980.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州区闭环整改守护群众出行安全",
+      "summary": "荆州区闭环整改守护群众出行安全",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月11日",
+      "sort": "2026-08-11",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202608/t20260811_1127013.shtml",
       "warn": false
     },
     {
@@ -2217,6 +2649,33 @@
     },
     {
       "level": "orange",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "我市发布夏季食品安全消费提示",
+      "summary": "我市发布夏季食品安全消费提示",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "07月29日",
+      "sort": "2026-07-29",
+      "url": "http://www.jingmen.gov.cn/art/2026/7/29/art_438_1230673.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "宜昌",
       "region": "宜昌",
       "subRegion": "宜昌",
@@ -2298,6 +2757,33 @@
       "date": "07月28日",
       "sort": "2026-07-28",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202607/9ebb680f56bf43a38df4437a96f10c3f.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "我市13个交通项目纳入国家“十五五”交通规划",
+      "summary": "我市13个交通项目纳入国家“十五五”交通规划",
+      "reason": "荆门最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "07月28日",
+      "sort": "2026-07-28",
+      "url": "http://www.jingmen.gov.cn/art/2026/7/28/art_438_1230484.html",
       "warn": false
     },
     {
