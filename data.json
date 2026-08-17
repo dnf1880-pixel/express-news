@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-08-17",
-  "note": "每日刷新 2026-08-17（信源清单驱动：13 core 直连 + 43 区县定向 + 11 专项）。保留昨日高价值条目，追加今日真实抓取；低价值条目沉淀不进入前端。",
+  "note": "轻量补抓 2026-08-17（核心源看守）：仅并入 watch 新增高价值 6 条，保留既有条目。",
   "news": [
     {
       "level": "red",
@@ -1701,6 +1701,33 @@
       "level": "orange",
       "cat": "荆州",
       "region": "荆州",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州区排查地质灾害和森林防火隐患",
+      "summary": "荆州区排查地质灾害和森林防火隐患",
+      "reason": "安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202608/t20260817_1128598.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
       "subRegion": "荆州",
       "channel": "资讯",
       "src": "荆州市邮政管理局",
@@ -2376,6 +2403,34 @@
     },
     {
       "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "山东局召开全省行业安全发展视频会议",
+      "summary": "山东局召开全省行业安全发展视频会议",
+      "reason": "安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全",
+        "监管"
+      ],
+      "date": "08月09日",
+      "sort": "2026-08-09",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/9135ed8b7be24af9b6790d78f653c056.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "荆州",
       "region": "荆州",
       "subRegion": "荆州",
@@ -2454,6 +2509,33 @@
       "date": "08月08日",
       "sort": "2026-08-08",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/08ada95fec064005b3923c956ddd924f.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "海南省委书记批示肯定省邮政管理局工作",
+      "summary": "海南省委书记批示肯定省邮政管理局工作",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月08日",
+      "sort": "2026-08-08",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/84deb2fffeb447479c931de46e91c7f0.shtml",
       "warn": false
     },
     {
@@ -2563,6 +2645,33 @@
       "date": "08月07日",
       "sort": "2026-08-07",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/7e24be1fab1f47d89c5ce572b92fa7e9.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "青海局联合省委组织部推进党建引领快递进村",
+      "summary": "青海局联合省委组织部推进党建引领快递进村",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 4,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月07日",
+      "sort": "2026-08-07",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/7f293b2f8b9a43058084c5fdf7a1f980.shtml",
       "warn": false
     },
     {
@@ -2699,6 +2808,60 @@
       "date": "08月06日",
       "sort": "2026-08-06",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/672c2dae4d0747d28971d0efddf944a2.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "快递进村被纳入“十五五”数字浙江建设规划",
+      "summary": "快递进村被纳入“十五五”数字浙江建设规划",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月06日",
+      "sort": "2026-08-06",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/62106f34051b425cbfa9139a23315e8b.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "海东市委副书记慰问一线快递员",
+      "summary": "海东市委副书记慰问一线快递员",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月06日",
+      "sort": "2026-08-06",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/6195c4fb10904cab9cbb1a3ccd9e88c0.shtml",
       "warn": false
     },
     {

@@ -52,9 +52,9 @@ const action = t => { if (/消防|安全|隐患|整治/.test(t)) return '→ 排
 function addNews(x) {
   const sort = parseDate(x.date) || DATE;
   const warn = !parseDate(x.date);
-  // 省委书记调研省邮政管理局：本质湖北信号，region 由"全国"校正为"湖北"
+  // 省委书记调研省邮政管理局：仅当标题确含"湖北/鄂西"才由"全国"校正为"湖北"，避免把海南/青海等外省事项误标湖北
   let region = x.region || '湖北/鄂西';
-  if (/省委书记/.test(x.title) && x.region === '全国') region = '湖北';
+  if (/省委书记/.test(x.title) && x.region === '全国' && /湖北|鄂西/.test(x.title)) region = '湖北';
   data.news.push({
     level: level(x.score), cat: cat(region), region, subRegion: x.subRegion || '',
     channel: x.channel || '资讯', src: x.src || '权威', srcName: x.srcName || x.src || '检索',
