@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-17",
-  "note": "轻量补抓 2026-08-17（核心源看守）：仅并入 watch 新增高价值 6 条，保留既有条目。",
+  "updatedAt": "2026-08-18",
+  "note": "每日刷新 2026-08-18（信源清单驱动：13 core 直连 + 43 区县定向 + 11 专项）。保留昨日高价值条目，追加今日真实抓取；低价值条目沉淀不进入前端。",
   "news": [
     {
       "level": "red",
@@ -1722,6 +1722,195 @@
       "date": "08月17日",
       "sort": "2026-08-17",
       "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202608/t20260817_1128598.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州市交通运输部门开展货运专项整治",
+      "summary": "荆州市交通运输部门开展货运专项整治",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmdt/202608/t20260817_1128600.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "科创赋能蓄动能 优商沃土引凤来——潜江以科技创新和一流营商环境护航高质量发展纪实",
+      "summary": "科创赋能蓄动能 优商沃土引凤来——潜江以科技创新和一流营商环境护航高质量发展纪实",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.hbqj.gov.cn/xwzx/jrqj/qjyw/202608/t20260817_5996068.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "全省标准化试点项目终期评估暨潜江市标准化管理培训会举行",
+      "summary": "全省标准化试点项目终期评估暨潜江市标准化管理培训会举行",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.hbqj.gov.cn/xwzx/jrqj/qjyw/202608/t20260817_5996038.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "荆州：多方联动 织密暑期未成年人安全防护网",
+      "summary": "荆州：多方联动 织密暑期未成年人安全防护网",
+      "reason": "荆州安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/bmdt/202608/t20260817_1128602.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "我省组建重大项目服务小分队奔赴17个市州开展包保服务",
+      "summary": "我省组建重大项目服务小分队奔赴17个市州开展包保服务",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.hbqj.gov.cn/xwzx/jrqj/qjyw/202608/t20260817_5996050.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "关于潜江市总口片区雨污分流改造工程项目建议书的批复",
+      "summary": "关于潜江市总口片区雨污分流改造工程项目建议书的批复",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.hbqj.gov.cn/xxgk/xxgkml/szfxxgkml/gcjsxm/sp/202608/t20260817_5995760.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "5G全链接智能工厂技术改造项目",
+      "summary": "5G全链接智能工厂技术改造项目",
+      "reason": "潜江最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月17日",
+      "sort": "2026-08-17",
+      "url": "https://www.hbqj.gov.cn/xxgk/xxgkml/szfxxgkml/gcjsxm/ba/202608/t20260817_5995755.html",
       "warn": false
     },
     {
@@ -7834,6 +8023,126 @@
       "warn": false,
       "score": 84,
       "level": "red"
+    },
+    {
+      "name": "喜讯！荆州区这一返乡创业园项目盛大开工啦！",
+      "biz": "待核实",
+      "region": "荆州城区",
+      "admin": "沙市区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(荆州城区) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "url": "http://www.jingzhouqu.gov.cn/sygx/tpxw/202511/t20251111_1051128.shtml",
+      "date": "11月11日",
+      "sort": "2025-11-11",
+      "warn": false,
+      "score": 94,
+      "level": "red"
+    },
+    {
+      "name": "潜江市龙湾镇乡村振兴农业产业园建设“火力全开”",
+      "biz": "待核实",
+      "region": "潜江",
+      "admin": "潜江市",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(潜江) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "url": "https://news.hubeidaily.net/pc/c_4627939.html",
+      "date": "08月18日",
+      "sort": "2026-08-18",
+      "warn": true,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "骏马开新局 筑梦积玉口——积玉口镇2026年招商推介",
+      "biz": "待核实",
+      "region": "潜江",
+      "admin": "潜江市",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(潜江) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "url": "https://dsjyh03.llb.chutianyun.gov.cn/xxgk/zc/qtwj/gsgg/202601/t20260130_5866884.html",
+      "date": "01月30日",
+      "sort": "2026-01-30",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "关于对区政协九届三次会议第93123号提案的答复",
+      "biz": "待核实",
+      "region": "荆门城区",
+      "admin": "东宝区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(荆门城区) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "url": "https://118.jingmen.gov.cn/art/2024/6/19/art_25638_1099251.html",
+      "date": "08月18日",
+      "sort": "2026-08-18",
+      "warn": true,
+      "score": 84,
+      "level": "red"
+    },
+    {
+      "name": "北古城镇:蓝莓铺就致富路 产业点亮新生活",
+      "biz": "待核实",
+      "region": "古城北",
+      "admin": "荆州区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(古城北) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "url": "https://www.sohu.com/a/1006747134_121123791",
+      "date": "08月18日",
+      "sort": "2026-08-18",
+      "warn": true,
+      "score": 78,
+      "level": "red"
+    },
+    {
+      "name": "重庆鲁能美丽乡村农业产业园招商公告",
+      "biz": "待核实",
+      "region": "江津西路",
+      "admin": "荆州区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(江津西路) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "url": "https://h.mffb.com.cn/a/540956.html",
+      "date": "08月18日",
+      "sort": "2026-08-18",
+      "warn": true,
+      "score": 78,
+      "level": "red"
     }
   ],
   "safety": [
@@ -7998,6 +8307,24 @@
       ],
       "warn": false,
       "url": "https://jtt.hubei.gov.cn/lwsfzx/fzlm/qtlm/zxlk/index3.shtml"
+    },
+    {
+      "title": "湖北省潜江市发布暴雨橙色预警信号",
+      "summary": "潜江市气象台2026年8月13日4时40分发布暴雨橙色预警信号：预计未来3小时，我市将有分散性中到大雨，后湖管理区、龙湾镇将有50-70毫米降水，阵风6-8级，请注意防范。",
+      "reason": "影响 潜江 末端派送与干线时效，需预警网点。",
+      "subRegion": "潜江市",
+      "region": "潜江",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "score": 74,
+      "level": "orange",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "https://tianqi.2345.com/alert/57475-0203.htm"
     },
     {
       "title": "降雨持续！荆门最新天气预报",
@@ -9006,6 +9333,42 @@
       ],
       "warn": false,
       "url": "https://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/gongshigonggao/2026/0805/1078599.html"
+    },
+    {
+      "title": "湖北宜昌暴雨,武铁刚刚官宣:宜万铁路部分列车停运",
+      "summary": "8月5日,国铁武汉局及时调整列车开行方案,对宜万铁路部分列车采取停运或折返措施;汉口开往利川的D5975次、D5981次、D5943次旅客列车运行至宜昌东站终止运行。",
+      "reason": "影响 宜昌东站 末端派送与干线时效，需预警网点。",
+      "subRegion": "伍家岗区",
+      "region": "宜昌东站",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
+      "date": "08月05日",
+      "sort": "2026-08-05",
+      "score": 75,
+      "level": "red",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "https://www.sohu.com/a/1059013116_121284943"
+    },
+    {
+      "title": "最新预警！影响沙市区、荆州区部分乡镇及街道",
+      "summary": "荆州市、荆州区相继发布强对流黄色预警，沙市区、荆州区部分乡镇街道将出现短时强降水、雷暴大风，局地有小冰雹。",
+      "reason": "影响 荆州城区 末端派送与干线时效，需预警网点。",
+      "subRegion": "沙市区",
+      "region": "荆州城区",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "date": "08月05日",
+      "sort": "2026-08-05",
+      "score": 75,
+      "level": "red",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "https://www.toutiao.com/article/7670518567997112866/"
     },
     {
       "title": "台风“白海豚”逼近",
