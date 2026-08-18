@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-08-18",
-  "note": "每日刷新 2026-08-18（信源清单驱动：13 core 直连 + 43 区县定向 + 11 专项）。保留昨日高价值条目，追加今日真实抓取；低价值条目沉淀不进入前端。",
+  "note": "轻量补抓 2026-08-18（核心源看守）：仅并入 watch 新增高价值 7 条，保留既有条目。",
   "news": [
     {
       "level": "red",
@@ -2729,6 +2729,33 @@
     },
     {
       "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "珠海跨境电商高质量发展措施出台",
+      "summary": "珠海跨境电商高质量发展措施出台",
+      "reason": "电商/产业带/农村寄递释放增量，值得网点主动揽收。",
+      "action": "→ 联系属地网点上门对接，测算揽收潜力。",
+      "s": {
+        "G": 3,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月08日",
+      "sort": "2026-08-08",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/8580ec3b43b747718442d3ba7f39f820.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "宜昌",
       "region": "宜昌",
       "subRegion": "宜昌",
@@ -2861,6 +2888,33 @@
       "date": "08月07日",
       "sort": "2026-08-07",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/7f293b2f8b9a43058084c5fdf7a1f980.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "上海现代物流发展“十五五”规划印发",
+      "summary": "上海现代物流发展“十五五”规划印发",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月07日",
+      "sort": "2026-08-07",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/72a57d5c7f044d7991ce9b3d892aae79.shtml",
       "warn": false
     },
     {
@@ -3061,6 +3115,33 @@
       "channel": "资讯",
       "src": "权威",
       "srcName": "国家邮政局",
+      "title": "朝阳市副市长专题听取市邮政管理局工作汇报",
+      "summary": "朝阳市副市长专题听取市邮政管理局工作汇报",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月06日",
+      "sort": "2026-08-06",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/656395f24dc44ae6a642ce8e8de89ffb.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
       "title": "福建3部门联合印发方案 推进快递行业劳动合同...",
       "summary": "福建3部门联合印发方案 推进快递行业劳动合同...",
       "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
@@ -3133,6 +3214,33 @@
       "date": "08月05日",
       "sort": "2026-08-05",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/051582e51c64441684f3a6c5a3d0e900.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "2025年邮票发行监管报告",
+      "summary": "2025年邮票发行监管报告",
+      "reason": "监管层面新动向，影响合规导向与考核重点，需周会传达。",
+      "action": "→ 周会传达，对齐合规与质量分要求。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "监管"
+      ],
+      "date": "08月05日",
+      "sort": "2026-08-05",
+      "url": "https://www.spb.gov.cn/gjyzj/c100009/c100010/202608/59dee383f151454aaca05ae0d558c9c3.shtml",
       "warn": false
     },
     {
@@ -3301,6 +3409,33 @@
       "level": "orange",
       "cat": "行业",
       "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "福建局赴邮政泉州智慧物流园项目现场调研",
+      "summary": "福建局赴邮政泉州智慧物流园项目现场调研",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月03日",
+      "sort": "2026-08-03",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/33bff054fda54240bd3d1e7fc3db9d52.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
       "subRegion": "全国",
       "channel": "资讯",
       "src": "国家邮政局",
@@ -3376,6 +3511,33 @@
       "date": "08月02日",
       "sort": "2026-08-02",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/2a5c24d9d020460187511adaee29a8e1.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "定西市副市长肯定市邮政管理工作",
+      "summary": "定西市副市长肯定市邮政管理工作",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月02日",
+      "sort": "2026-08-02",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/2b179a2accb64c54abdc5c190debba8c.shtml",
       "warn": false
     },
     {
@@ -3484,6 +3646,33 @@
       "date": "08月01日",
       "sort": "2026-08-01",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/1d35eac052aa4d94b1d090cee47b6f7b.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "南昌局赴进贤调研快递进村与特色产业服务工作",
+      "summary": "南昌局赴进贤调研快递进村与特色产业服务工作",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 4,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月01日",
+      "sort": "2026-08-01",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/01bab0a23cfc40d0b24d19182015fac0.shtml",
       "warn": false
     },
     {
