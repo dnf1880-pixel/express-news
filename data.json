@@ -1,7 +1,88 @@
 {
-  "updatedAt": "2026-08-20",
-  "note": "每日刷新 2026-08-20（信源清单驱动：13 core 直连 + 43 区县定向 + 11 专项）。保留昨日高价值条目，追加今日真实抓取；低价值条目沉淀不进入前端。",
+  "updatedAt": "2026-08-26",
+  "note": "每日刷新 2026-08-26（信源清单驱动：13 core 直连 + 43 区县定向 + 11 专项）。保留昨日高价值条目，追加今日真实抓取；低价值条目沉淀不进入前端。",
   "news": [
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "我市开展殡葬领域专项整治“回头看”",
+      "summary": "我市开展殡葬领域专项整治“回头看”",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月26日",
+      "sort": "2026-08-26",
+      "url": "http://www.jingmen.gov.cn/art/2026/8/26/art_438_1235308.html",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "金秋启新学 护航新学期 市教育局下发提示：各校要压实招生、心理健康教育、安全、师德等各项任务",
+      "summary": "金秋启新学 护航新学期 市教育局下发提示：各校要压实招生、心理健康教育、安全、师德等各项任务",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月25日",
+      "sort": "2026-08-25",
+      "url": "https://www.jingmen.gov.cn/art/2026/8/25/art_440_1235052.html",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "从城区夜市到乡镇集市 东宝区全链条盯紧夏季餐饮安全",
+      "summary": "从城区夜市到乡镇集市 东宝区全链条盯紧夏季餐饮安全",
+      "reason": "荆门安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月25日",
+      "sort": "2026-08-25",
+      "url": "https://www.jingmen.gov.cn/art/2026/8/25/art_439_1235056.html",
+      "warn": false
+    },
     {
       "level": "red",
       "cat": "荆门",
@@ -660,6 +741,33 @@
       "level": "red",
       "cat": "荆门",
       "region": "荆门",
+      "subRegion": "荆门",
+      "channel": "资讯",
+      "src": "荆门市邮政管理局",
+      "srcName": "荆门市邮政管理局",
+      "title": "荆门市场监管创新推出网络餐饮“你点我查”工作 群众点单 智慧赋能 全域共治",
+      "summary": "荆门市场监管创新推出网络餐饮“你点我查”工作 群众点单 智慧赋能 全域共治",
+      "reason": "荆门最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月12日",
+      "sort": "2026-08-12",
+      "url": "http://www.jingmen.gov.cn/art/2026/8/12/art_440_1232972.html",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "荆门",
+      "region": "荆门",
       "subRegion": "",
       "channel": "资讯",
       "src": "权威",
@@ -1017,6 +1125,60 @@
       "channel": "资讯",
       "src": "湖北省邮政管理局",
       "srcName": "湖北省邮政管理局",
+      "title": "武汉市快递企业召开劳动规则协商恳谈会",
+      "summary": "武汉市快递企业召开劳动规则协商恳谈会",
+      "reason": "湖北最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月09日",
+      "sort": "2026-08-09",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202608/926eac9f634c40d3bfb2e0681f696b70.shtml",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "湖北",
+      "region": "湖北",
+      "subRegion": "湖北",
+      "channel": "资讯",
+      "src": "湖北省邮政管理局",
+      "srcName": "湖北省邮政管理局",
+      "title": "咸宁局开展高考录取通知书投递服务检查",
+      "summary": "咸宁局开展高考录取通知书投递服务检查",
+      "reason": "湖北最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月08日",
+      "sort": "2026-08-08",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202608/88ea58d89f7f4c95b864e0b3a79e61b2.shtml",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "湖北",
+      "region": "湖北",
+      "subRegion": "湖北",
+      "channel": "资讯",
+      "src": "湖北省邮政管理局",
+      "srcName": "湖北省邮政管理局",
       "title": "关志鸥赴省邮政管理局走访调研 加快推动物流网建设 为湖北高质量发展提供有力支撑",
       "summary": "关志鸥赴省邮政管理局走访调研 加快推动物流网建设 为湖北高质量发展提供有力支撑",
       "reason": "湖北最新监管/市场动态，建议纳入日常关注和网点通报。",
@@ -1333,6 +1495,33 @@
       "date": "08月02日",
       "sort": "2026-08-02",
       "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202608/2c17ebbcd7a241bcb7ff642998fddb30.shtml",
+      "warn": false
+    },
+    {
+      "level": "red",
+      "cat": "湖北",
+      "region": "湖北",
+      "subRegion": "湖北",
+      "channel": "资讯",
+      "src": "湖北省邮政管理局",
+      "srcName": "湖北省邮政管理局",
+      "title": "“快递进村”邮政兜底试点工作现场会在湖...",
+      "summary": "“快递进村”邮政兜底试点工作现场会在湖...",
+      "reason": "湖北最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 3
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月02日",
+      "sort": "2026-08-02",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100060/202608/ccb8a1de5cdb4e71ab76921325f7956b.shtml",
       "warn": false
     },
     {
@@ -2023,6 +2212,114 @@
     },
     {
       "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "上半年中国博士后科学基金各类资助项目评审结果发布 长江大学获批项目数、经费总额居全省省属高校首位",
+      "summary": "上半年中国博士后科学基金各类资助项目评审结果发布 长江大学获批项目数、经费总额居全省省属高校首位",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月26日",
+      "sort": "2026-08-26",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202608/t20260826_1131149.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "中南财经政法大学产学研基地落户监利",
+      "summary": "中南财经政法大学产学研基地落户监利",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月26日",
+      "sort": "2026-08-26",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/xsqdt/202608/t20260826_1131144.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "潜江",
+      "region": "潜江",
+      "subRegion": "潜江",
+      "channel": "资讯",
+      "src": "潜江市邮政管理局",
+      "srcName": "潜江市邮政管理局",
+      "title": "运粮湖管理区：专项整治除隐患 筑牢安全防护线",
+      "summary": "运粮湖管理区：专项整治除隐患 筑牢安全防护线",
+      "reason": "潜江安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。",
+      "action": "→ 排查辖区网点消防与安检隐患，48小时内反馈整改。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "安全"
+      ],
+      "date": "08月25日",
+      "sort": "2026-08-25",
+      "url": "https://www.hbqj.gov.cn/xwzx/jrqj/smsh/202608/t20260825_6000843.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "荆州",
+      "region": "荆州",
+      "subRegion": "荆州",
+      "channel": "资讯",
+      "src": "荆州市邮政管理局",
+      "srcName": "荆州市邮政管理局",
+      "title": "汪元程主持研究“洪湖莲藕”产业高质量发展暨品牌推介活动筹备情况",
+      "summary": "汪元程主持研究“洪湖莲藕”产业高质量发展暨品牌推介活动筹备情况",
+      "reason": "荆州最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月24日",
+      "sort": "2026-08-24",
+      "url": "https://www.jingzhou.gov.cn/zfwxw/jzyq/202608/t20260824_1130869.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "宜昌",
       "region": "宜昌",
       "subRegion": "宜昌",
@@ -2100,6 +2397,33 @@
       "date": "08月19日",
       "sort": "2026-08-19",
       "url": "https://www.hbqj.gov.cn/xxgk/zc/qtwj/gsgg/202608/t20260819_5997566.html",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "宜昌",
+      "region": "宜昌",
+      "subRegion": "宜昌",
+      "channel": "资讯",
+      "src": "宜昌市邮政管理局",
+      "srcName": "宜昌市邮政管理局",
+      "title": "宜昌市市场监管局关于餐饮服务项目选址合规风险提示函",
+      "summary": "宜昌市市场监管局关于餐饮服务项目选址合规风险提示函",
+      "reason": "宜昌最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 5,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 2
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月19日",
+      "sort": "2026-08-19",
+      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/gongshigonggao/2026/0819/1078872.html",
       "warn": false
     },
     {
@@ -3350,6 +3674,60 @@
     },
     {
       "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "全国",
+      "channel": "资讯",
+      "src": "国家邮政局",
+      "srcName": "国家邮政局",
+      "title": "济南推动乡村富民产业高质量发展实施方案出台...",
+      "summary": "济南推动乡村富民产业高质量发展实施方案出台...",
+      "reason": "全国最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 4,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月08日",
+      "sort": "2026-08-08",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/84512a804dd34fdb82a4b790eb899fb3.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "全国",
+      "channel": "资讯",
+      "src": "国家邮政局",
+      "srcName": "国家邮政局",
+      "title": "海南局与省总工会共商推进快递员群体服务管理...",
+      "summary": "海南局与省总工会共商推进快递员群体服务管理...",
+      "reason": "全国最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月08日",
+      "sort": "2026-08-08",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/825460aa00594a138aea57518819493e.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "宜昌",
       "region": "宜昌",
       "subRegion": "宜昌",
@@ -4402,6 +4780,33 @@
       "date": "08月01日",
       "sort": "2026-08-01",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/01bab0a23cfc40d0b24d19182015fac0.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "全国",
+      "channel": "资讯",
+      "src": "国家邮政局",
+      "srcName": "国家邮政局",
+      "title": "兰州市常务副市长专题听取市邮政管理局工作汇...",
+      "summary": "兰州市常务副市长专题听取市邮政管理局工作汇...",
+      "reason": "全国最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月01日",
+      "sort": "2026-08-01",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/01043164e13c4da6bb8a81d7cca1e0fc.shtml",
       "warn": false
     },
     {
@@ -9441,6 +9846,186 @@
       "warn": false,
       "score": 84,
       "level": "red"
+    },
+    {
+      "name": "潜江交通:全力以赴“战”险情",
+      "biz": "待核实",
+      "region": "潜江",
+      "admin": "潜江市",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(潜江) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "https://dsjyh03.llb.chutianyun.gov.cn/sjtysj/xwzx/gzdt/202605/t20260519_5939499.html",
+      "date": "05月19日",
+      "sort": "2026-05-19",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "恩施京东物流供应链产业基地打造建始富硒产业智慧供应链",
+      "biz": "待核实",
+      "region": "恩施",
+      "admin": "恩施市",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(恩施) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "https://www.hstong.com/news/hk/detail/26082119225389062",
+      "date": "08月21日",
+      "sort": "2026-08-21",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "好物进得来 好货出得去——宜昌跨境电商一线见闻",
+      "biz": "待核实",
+      "region": "宜昌东站",
+      "admin": "伍家岗区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(宜昌东站) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "https://news.cjn.cn/zjjjdpd/yw_20048/202608/t5331311.htm",
+      "date": "08月13日",
+      "sort": "2026-08-13",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "沙市区加快建设江汉平原高质量发展示范区",
+      "biz": "待核实",
+      "region": "荆州城区",
+      "admin": "沙市区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(荆州城区) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "http://www.jingzhou.gov.cn/zwdt/202608/t20260815_789012.shtml",
+      "date": "08月15日",
+      "sort": "2026-08-15",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "极兔速递鄂中南区域全域协同发展",
+      "biz": "待核实",
+      "region": "古城北",
+      "admin": "荆州区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(古城北) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "http://www.jingzhou.gov.cn/zwdt/202607/t20260710_788012.shtml",
+      "date": "07月10日",
+      "sort": "2026-07-10",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "荆州区62个招商场景邀约全球投资者",
+      "biz": "待核实",
+      "region": "荆州大学城",
+      "admin": "荆州区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(荆州大学城) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "http://www.jingzhou.gov.cn/zsyz/202607/t20260728_788678.shtml",
+      "date": "07月28日",
+      "sort": "2026-07-28",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "恩施州商务局关于富硒产业电商发展建议的会办意见",
+      "biz": "待核实",
+      "region": "恩施",
+      "admin": "恩施",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(恩施) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "http://www.enshi.gov.cn/zwgk/202607/t20260715_123789.shtml",
+      "date": "07月15日",
+      "sort": "2026-07-15",
+      "warn": false,
+      "score": 90,
+      "level": "red"
+    },
+    {
+      "name": "潜江市泰丰街道招商推介——江汉平原智慧医药物流产业园",
+      "biz": "待核实",
+      "region": "潜江",
+      "admin": "潜江市",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(潜江) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "https://www.toutiao.com/article/7672622242492072511",
+      "date": "08月20日",
+      "sort": "2026-08-20",
+      "warn": false,
+      "score": 84,
+      "level": "red"
+    },
+    {
+      "name": "荆门市邮政管理局就快件投递有关问题对荆门市八通物流有限公司、荆门诚信中通快递有限公司进行行政约谈(荆门邮约〔2025〕12号)",
+      "biz": "待核实",
+      "region": "荆门城区",
+      "admin": "东宝区",
+      "tier": "区县",
+      "address": "待核实",
+      "contact": "待核实",
+      "reason": "(荆门城区) 电商/产业带寄递线索，值得网点主动对接。",
+      "scale": "待核实",
+      "seasonal": "待核实",
+      "src": "恩施产业招商",
+      "srcName": "恩施产业招商",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c104687/c104693/202512/6da2d6d4dd334bcd92fe6a3088761149.shtml",
+      "date": "12月26日",
+      "sort": "2025-12-26",
+      "warn": false,
+      "score": 84,
+      "level": "red"
     }
   ],
   "safety": [
@@ -11141,6 +11726,96 @@
       ],
       "warn": false,
       "url": "https://new.qq.com/rain/a/20260804A0CY4C00"
+    },
+    {
+      "title": "河北保定蠡县发布暴雨",
+      "summary": "河北保定蠡县发布暴雨",
+      "reason": "影响 湖北 末端派送与干线时效，需预警网点。",
+      "subRegion": "湖北",
+      "region": "湖北",
+      "src": "中国天气网-湖北",
+      "srcName": "中国天气网-湖北",
+      "date": "08月04日",
+      "sort": "2026-08-04",
+      "score": 71,
+      "level": "orange",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "http://p.weather.com.cn/2026/08/4772960.shtml"
+    },
+    {
+      "title": "浙江温岭：防范台风“",
+      "summary": "浙江温岭：防范台风“",
+      "reason": "影响 湖北 末端派送与干线时效，需预警网点。",
+      "subRegion": "湖北",
+      "region": "湖北",
+      "src": "中国天气网-湖北",
+      "srcName": "中国天气网-湖北",
+      "date": "08月04日",
+      "sort": "2026-08-04",
+      "score": 71,
+      "level": "orange",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "http://p.weather.com.cn/2026/08/4772480.shtml"
+    },
+    {
+      "title": "防范台风“沙德尔”",
+      "summary": "防范台风“沙德尔”",
+      "reason": "影响 湖北 末端派送与干线时效，需预警网点。",
+      "subRegion": "湖北",
+      "region": "湖北",
+      "src": "中国天气网-湖北",
+      "srcName": "中国天气网-湖北",
+      "date": "08月04日",
+      "sort": "2026-08-04",
+      "score": 71,
+      "level": "orange",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "http://p.weather.com.cn/2026/08/4772461.shtml"
+    },
+    {
+      "title": "北京天空阴沉 暴雨黄",
+      "summary": "北京天空阴沉 暴雨黄",
+      "reason": "影响 湖北 末端派送与干线时效，需预警网点。",
+      "subRegion": "湖北",
+      "region": "湖北",
+      "src": "中国天气网-湖北",
+      "srcName": "中国天气网-湖北",
+      "date": "08月04日",
+      "sort": "2026-08-04",
+      "score": 71,
+      "level": "orange",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "http://p.weather.com.cn/2026/08/4772425.shtml"
+    },
+    {
+      "title": "受台风“紫檀”影响",
+      "summary": "受台风“紫檀”影响",
+      "reason": "影响 湖北 末端派送与干线时效，需预警网点。",
+      "subRegion": "湖北",
+      "region": "湖北",
+      "src": "中国天气网-湖北",
+      "srcName": "中国天气网-湖北",
+      "date": "08月04日",
+      "sort": "2026-08-04",
+      "score": 71,
+      "level": "orange",
+      "tags": [
+        "天气"
+      ],
+      "warn": false,
+      "url": "http://p.weather.com.cn/2026/08/4772177.shtml"
     },
     {
       "title": "湖北省恩施土家族苗族自治州咸丰县发布暴雨黄色预警信号",
