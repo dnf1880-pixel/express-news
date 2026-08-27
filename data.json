@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-26",
-  "note": "轻量补抓 2026-08-26（核心源看守）：仅并入 watch 新增高价值 4 条，保留既有条目。",
+  "updatedAt": "2026-08-27",
+  "note": "轻量补抓 2026-08-27（核心源看守）：仅并入 watch 新增高价值 4 条，保留既有条目。",
   "news": [
     {
       "level": "red",
@@ -3565,6 +3565,33 @@
     },
     {
       "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "江苏省政府与圆通速递签署战略合作协议",
+      "summary": "江苏省政府与圆通速递签署战略合作协议",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月09日",
+      "sort": "2026-08-09",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/9f5e3590c74d495a9e4844a6e5079db4.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
       "cat": "荆州",
       "region": "荆州",
       "subRegion": "荆州",
@@ -3947,6 +3974,60 @@
       "level": "orange",
       "cat": "行业",
       "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "广东局开展“夏送清凉”走访慰问快递行业党员...",
+      "summary": "广东局开展“夏送清凉”走访慰问快递行业党员...",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月07日",
+      "sort": "2026-08-07",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202608/7530db2ab2e54fdb9d1c443db50e579b.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "绍兴局联合市委社工部开展快递员服务管理专题...",
+      "summary": "绍兴局联合市委社工部开展快递员服务管理专题...",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 4,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "电商"
+      ],
+      "date": "08月07日",
+      "sort": "2026-08-07",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/79028d865fcc4c5f99f4e7b4d3064c50.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
       "subRegion": "全国",
       "channel": "资讯",
       "src": "国家邮政局",
@@ -4266,6 +4347,33 @@
       "date": "08月06日",
       "sort": "2026-08-06",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/66a748e221dd4a8599d6b69629c4a528.shtml",
+      "warn": false
+    },
+    {
+      "level": "orange",
+      "cat": "行业",
+      "region": "全国",
+      "subRegion": "",
+      "channel": "资讯",
+      "src": "权威",
+      "srcName": "国家邮政局",
+      "title": "烟台现代物流产业市场主体引育三年行动方案出...",
+      "summary": "烟台现代物流产业市场主体引育三年行动方案出...",
+      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
+      "action": "→ 关注后续进展，必要时通报网点。",
+      "s": {
+        "G": 3,
+        "B": 3,
+        "P": 3,
+        "C": 3,
+        "T": 5
+      },
+      "tags": [
+        "资讯"
+      ],
+      "date": "08月06日",
+      "sort": "2026-08-06",
+      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202608/6f258205cab34277aa12407698b715bf.shtml",
       "warn": false
     },
     {
