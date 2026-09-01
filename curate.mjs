@@ -271,6 +271,26 @@ existing.news = dedup(existing.news, x => x.url || x.title);
 existing.leads = dedup(existing.leads, x => (x.name + '|' + x.region + '|' + x.biz));
 existing.safety = dedup(existing.safety, x => x.url || x.title);
 
+// === 时间真实性守门：未来日期一律钳制 ===
+// 根因：scrape.mjs 的 extractItems 在链接后 200 字符内取首个匹配日期，
+// 会抓到相邻条目或页面模板的日期（实测案例：河北局党建推进会抓成 2026-09-03，早于运行日）。
+// 处理：sort 钳到运行日并置 warn=true（日期存疑，按先例用运行系统时间兜底），
+// 保证「零未来日期」硬约束；warn 条目按规则不进精选。
+let clamped = 0;
+const clampFuture = (arr) => {
+  for (const x of arr) {
+    if (x.sort && /^\d{4}-\d{2}-\d{2}$/.test(x.sort) && x.sort > DATE) {
+      clamped++;
+      x.sort = DATE;
+      x.warn = true;
+    }
+  }
+};
+clampFuture(existing.news);
+clampFuture(existing.leads);
+clampFuture(existing.safety);
+if (clamped) console.log(`  ⚠ 未来日期钳制 ${clamped} 条 → sort 归为 ${DATE} 并置 warn（日期解析存疑，待核实）`);
+
 // === 排序 ===
 existing.news.sort((a, b) => {
   if (a.sort === '0000-00-00' && b.sort !== '0000-00-00') return 1;

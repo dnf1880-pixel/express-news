@@ -10,3 +10,5 @@ node_modules/
 
 archive/search-batch-input-*.json
 archive/part*.json
+archive/search-cache.json
+archive/consumed/

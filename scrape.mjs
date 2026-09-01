@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { splitByCache, cachedItemsToRaw, saveResults, cacheStats } from './search_cache.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATE = new Date().toISOString().slice(0, 10);
@@ -117,17 +118,32 @@ async function main() {
     return items;
   });
 
+  // A1 缓存层：72h 内已搜过的 query 直接复用结果，不重复消耗搜索配额/子代理积分
+  const { hit, miss } = splitByCache(searchQs);
+  const cachedItems = cachedItemsToRaw(hit);
+  if (cachedItems.length) {
+    fetched.push(...cachedItems);
+    console.log(`  ♻ 缓存复用 ${hit.length} 条 query → ${cachedItems.length} 条结果`);
+  }
+  console.log(`搜索任务：总 ${searchQs.length} 条 = 缓存命中 ${hit.length} + 待搜 ${miss.length}`);
+
   // fetch-or-search：优先 fetch 已处理；仍想补搜索的，派发到 todo（仅当配了 API 或 agent 模式）
   const todo = [];
-  // 纯 search 类 + 降级类
-  for (const q of searchQs) {
+  const apiEntries = [];
+  // 纯 search 类 + 降级类 + 缓存未命中类
+  for (const q of miss) {
     if (SEARCH_API_KEY) {
       const r = await searchViaApi(q.query || `${q.bureau} ${q.alias} 快递`);
-      if (r && r.length) { r.forEach(x => { x.channel = q.channel; x.region = q.city || q.scope; x.subRegion = q.alias || q.admin; x.src = q.bureau || '检索'; x.srcName = q.bureau || q.source || '检索'; }); fetched.push(...r); }
+      if (r && r.length) { r.forEach(x => { x.channel = q.channel; x.region = q.city || q.scope; x.subRegion = q.alias || q.admin; x.src = q.bureau || '检索'; x.srcName = q.bureau || q.source || '检索'; }); fetched.push(...r); apiEntries.push({ queryMeta: q, results: r }); }
       else todo.push(q);
     } else {
       todo.push(q);
     }
+  }
+  // 脚本自搜结果同样回写缓存（省 API 配额）
+  if (apiEntries.length) {
+    const n = saveResults(apiEntries);
+    console.log(`  💾 脚本搜索结果写入缓存 ${n} 条 query`);
   }
 
   const rawPath = join(ARCHIVE, `raw-${DATE}.json`);

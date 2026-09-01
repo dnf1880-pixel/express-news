@@ -15,7 +15,7 @@ if (!data.safety) data.safety = [];
 const existUrls = new Set([...data.news, ...data.leads, ...data.safety].map(x => x.url).filter(Boolean));
 const existTitles = new Set([...data.news, ...data.leads, ...data.safety].map(x => x.title));
 
-const TARGET = ['宜昌', '恩施', '荆州', '荆门', '潜江', '湖北', '全国', '鄂西'];
+const TARGET = ['宜昌', '恩施', '荆州', '荆门', '潜江', '湖北', '鄂西'];
 const inTarget = (r = '', s = '') => TARGET.some(k => `${r}/${s}`.includes(k));
 
 const CORE = ['快递', '物流', '寄递', '邮政', '快件', '包裹', '网点', '分拣', '转运', '末端', '派送', '揽收', '时效', '客货邮', '进村', '冷链', '跨境', '配送', '闪送', '无人机', '分拨', '收寄', '安检', '验视', '过机'];
