@@ -35,6 +35,10 @@ const isDupEvent = (title, url) => {
 };
 
 const TARGET = ['宜昌', '恩施', '荆州', '荆门', '潜江', '湖北', '鄂西'];
+// 辖区城市（四重过滤之「鄂西辖区」）：省局网站每天大量非鄂西地市动态（襄阳/黄冈/咸宁/武汉…），
+// 标题常常不含城市名（如「暖"新"送政策 安居有保障」正文实为襄阳），仅凭标题挡不住 → 必须读正文判定。
+const IN_CITY = ['宜昌', '恩施', '荆州', '荆门', '潜江'];
+const OUT_CITY = ['武汉', '襄阳', '黄冈', '咸宁', '鄂州', '孝感', '黄石', '十堰', '随州', '天门', '仙桃', '神农架'];
 // 区域命中：鄂西/湖北命中，或「国家邮政局(spb.gov.cn)全国行业信号流」——后者按设计归入 cat=行业（2026-09-02 修复：09-01 成本优化提交误删'全国'导致该通道静默断流）
 const isSpb = u => /spb\.gov\.cn/.test(u || '');
 const inTarget = (r = '', s = '', url = '') => TARGET.some(k => `${r}/${s}`.includes(k)) || isSpb(url);
@@ -76,6 +80,10 @@ function addNews(x, sort, warn) {
   if (/省委书记/.test(x.title) && x.region === '全国' && /湖北|鄂西/.test(x.title)) region = '湖北';
   // spb 全国条目若标题明确指向某省，按该省标注（如「湖北省邮政业…规划」被 score 误标全国）
   if (region === '全国') { const pm = x.title.match(/(湖北|宜昌|恩施|荆州|荆门|潜江|鄂西)/); if (pm) region = pm[1]; }
+  // 省局站点大量「XX局…」地市动态（荆州局/恩施局/荆门局…），region 被 score 一律标成"湖北"。
+  // 不下沉到地市，辖区筛选与看板归类就失真 —— 按标题里的地市名校正 region/subRegion/cat。
+  const cityM = x.title && x.title.match(/(宜昌|恩施|荆州|荆门|潜江)[市州]?(?:局|邮政)/);
+  if (cityM) { region = cityM[1]; x.subRegion = cityM[1]; }
   data.news.push({
     level: level(x.score), cat: cat(region), region, subRegion: x.subRegion || '',
     channel: x.channel || '资讯', src: x.src || '权威', srcName: x.srcName || x.src || '检索',
@@ -88,19 +96,47 @@ function addNews(x, sort, warn) {
 
 // spb 页面 date 字段由标题截取，常残缺为「202609-4」甚至解析出未来日期。
 // 抓取 <meta name="PubDate"> 取真实发布日，避免因日期不可信而误杀真新闻。
-async function spbPubDate(url) {
+// 同一次抓取顺带缓存正文，供辖区判定复用（每 URL 只发一次请求）。
+const metaCache = new Map();
+async function spbMeta(url) {
+  if (metaCache.has(url)) return metaCache.get(url);
+  let out = { pubDate: null, bodyDate: null, text: '' };
   try {
     const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) });
     const h = await r.text();
     const m = h.match(/<meta\s+name="PubDate"\s+content="(\d{4}-\d{2}-\d{2})/i);
-    return m ? m[1] : null;
-  } catch { return null; }
+    out.pubDate = m ? m[1] : null;
+    out.text = h.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, '').slice(0, 3000);
+    // 正文「日期：YYYY-MM-DD」才是稿件真实日期；PubDate 是 CMS 批量发布时间（实测两篇不同日期的稿
+    // 子 PubDate 同为 09-02 14:11，若盲信 PubDate 会把 09-01 的稿子错标成 09-02）。正文日期优先。
+    // 该 CMS 的「日期：」字段位于正文前、约 1400 字符处（去标签后），窗口取 2000 才够得着
+    const bd = out.text.slice(0, 2000).match(/20\d{2}[-/年]\s?(\d{1,2})[-/月]\s?(\d{1,2})/);
+    if (bd) out.bodyDate = `${bd[0].slice(0, 4)}-${bd[1].padStart(2, '0')}-${bd[2].padStart(2, '0')}`;
+  } catch { /* 抓取失败：pubDate 留空，正文留空 → 辖区判定放行（宁可不误杀） */ }
+  metaCache.set(url, out);
+  return out;
 }
 
 async function resolveSort(x) {
   let sort = parseDate(x.date);
-  if (isSpb(x.url) && (!sort || sort > DATE)) sort = (await spbPubDate(x.url)) || null;
+  if (isSpb(x.url)) {
+    const m = await spbMeta(x.url);
+    // 稿件真实日期优先：正文日期 > PubDate > 列表页解析出的残缺日期
+    if (m.bodyDate && m.bodyDate <= DATE) sort = m.bodyDate;
+    else if (!sort || sort > DATE) sort = m.pubDate || null;
+  }
   return sort;
+}
+
+// 辖区判定：正文出现任一辖区城市 → 入；否则出现任一非辖区湖北地市 → 剔；
+// 两端都不出现（省级/全国性内容）→ 放行，归 cat=行业。抓取失败同样放行（不因网络抖动误杀）。
+async function inScope(x) {
+  if (!isSpb(x.url)) return true;
+  const { text } = await spbMeta(x.url);
+  if (!text) return true;
+  if (IN_CITY.some(c => text.includes(c))) return true;
+  if (OUT_CITY.some(c => text.includes(c))) return false;
+  return true;
 }
 
 let added = 0;
@@ -109,6 +145,7 @@ for (const ch of ['news']) {
   for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url))) {
     if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
     if (!relevant(x.title, x.srcName, x.url)) continue;
+    if (!(await inScope(x))) continue;
     const sort = await resolveSort(x);
     if (!sort || sort < '2026-07-15' || sort > DATE) continue; // 真实发生日需在窗口内，垃圾日期跳过
     addNews(x, sort, false); added++;
@@ -120,6 +157,7 @@ const RESCUE = /湖北|鄂西|宜昌|恩施|荆州|荆门|潜江/;
 for (const x of (staging.lowValue || []).filter(x => x.stage === 'watch' && x.score >= 65 && isSpb(x.url) && RESCUE.test(x.title || ''))) {
   if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
   if (!relevant(x.title, x.srcName, x.url)) continue;
+  if (!(await inScope(x))) continue;
   const sort = await resolveSort(x);
   if (!sort || sort < '2026-07-15' || sort > DATE) continue;
   addNews(x, sort, false); added++;
