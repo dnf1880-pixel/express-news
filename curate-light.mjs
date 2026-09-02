@@ -16,7 +16,9 @@ const existUrls = new Set([...data.news, ...data.leads, ...data.safety].map(x =>
 const existTitles = new Set([...data.news, ...data.leads, ...data.safety].map(x => x.title));
 
 const TARGET = ['宜昌', '恩施', '荆州', '荆门', '潜江', '湖北', '鄂西'];
-const inTarget = (r = '', s = '') => TARGET.some(k => `${r}/${s}`.includes(k));
+// 区域命中：鄂西/湖北命中，或「国家邮政局(spb.gov.cn)全国行业信号流」——后者按设计归入 cat=行业（2026-09-02 修复：09-01 成本优化提交误删'全国'导致该通道静默断流）
+const isSpb = u => /spb\.gov\.cn/.test(u || '');
+const inTarget = (r = '', s = '', url = '') => TARGET.some(k => `${r}/${s}`.includes(k)) || isSpb(url);
 
 const CORE = ['快递', '物流', '寄递', '邮政', '快件', '包裹', '网点', '分拣', '转运', '末端', '派送', '揽收', '时效', '客货邮', '进村', '冷链', '跨境', '配送', '闪送', '无人机', '分拨', '收寄', '安检', '验视', '过机'];
 const COMP = ['圆通', '顺丰', '京东', '中通', '韵达', '极兔', '申通', '德邦', '菜鸟', '丰巢'];
@@ -49,12 +51,12 @@ const tags = t => { const x = []; if (/消防|安全|隐患|整治/.test(t)) x.p
 const reason = t => { const r = '辖区'; if (/消防|安全|隐患|整治/.test(t)) return '安全整治直接关联网点消防、过机安检与质量分，需跟踪整改闭环。'; if (/台风|暴雨|防汛|封路|管制|预警/.test(t)) return '天气/路况影响末端派送与干线时效，需提前预警网点。'; if (/产业园|电商|水果|寄递|招商|直播|产业带|农村/.test(t)) return '电商/产业带/农村寄递释放增量，值得网点主动揽收。'; if (/会议|调度|部署|政策|监管/.test(t)) return '监管层面新动向，影响合规导向与考核重点，需周会传达。'; return '最新监管/市场动态，建议纳入日常关注和网点通报。'; };
 const action = t => { if (/消防|安全|隐患|整治/.test(t)) return '→ 排查辖区网点消防与安检隐患，48小时内反馈整改。'; if (/台风|暴雨|防汛|封路|管制|预警/.test(t)) return '→ 启动恶劣天气应急预案，调整路由与派送班次。'; if (/产业园|电商|水果|寄递|招商|直播|产业带|农村/.test(t)) return '→ 联系属地网点上门对接，测算揽收潜力。'; if (/会议|调度|部署|政策|监管/.test(t)) return '→ 周会传达，对齐合规与质量分要求。'; return '→ 关注后续进展，必要时通报网点。'; };
 
-function addNews(x) {
-  const sort = parseDate(x.date) || DATE;
-  const warn = !parseDate(x.date);
+function addNews(x, sort, warn) {
   // 省委书记调研省邮政管理局：仅当标题确含"湖北/鄂西"才由"全国"校正为"湖北"，避免把海南/青海等外省事项误标湖北
   let region = x.region || '湖北/鄂西';
   if (/省委书记/.test(x.title) && x.region === '全国' && /湖北|鄂西/.test(x.title)) region = '湖北';
+  // spb 全国条目若标题明确指向某省，按该省标注（如「湖北省邮政业…规划」被 score 误标全国）
+  if (region === '全国') { const pm = x.title.match(/(湖北|宜昌|恩施|荆州|荆门|潜江|鄂西)/); if (pm) region = pm[1]; }
   data.news.push({
     level: level(x.score), cat: cat(region), region, subRegion: x.subRegion || '',
     channel: x.channel || '资讯', src: x.src || '权威', srcName: x.srcName || x.src || '检索',
@@ -65,22 +67,49 @@ function addNews(x) {
   });
 }
 
+// spb 页面 date 字段由标题截取，常残缺为「202609-4」甚至解析出未来日期。
+// 抓取 <meta name="PubDate"> 取真实发布日，避免因日期不可信而误杀真新闻。
+async function spbPubDate(url) {
+  try {
+    const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) });
+    const h = await r.text();
+    const m = h.match(/<meta\s+name="PubDate"\s+content="(\d{4}-\d{2}-\d{2})/i);
+    return m ? m[1] : null;
+  } catch { return null; }
+}
+
+async function resolveSort(x) {
+  let sort = parseDate(x.date);
+  if (isSpb(x.url) && (!sort || sort > DATE)) sort = (await spbPubDate(x.url)) || null;
+  return sort;
+}
+
 let added = 0;
 // 仅处理 watch 通道新增（不回填历史 raw）
 for (const ch of ['news']) {
-  for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion))) {
+  for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url))) {
     if (existUrls.has(x.url) || existTitles.has(x.title)) continue;
     if (!relevant(x.title, x.srcName, x.url)) continue;
-    const sort = parseDate(x.date);
+    const sort = await resolveSort(x);
     if (!sort || sort < '2026-07-15' || sort > DATE) continue; // 真实发生日需在窗口内，垃圾日期跳过
-    addNews(x); added++;
+    addNews(x, sort, false); added++;
   }
+}
+// 漏判兜底：score.mjs 对省局/国家局条目的 region 识别偏弱，湖北/鄂西信号常被误标"全国"而沉 lowValue。
+// 主动扫 lowValue 中「spb 源 + 标题含湖北/鄂西地域词」的高价值条目。
+const RESCUE = /湖北|鄂西|宜昌|恩施|荆州|荆门|潜江/;
+for (const x of (staging.lowValue || []).filter(x => x.stage === 'watch' && x.score >= 65 && isSpb(x.url) && RESCUE.test(x.title || ''))) {
+  if (existUrls.has(x.url) || existTitles.has(x.title)) continue;
+  if (!relevant(x.title, x.srcName, x.url)) continue;
+  const sort = await resolveSort(x);
+  if (!sort || sort < '2026-07-15' || sort > DATE) continue;
+  addNews(x, sort, false); added++;
 }
 // watch 通道若有 leads/safety（本跑为 0，保留通用处理）
 for (const ch of ['leads', 'safety']) {
-  for (const x of (staging[ch] || []).filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion))) {
+  for (const x of (staging[ch] || []).filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url))) {
     if (existUrls.has(x.url) || existTitles.has(x.title)) continue;
-    const sort = parseDate(x.date) || DATE;
+    const sort = (await resolveSort(x)) || DATE;
     if (ch === 'leads') data.leads.push({ name: x.name || x.title, biz: x.biz || '待核实', region: x.region || '待核实', admin: x.subRegion || x.region || '待核实', tier: x.tier || '区县', address: x.address || '待核实', contact: x.contact || '待核实', reason: x.reason || '电商/产业带寄递线索，值得网点对接。', scale: x.scale || '待核实', seasonal: x.seasonal || '待核实', src: x.src || '检索', srcName: x.srcName || x.src, url: x.url || `https://www.baidu.com/s?wd=${encodeURIComponent(x.name || '')}`, date: `${sort.slice(5, 7)}月${sort.slice(8, 10)}日`, sort, warn: !parseDate(x.date), score: x.score, level: level(x.score) });
     else data.safety.push({ title: x.title, summary: x.snippet || x.title, reason: x.reason || '影响辖区末端派送与干线时效，需预警网点。', subRegion: x.subRegion || '', region: x.region || '湖北/鄂西', src: x.src || '权威', srcName: x.srcName || x.src, date: `${sort.slice(5, 7)}月${sort.slice(8, 10)}日`, sort, score: x.score, level: level(x.score), tags: tags(x.title), warn: !parseDate(x.date), url: x.url || `https://www.baidu.com/s?wd=${encodeURIComponent(x.title)}` });
     added++;
