@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-09-02",
   "note": "信源清单（官方源优先，替代无差别组合检索）。v1 权重模型固定不变。counties 为 43 区县官方源路由：区县级无独立邮管局，官方源=所属市邮管局 + 区县政府网 + 区县融媒号；融媒多为微信/抖音私域，自动化硬抓不到，标注为专项/人工层。",
   "weightModel": {
     "axes": { "G": "地域相关度", "B": "业务影响面", "P": "政策监管强度", "C": "竞争态势", "T": "时效紧迫度" },
@@ -11,11 +11,11 @@
   "core": [
     { "name": "国家邮政局", "url": "https://www.spb.gov.cn/", "scope": "全国", "channel": "资讯", "fetch": true, "desc": "行业政策、全国业务量、反内卷定调" },
     { "name": "湖北省邮政管理局", "url": "https://hb.spb.gov.cn/", "scope": "湖北", "channel": "资讯", "fetch": true, "desc": "省局会议、专项整治、进村部署" },
-    { "name": "荆州市邮政管理局", "url": "https://www.jingzhou.gov.cn/", "scope": "荆州", "channel": "资讯", "fetch": true, "desc": "荆州辖区安全/质量整治" },
-    { "name": "宜昌市邮政管理局", "url": "https://www.yichang.gov.cn/", "scope": "宜昌", "channel": "资讯", "fetch": true, "desc": "宜昌物流园/末端" },
-    { "name": "恩施州邮政管理局", "url": "https://www.enshi.gov.cn/", "scope": "恩施", "channel": "资讯", "fetch": true, "desc": "恩施物流园/寄递" },
-    { "name": "荆门市邮政管理局", "url": "https://www.jingmen.gov.cn/", "scope": "荆门", "channel": "资讯", "fetch": true, "desc": "荆门网点异动" },
-    { "name": "潜江市邮政管理局", "url": "https://www.hbqj.gov.cn/", "scope": "潜江", "channel": "资讯", "fetch": true, "desc": "潜江进村/示范区" },
+    { "name": "荆州市邮政管理局", "url": "https://www.jingzhou.gov.cn/", "scope": "荆州", "channel": "资讯", "strict": true, "fetch": true, "desc": "荆州辖区安全/质量整治" },
+    { "name": "宜昌市邮政管理局", "url": "https://www.yichang.gov.cn/", "scope": "宜昌", "channel": "资讯", "strict": true, "fetch": true, "desc": "宜昌物流园/末端" },
+    { "name": "恩施州邮政管理局", "url": "https://www.enshi.gov.cn/", "scope": "恩施", "channel": "资讯", "strict": true, "fetch": true, "desc": "恩施物流园/寄递" },
+    { "name": "荆门市邮政管理局", "url": "https://www.jingmen.gov.cn/", "scope": "荆门", "channel": "资讯", "strict": true, "fetch": true, "desc": "荆门网点异动" },
+    { "name": "潜江市邮政管理局", "url": "https://www.hbqj.gov.cn/", "scope": "潜江", "channel": "资讯", "strict": true, "fetch": true, "desc": "潜江进村/示范区" },
     { "name": "圆通速递公告", "url": "https://www.yto.net.cn/", "scope": "公司", "channel": "资讯", "fetch": true, "desc": "业绩预告/投资者关系" },
     { "name": "鄂州花湖机场", "url": "https://www.huahuairport.com/", "scope": "湖北", "channel": "资讯", "fetch": true, "desc": "货运枢纽动态" },
     { "name": "国务院新闻办", "url": "http://www.scio.gov.cn/", "scope": "全国", "channel": "资讯", "fetch": true, "desc": "枢纽集群等重大发布" },

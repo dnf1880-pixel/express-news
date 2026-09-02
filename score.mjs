@@ -24,7 +24,23 @@ const COMP_KWS = ['圆通', '顺丰', '京东', '中通', '韵达', '极兔', '�
 const NOISE_KWS = ['党建', '党', '支部', '党员', '跟党走', '学习', '贯彻', '精神', '文明', '道德', '典型', '礼遇', '表彰', '工会', '团委', '团建', '志愿者', '志愿服务', '宣讲', '读书', '文化', '体育', '篮球', '足球', '比赛', '运动会', '文艺', '汇演', '演讲', '征文', '竞赛', '扶贫', '振兴', '乡村', '三农', '农业招商', '农业发展', '德者有得'];
 const STRONG_EXEMPT_KWS = [...CORE_KWS, ...COMP_KWS, '安全', '整治', '消防', '隐患', '监管', '通报', '投诉', '质量'];
 
-function isRelevantNews(t = '') {
+// strict 源：sources.json 中标记 strict:true 的信源（地市政府门户页，非邮政业务页），走严格核心词过滤
+const STRICT_HOSTS = (() => {
+  try {
+    const s = JSON.parse(readFileSync(join(__dirname, 'sources.json'), 'utf8'));
+    return new Set((s.core || []).filter(x => x.strict && x.url)
+      .map(x => { try { return new URL(x.url).host.replace(/^www\./, ''); } catch { return ''; } }).filter(Boolean));
+  } catch { return new Set(); }
+})();
+const isStrictSrc = it => {
+  const u = it.srcUrl || it.url || '';
+  try { return STRICT_HOSTS.has(new URL(u).host.replace(/^www\./, '')); } catch { return false; }
+};
+
+function isRelevantNews(t = '', strict = false) {
+  // strict 源（地市政府门户，非邮政业务页）：BIZ_KWS 里的宽泛词（整治/安全/监管/项目/基地）会放进大量泛政务噪音
+  // ——实测 news 违规 56/277 全部来自这 4 源（2026-09-02 审计）。strict 模式只认核心物流/竞争词。
+  if (strict) return has(t, CORE_KWS) || has(t, COMP_KWS);
   const hasCore = has(t, CORE_KWS);
   const hasBiz = has(t, BIZ_KWS);
   const hasComp = has(t, COMP_KWS);
@@ -94,7 +110,7 @@ function main() {
       const s = baseNewsScores(it); const score = comp5(s);
       const obj = { ...it, s, score, level: levelOf(score), needsReview: true };
       const t = (it.title || '') + ' ' + (it.snippet || '');
-      if (score < 50 || (it.warn && !it.date) || !isRelevantNews(t)) lowValue.push(obj); else news.push(obj);
+      if (score < 50 || (it.warn && !it.date) || !isRelevantNews(t, isStrictSrc(it))) lowValue.push(obj); else news.push(obj);
     }
   }
   const sortByScore = a => a.sort((x, y) => y.score - x.score);
