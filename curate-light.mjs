@@ -14,6 +14,25 @@ if (!data.safety) data.safety = [];
 
 const existUrls = new Set([...data.news, ...data.leads, ...data.safety].map(x => x.url).filter(Boolean));
 const existTitles = new Set([...data.news, ...data.leads, ...data.safety].map(x => x.title));
+const ALL = [...data.news, ...data.leads, ...data.safety];
+
+// 事件级去重：同一事件在 hb.spb 与 spb 常以「…规划正式发布」「…规划印发」两种标题出现，
+// 精确 title 比对挡不住，手工删掉也会被下一轮 rescue 重新并入（2026-09-02 踩坑）。
+// 仅在邮政局域名内生效，规范化后相等、或前导串相同且长度差≤4 判为同事件。
+const normTitle = t => String(t || '')
+  .replace(/["“”‘’'()（）《》【】\s·、，,。.:：;；!！?？\-—…]/g, '')
+  .replace(/(正式发布|印发|出台|发布|公布|实施|启动|召开|举行|开展|推进|印发实施)$/g, '');
+const isDupEvent = (title, url) => {
+  if (!/spb\.gov\.cn/.test(url || '')) return false;
+  const nt = normTitle(title);
+  if (nt.length < 8) return false;
+  return ALL.filter(x => /spb\.gov\.cn/.test(x.url || '')).some(x => {
+    const o = normTitle(x.title);
+    if (o.length < 8) return false;
+    if (o === nt) return true;
+    return Math.abs(o.length - nt.length) <= 4 && (o.startsWith(nt) || nt.startsWith(o));
+  });
+};
 
 const TARGET = ['宜昌', '恩施', '荆州', '荆门', '潜江', '湖北', '鄂西'];
 // 区域命中：鄂西/湖北命中，或「国家邮政局(spb.gov.cn)全国行业信号流」——后者按设计归入 cat=行业（2026-09-02 修复：09-01 成本优化提交误删'全国'导致该通道静默断流）
@@ -88,7 +107,7 @@ let added = 0;
 // 仅处理 watch 通道新增（不回填历史 raw）
 for (const ch of ['news']) {
   for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url))) {
-    if (existUrls.has(x.url) || existTitles.has(x.title)) continue;
+    if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
     if (!relevant(x.title, x.srcName, x.url)) continue;
     const sort = await resolveSort(x);
     if (!sort || sort < '2026-07-15' || sort > DATE) continue; // 真实发生日需在窗口内，垃圾日期跳过
@@ -99,7 +118,7 @@ for (const ch of ['news']) {
 // 主动扫 lowValue 中「spb 源 + 标题含湖北/鄂西地域词」的高价值条目。
 const RESCUE = /湖北|鄂西|宜昌|恩施|荆州|荆门|潜江/;
 for (const x of (staging.lowValue || []).filter(x => x.stage === 'watch' && x.score >= 65 && isSpb(x.url) && RESCUE.test(x.title || ''))) {
-  if (existUrls.has(x.url) || existTitles.has(x.title)) continue;
+  if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
   if (!relevant(x.title, x.srcName, x.url)) continue;
   const sort = await resolveSort(x);
   if (!sort || sort < '2026-07-15' || sort > DATE) continue;
