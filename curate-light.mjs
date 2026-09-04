@@ -41,7 +41,14 @@ const IN_CITY = ['宜昌', '恩施', '荆州', '荆门', '潜江'];
 const OUT_CITY = ['武汉', '襄阳', '黄冈', '咸宁', '鄂州', '孝感', '黄石', '十堰', '随州', '天门', '仙桃', '神农架'];
 // 区域命中：鄂西/湖北命中，或「国家邮政局(spb.gov.cn)全国行业信号流」——后者按设计归入 cat=行业（2026-09-02 修复：09-01 成本优化提交误删'全国'导致该通道静默断流）
 const isSpb = u => /spb\.gov\.cn/.test(u || '');
-const inTarget = (r = '', s = '', url = '') => TARGET.some(k => `${r}/${s}`.includes(k)) || isSpb(url);
+// spb 全国放行口径（2026-09-04 收紧）：只放行三类——①鄂西/湖北 ②全国性竞争对手动态 ③国家层面行业信号（政策/规划/数据/标准）。
+// 外省市局本地动态（山东局、济南、萍乡、四平、清远…）对鄂西无实操价值，党建/慰问类无业务内容，一律剔除。
+const NATIONAL_SIGNAL = /国家邮政局|国家局|交通运输部|全国|全行业|行业|中国快递|邮政业|邮政快递业|十四五|十五五|规划|纲要|数据|指数|运行情况|印发|施行|办法|意见|通知|标准|会议部署/;
+const NATIONAL_NOISE = /党建|党组|工会|慰问|群团|道德模范|文明创建|主题教育|志愿服务|青年|妇女|纪检|巡察|集邮/;
+// 外省主体：标题以非湖北的省/直辖市名开头（「云南省邮政管理局…」「江西局…」「山东局…」），一律判为外省本地动态
+const OUT_PROVINCE = /^(?!.*(?:湖北|鄂西|宜昌|恩施|荆州|荆门|潜江))(?:北京|天津|上海|重庆|河北|山西|辽宁|吉林|黑龙江|江苏|浙江|安徽|福建|江西|山东|河南|湖南|广东|海南|四川|贵州|云南|陕西|甘肃|青海|内蒙古|广西|西藏|宁夏|新疆)/;
+const isSpbAllowed = (t = '') => !OUT_PROVINCE.test(t) && (/湖北|鄂西|宜昌|恩施|荆州|荆门|潜江/.test(t) || (NATIONAL_SIGNAL.test(t) && !NATIONAL_NOISE.test(t)));
+const inTarget = (r = '', s = '', url = '', title = '') => TARGET.some(k => `${r}/${s}`.includes(k)) || (isSpb(url) && isSpbAllowed(title));
 
 const CORE = ['快递', '物流', '寄递', '邮政', '快件', '包裹', '网点', '分拣', '转运', '末端', '派送', '揽收', '时效', '客货邮', '进村', '冷链', '跨境', '配送', '闪送', '无人机', '分拨', '收寄', '安检', '验视', '过机'];
 const COMP = ['圆通', '顺丰', '京东', '中通', '韵达', '极兔', '申通', '德邦', '菜鸟', '丰巢'];
@@ -55,8 +62,8 @@ function relevant(title = '', srcName = '', url = '') {
   const t = title;
   // 燃油/加注站整治（非寄递设施安全）一律剔除，优先级最高
   if (has(t, FUEL) && !has(t, [...CORE, ...COMP])) return false;
-  // 国家邮政局(spb.gov.cn) = 纯邮政快递域，天然相关
-  if (/spb\.gov\.cn/.test(url)) return true;
+  // 国家邮政局(spb.gov.cn) = 纯邮政快递域，天然相关；但仍受全国放行口径约束（外省市局本地动态/党建类不算相关）
+  if (/spb\.gov\.cn/.test(url)) return isSpbAllowed(t);
   // 地市"邮政管理局"源实际抓市政府页：必须含快递/物流/寄递/邮政/网点等核心词，或天气/消防类运营安全，否则视为泛政务噪音剔除
   return has(t, [...CORE, ...COMP, ...WEATHER, ...SAFE]);
 }
@@ -142,7 +149,7 @@ async function inScope(x) {
 let added = 0;
 // 仅处理 watch 通道新增（不回填历史 raw）
 for (const ch of ['news']) {
-  for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url))) {
+  for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url, x.title))) {
     if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
     if (!relevant(x.title, x.srcName, x.url)) continue;
     if (!(await inScope(x))) continue;
@@ -164,7 +171,7 @@ for (const x of (staging.lowValue || []).filter(x => x.stage === 'watch' && x.sc
 }
 // watch 通道若有 leads/safety（本跑为 0，保留通用处理）
 for (const ch of ['leads', 'safety']) {
-  for (const x of (staging[ch] || []).filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url))) {
+  for (const x of (staging[ch] || []).filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url, x.title))) {
     if (existUrls.has(x.url) || existTitles.has(x.title)) continue;
     const sort = (await resolveSort(x)) || DATE;
     if (ch === 'leads') data.leads.push({ name: x.name || x.title, biz: x.biz || '待核实', region: x.region || '待核实', admin: x.subRegion || x.region || '待核实', tier: x.tier || '区县', address: x.address || '待核实', contact: x.contact || '待核实', reason: x.reason || '电商/产业带寄递线索，值得网点对接。', scale: x.scale || '待核实', seasonal: x.seasonal || '待核实', src: x.src || '检索', srcName: x.srcName || x.src, url: x.url || `https://www.baidu.com/s?wd=${encodeURIComponent(x.name || '')}`, date: `${sort.slice(5, 7)}月${sort.slice(8, 10)}日`, sort, warn: !parseDate(x.date), score: x.score, level: level(x.score) });
