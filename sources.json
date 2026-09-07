@@ -1,105 +1,593 @@
 {
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-07",
   "note": "信源清单（官方源优先，替代无差别组合检索）。v1 权重模型固定不变。counties 为 43 区县官方源路由：区县级无独立邮管局，官方源=所属市邮管局 + 区县政府网 + 区县融媒号；融媒多为微信/抖音私域，自动化硬抓不到，标注为专项/人工层。",
   "weightModel": {
-    "axes": { "G": "地域相关度", "B": "业务影响面", "P": "政策监管强度", "C": "竞争态势", "T": "时效紧迫度" },
-    "weights": { "G": 0.28, "B": 0.26, "P": 0.20, "C": 0.14, "T": 0.12 },
+    "axes": {
+      "G": "地域相关度",
+      "B": "业务影响面",
+      "P": "政策监管强度",
+      "C": "竞争态势",
+      "T": "时效紧迫度"
+    },
+    "weights": {
+      "G": 0.28,
+      "B": 0.26,
+      "P": 0.2,
+      "C": 0.14,
+      "T": 0.12
+    },
     "formula": "W = round(20 × Σ(轴分ᵢ × 权重ᵢ))，范围 0–100",
-    "thresholds": { "red": 75, "orange": 55, "green": 0 },
+    "thresholds": {
+      "red": 75,
+      "orange": 55,
+      "green": 0
+    },
     "legend": "🔴 红线 ≥75 ｜ 🟠 重点 55–75 ｜ 🟢 一般 <55"
   },
   "core": [
-    { "name": "国家邮政局", "url": "https://www.spb.gov.cn/", "scope": "全国", "channel": "资讯", "fetch": true, "desc": "行业政策、全国业务量、反内卷定调" },
-    { "name": "湖北省邮政管理局", "url": "https://hb.spb.gov.cn/", "scope": "湖北", "channel": "资讯", "fetch": true, "desc": "省局会议、专项整治、进村部署" },
-    { "name": "荆州市邮政管理局", "url": "https://www.jingzhou.gov.cn/", "scope": "荆州", "channel": "资讯", "strict": true, "fetch": true, "desc": "荆州辖区安全/质量整治" },
-    { "name": "宜昌市邮政管理局", "url": "https://www.yichang.gov.cn/", "scope": "宜昌", "channel": "资讯", "strict": true, "fetch": true, "desc": "宜昌物流园/末端" },
-    { "name": "恩施州邮政管理局", "url": "https://www.enshi.gov.cn/", "scope": "恩施", "channel": "资讯", "strict": true, "fetch": true, "desc": "恩施物流园/寄递" },
-    { "name": "荆门市邮政管理局", "url": "https://www.jingmen.gov.cn/", "scope": "荆门", "channel": "资讯", "strict": true, "fetch": true, "desc": "荆门网点异动" },
-    { "name": "潜江市邮政管理局", "url": "https://www.hbqj.gov.cn/", "scope": "潜江", "channel": "资讯", "strict": true, "fetch": true, "desc": "潜江进村/示范区" },
-    { "name": "圆通速递公告", "url": "https://www.yto.net.cn/", "scope": "公司", "channel": "资讯", "fetch": true, "desc": "业绩预告/投资者关系" },
-    { "name": "鄂州花湖机场", "url": "https://www.huahuairport.com/", "scope": "湖北", "channel": "资讯", "fetch": true, "desc": "货运枢纽动态" },
-    { "name": "国务院新闻办", "url": "http://www.scio.gov.cn/", "scope": "全国", "channel": "资讯", "fetch": true, "desc": "枢纽集群等重大发布" },
-    { "name": "财联社", "url": "https://www.cls.cn/", "scope": "媒体", "channel": "资讯", "fetch": true, "desc": "快递/物流快讯" },
-    { "name": "每日经济新闻", "url": "https://www.nbd.com.cn/", "scope": "媒体", "channel": "资讯", "fetch": true, "desc": "行业深度" },
-    { "name": "极目新闻", "url": "https://www.jimu.com/", "scope": "湖北媒体", "channel": "资讯", "fetch": true, "desc": "湖北本地快递事件" }
+    {
+      "name": "国家邮政局",
+      "url": "https://www.spb.gov.cn/",
+      "scope": "全国",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "行业政策、全国业务量、反内卷定调"
+    },
+    {
+      "name": "湖北省邮政管理局",
+      "url": "https://hb.spb.gov.cn/",
+      "scope": "湖北",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "省局会议、专项整治、进村部署"
+    },
+    {
+      "name": "荆州市邮政管理局",
+      "url": "https://www.jingzhou.gov.cn/",
+      "scope": "荆州",
+      "channel": "资讯",
+      "strict": true,
+      "fetch": true,
+      "desc": "荆州辖区安全/质量整治"
+    },
+    {
+      "name": "宜昌市邮政管理局",
+      "url": "https://www.yichang.gov.cn/",
+      "scope": "宜昌",
+      "channel": "资讯",
+      "strict": true,
+      "fetch": true,
+      "desc": "宜昌物流园/末端"
+    },
+    {
+      "name": "恩施州邮政管理局",
+      "url": "https://www.enshi.gov.cn/",
+      "scope": "恩施",
+      "channel": "资讯",
+      "strict": true,
+      "fetch": true,
+      "desc": "恩施物流园/寄递"
+    },
+    {
+      "name": "荆门市邮政管理局",
+      "url": "https://www.jingmen.gov.cn/",
+      "scope": "荆门",
+      "channel": "资讯",
+      "strict": true,
+      "fetch": true,
+      "desc": "荆门网点异动"
+    },
+    {
+      "name": "潜江市邮政管理局",
+      "url": "https://www.hbqj.gov.cn/",
+      "scope": "潜江",
+      "channel": "资讯",
+      "strict": true,
+      "fetch": true,
+      "desc": "潜江进村/示范区"
+    },
+    {
+      "name": "圆通速递公告",
+      "url": "https://www.yto.net.cn/",
+      "scope": "公司",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "业绩预告/投资者关系"
+    },
+    {
+      "name": "鄂州花湖机场",
+      "url": "https://www.huahuairport.com/",
+      "scope": "湖北",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "货运枢纽动态"
+    },
+    {
+      "name": "国务院新闻办",
+      "url": "http://www.scio.gov.cn/",
+      "scope": "全国",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "枢纽集群等重大发布"
+    },
+    {
+      "name": "财联社",
+      "url": "https://www.cls.cn/",
+      "scope": "媒体",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "快递/物流快讯"
+    },
+    {
+      "name": "每日经济新闻",
+      "url": "https://www.nbd.com.cn/",
+      "scope": "媒体",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "行业深度"
+    },
+    {
+      "name": "极目新闻",
+      "url": "https://www.jimu.com/",
+      "scope": "湖北媒体",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "湖北本地快递事件"
+    },
+    {
+      "name": "湖北省邮政管理局-各地动态",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/common_list.shtml",
+      "scope": "湖北",
+      "channel": "资讯",
+      "fetch": true,
+      "desc": "荆州/恩施/宜昌等市州局动态（首页仅取行业要闻栏，漏此栏=漏鄂西地市信号）"
+    }
   ],
   "cityBureauMap": {
-    "恩施市": { "bureau": "恩施州邮政管理局", "govBase": "https://www.enshi.gov.cn/" },
-    "宜昌市": { "bureau": "宜昌市邮政管理局", "govBase": "https://www.yichang.gov.cn/" },
-    "荆州市": { "bureau": "荆州市邮政管理局", "govBase": "https://www.jingzhou.gov.cn/" },
-    "荆门市": { "bureau": "荆门市邮政管理局", "govBase": "https://www.jingmen.gov.cn/" },
-    "潜江市": { "bureau": "潜江市邮政管理局", "govBase": "https://www.hbqj.gov.cn/" }
+    "恩施市": {
+      "bureau": "恩施州邮政管理局",
+      "govBase": "https://www.enshi.gov.cn/"
+    },
+    "宜昌市": {
+      "bureau": "宜昌市邮政管理局",
+      "govBase": "https://www.yichang.gov.cn/"
+    },
+    "荆州市": {
+      "bureau": "荆州市邮政管理局",
+      "govBase": "https://www.jingzhou.gov.cn/"
+    },
+    "荆门市": {
+      "bureau": "荆门市邮政管理局",
+      "govBase": "https://www.jingmen.gov.cn/"
+    },
+    "潜江市": {
+      "bureau": "潜江市邮政管理局",
+      "govBase": "https://www.hbqj.gov.cn/"
+    }
   },
   "counties": [
-    { "alias": "恩施", "city": "恩施市", "admin": "恩施市", "tier": "城区", "media": "恩施发布" },
-    { "alias": "建始", "city": "恩施市", "admin": "建始县", "tier": "县级", "media": "建始融媒" },
-    { "alias": "利川", "city": "恩施市", "admin": "利川市", "tier": "县级", "media": "利川融媒" },
-    { "alias": "宜昌东站", "city": "宜昌市", "admin": "伍家岗区", "tier": "城区", "media": "宜昌发布" },
-    { "alias": "猇亭", "city": "宜昌市", "admin": "猇亭区", "tier": "城区", "media": "宜昌发布" },
-    { "alias": "宜昌高新区", "city": "宜昌市", "admin": "西陵区", "tier": "城区", "media": "宜昌发布" },
-    { "alias": "三峡大学", "city": "宜昌市", "admin": "西陵区", "tier": "城区", "media": "宜昌发布" },
-    { "alias": "点军区", "city": "宜昌市", "admin": "点军区", "tier": "城区", "media": "宜昌发布" },
-    { "alias": "夷陵", "city": "宜昌市", "admin": "夷陵区", "tier": "城区", "media": "宜昌发布" },
-    { "alias": "宜都", "city": "宜昌市", "admin": "宜都市", "tier": "县级", "media": "宜都融媒" },
-    { "alias": "当阳", "city": "宜昌市", "admin": "当阳市", "tier": "县级", "media": "当阳融媒" },
-    { "alias": "枝江", "city": "宜昌市", "admin": "枝江市", "tier": "县级", "media": "枝江融媒" },
-    { "alias": "秭归", "city": "宜昌市", "admin": "秭归县", "tier": "县级", "media": "秭归融媒" },
-    { "alias": "野三关", "city": "恩施市", "admin": "巴东县", "tier": "县级", "media": "巴东融媒" },
-    { "alias": "来凤", "city": "恩施市", "admin": "来凤县", "tier": "县级", "media": "来凤融媒" },
-    { "alias": "巴东", "city": "恩施市", "admin": "巴东县", "tier": "县级", "media": "巴东融媒" },
-    { "alias": "宣恩", "city": "恩施市", "admin": "宣恩县", "tier": "县级", "media": "宣恩融媒" },
-    { "alias": "咸丰", "city": "恩施市", "admin": "咸丰县", "tier": "县级", "media": "咸丰融媒" },
-    { "alias": "五峰", "city": "宜昌市", "admin": "五峰县", "tier": "县级", "media": "五峰融媒" },
-    { "alias": "远安", "city": "宜昌市", "admin": "远安县", "tier": "县级", "media": "远安融媒" },
-    { "alias": "兴山", "city": "宜昌市", "admin": "兴山县", "tier": "县级", "media": "兴山融媒" },
-    { "alias": "长阳", "city": "宜昌市", "admin": "长阳县", "tier": "县级", "media": "长阳融媒" },
-    { "alias": "鹤峰", "city": "恩施市", "admin": "鹤峰县", "tier": "县级", "media": "鹤峰融媒" },
-    { "alias": "荆州城区", "city": "荆州市", "admin": "沙市区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "沙北新区", "city": "荆州市", "admin": "沙市区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "古城北", "city": "荆州市", "admin": "荆州区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "长港路", "city": "荆州市", "admin": "沙市区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "荆州大学城", "city": "荆州市", "admin": "荆州区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "江津西路", "city": "荆州市", "admin": "荆州区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "武德路", "city": "荆州市", "admin": "沙市区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "北京路", "city": "荆州市", "admin": "沙市区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "开发区一部", "city": "荆州市", "admin": "沙市区", "tier": "城区", "media": "荆州发布" },
-    { "alias": "公安", "city": "荆州市", "admin": "公安县", "tier": "县级", "media": "公安融媒" },
-    { "alias": "江陵", "city": "荆州市", "admin": "江陵县", "tier": "县级", "media": "江陵融媒" },
-    { "alias": "石首", "city": "荆州市", "admin": "石首市", "tier": "县级", "media": "石首融媒" },
-    { "alias": "松滋", "city": "荆州市", "admin": "松滋市", "tier": "县级", "media": "松滋融媒" },
-    { "alias": "监利", "city": "荆州市", "admin": "监利市", "tier": "县级", "media": "监利融媒" },
-    { "alias": "荆门城区", "city": "荆门市", "admin": "东宝区", "tier": "城区", "media": "荆门发布" },
-    { "alias": "沙洋", "city": "荆门市", "admin": "沙洋县", "tier": "县级", "media": "沙洋融媒" },
-    { "alias": "钟祥", "city": "荆门市", "admin": "钟祥市", "tier": "县级", "media": "钟祥融媒" },
-    { "alias": "潜江", "city": "潜江市", "admin": "潜江市", "tier": "城区", "media": "潜江发布" },
-    { "alias": "洪湖", "city": "荆州市", "admin": "洪湖市", "tier": "县级", "media": "洪湖融媒" },
-    { "alias": "京山", "city": "荆门市", "admin": "京山县", "tier": "县级", "media": "京山融媒" }
+    {
+      "alias": "恩施",
+      "city": "恩施市",
+      "admin": "恩施市",
+      "tier": "城区",
+      "media": "恩施发布"
+    },
+    {
+      "alias": "建始",
+      "city": "恩施市",
+      "admin": "建始县",
+      "tier": "县级",
+      "media": "建始融媒"
+    },
+    {
+      "alias": "利川",
+      "city": "恩施市",
+      "admin": "利川市",
+      "tier": "县级",
+      "media": "利川融媒"
+    },
+    {
+      "alias": "宜昌东站",
+      "city": "宜昌市",
+      "admin": "伍家岗区",
+      "tier": "城区",
+      "media": "宜昌发布"
+    },
+    {
+      "alias": "猇亭",
+      "city": "宜昌市",
+      "admin": "猇亭区",
+      "tier": "城区",
+      "media": "宜昌发布"
+    },
+    {
+      "alias": "宜昌高新区",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "media": "宜昌发布"
+    },
+    {
+      "alias": "三峡大学",
+      "city": "宜昌市",
+      "admin": "西陵区",
+      "tier": "城区",
+      "media": "宜昌发布"
+    },
+    {
+      "alias": "点军区",
+      "city": "宜昌市",
+      "admin": "点军区",
+      "tier": "城区",
+      "media": "宜昌发布"
+    },
+    {
+      "alias": "夷陵",
+      "city": "宜昌市",
+      "admin": "夷陵区",
+      "tier": "城区",
+      "media": "宜昌发布"
+    },
+    {
+      "alias": "宜都",
+      "city": "宜昌市",
+      "admin": "宜都市",
+      "tier": "县级",
+      "media": "宜都融媒"
+    },
+    {
+      "alias": "当阳",
+      "city": "宜昌市",
+      "admin": "当阳市",
+      "tier": "县级",
+      "media": "当阳融媒"
+    },
+    {
+      "alias": "枝江",
+      "city": "宜昌市",
+      "admin": "枝江市",
+      "tier": "县级",
+      "media": "枝江融媒"
+    },
+    {
+      "alias": "秭归",
+      "city": "宜昌市",
+      "admin": "秭归县",
+      "tier": "县级",
+      "media": "秭归融媒"
+    },
+    {
+      "alias": "野三关",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "media": "巴东融媒"
+    },
+    {
+      "alias": "来凤",
+      "city": "恩施市",
+      "admin": "来凤县",
+      "tier": "县级",
+      "media": "来凤融媒"
+    },
+    {
+      "alias": "巴东",
+      "city": "恩施市",
+      "admin": "巴东县",
+      "tier": "县级",
+      "media": "巴东融媒"
+    },
+    {
+      "alias": "宣恩",
+      "city": "恩施市",
+      "admin": "宣恩县",
+      "tier": "县级",
+      "media": "宣恩融媒"
+    },
+    {
+      "alias": "咸丰",
+      "city": "恩施市",
+      "admin": "咸丰县",
+      "tier": "县级",
+      "media": "咸丰融媒"
+    },
+    {
+      "alias": "五峰",
+      "city": "宜昌市",
+      "admin": "五峰县",
+      "tier": "县级",
+      "media": "五峰融媒"
+    },
+    {
+      "alias": "远安",
+      "city": "宜昌市",
+      "admin": "远安县",
+      "tier": "县级",
+      "media": "远安融媒"
+    },
+    {
+      "alias": "兴山",
+      "city": "宜昌市",
+      "admin": "兴山县",
+      "tier": "县级",
+      "media": "兴山融媒"
+    },
+    {
+      "alias": "长阳",
+      "city": "宜昌市",
+      "admin": "长阳县",
+      "tier": "县级",
+      "media": "长阳融媒"
+    },
+    {
+      "alias": "鹤峰",
+      "city": "恩施市",
+      "admin": "鹤峰县",
+      "tier": "县级",
+      "media": "鹤峰融媒"
+    },
+    {
+      "alias": "荆州城区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "沙北新区",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "古城北",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "长港路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "荆州大学城",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "江津西路",
+      "city": "荆州市",
+      "admin": "荆州区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "武德路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "北京路",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "开发区一部",
+      "city": "荆州市",
+      "admin": "沙市区",
+      "tier": "城区",
+      "media": "荆州发布"
+    },
+    {
+      "alias": "公安",
+      "city": "荆州市",
+      "admin": "公安县",
+      "tier": "县级",
+      "media": "公安融媒"
+    },
+    {
+      "alias": "江陵",
+      "city": "荆州市",
+      "admin": "江陵县",
+      "tier": "县级",
+      "media": "江陵融媒"
+    },
+    {
+      "alias": "石首",
+      "city": "荆州市",
+      "admin": "石首市",
+      "tier": "县级",
+      "media": "石首融媒"
+    },
+    {
+      "alias": "松滋",
+      "city": "荆州市",
+      "admin": "松滋市",
+      "tier": "县级",
+      "media": "松滋融媒"
+    },
+    {
+      "alias": "监利",
+      "city": "荆州市",
+      "admin": "监利市",
+      "tier": "县级",
+      "media": "监利融媒"
+    },
+    {
+      "alias": "荆门城区",
+      "city": "荆门市",
+      "admin": "东宝区",
+      "tier": "城区",
+      "media": "荆门发布"
+    },
+    {
+      "alias": "沙洋",
+      "city": "荆门市",
+      "admin": "沙洋县",
+      "tier": "县级",
+      "media": "沙洋融媒"
+    },
+    {
+      "alias": "钟祥",
+      "city": "荆门市",
+      "admin": "钟祥市",
+      "tier": "县级",
+      "media": "钟祥融媒"
+    },
+    {
+      "alias": "潜江",
+      "city": "潜江市",
+      "admin": "潜江市",
+      "tier": "城区",
+      "media": "潜江发布"
+    },
+    {
+      "alias": "洪湖",
+      "city": "荆州市",
+      "admin": "洪湖市",
+      "tier": "县级",
+      "media": "洪湖融媒"
+    },
+    {
+      "alias": "京山",
+      "city": "荆门市",
+      "admin": "京山县",
+      "tier": "县级",
+      "media": "京山融媒"
+    }
   ],
   "ecom": [
-    { "name": "湖北省农业农村厅", "url": "https://nyt.hubei.gov.cn/", "scope": "湖北", "desc": "农产品寄递/产业带/时令水果上市" },
-    { "name": "湖北省商务厅", "url": "https://swt.hubei.gov.cn/", "scope": "湖北", "desc": "电商/跨境电商/产业园政策" },
-    { "name": "荆州产业招商", "url": "https://www.jingzhou.gov.cn/", "scope": "荆州", "desc": "产业招商/企业落地/物流园区" },
-    { "name": "宜昌产业招商", "url": "https://www.yichang.gov.cn/", "scope": "宜昌", "desc": "产业招商/企业落地/物流园区" },
-    { "name": "恩施产业招商", "url": "https://www.enshi.gov.cn/", "scope": "恩施", "desc": "富硒产业/电商示范" },
-    { "name": "拼多多产业带", "url": "https://www.pinduoduo.com/", "scope": "平台", "desc": "农产品上行/村播/产地仓（websearch 补）" },
-    { "name": "抖音电商", "url": "https://www.douyinec.com/", "scope": "平台", "desc": "直播带货/产地直发（websearch 补）" }
+    {
+      "name": "湖北省农业农村厅",
+      "url": "https://nyt.hubei.gov.cn/",
+      "scope": "湖北",
+      "desc": "农产品寄递/产业带/时令水果上市"
+    },
+    {
+      "name": "湖北省商务厅",
+      "url": "https://swt.hubei.gov.cn/",
+      "scope": "湖北",
+      "desc": "电商/跨境电商/产业园政策"
+    },
+    {
+      "name": "荆州产业招商",
+      "url": "https://www.jingzhou.gov.cn/",
+      "scope": "荆州",
+      "desc": "产业招商/企业落地/物流园区"
+    },
+    {
+      "name": "宜昌产业招商",
+      "url": "https://www.yichang.gov.cn/",
+      "scope": "宜昌",
+      "desc": "产业招商/企业落地/物流园区"
+    },
+    {
+      "name": "恩施产业招商",
+      "url": "https://www.enshi.gov.cn/",
+      "scope": "恩施",
+      "desc": "富硒产业/电商示范"
+    },
+    {
+      "name": "拼多多产业带",
+      "url": "https://www.pinduoduo.com/",
+      "scope": "平台",
+      "desc": "农产品上行/村播/产地仓（websearch 补）"
+    },
+    {
+      "name": "抖音电商",
+      "url": "https://www.douyinec.com/",
+      "scope": "平台",
+      "desc": "直播带货/产地直发（websearch 补）"
+    }
   ],
   "safety": [
-    { "name": "湖北气象", "url": "http://hb.cma.gov.cn/", "scope": "湖北", "desc": "暴雨/暴雪/大雾预警信号" },
-    { "name": "中央气象台", "url": "http://www.nmc.cn/", "scope": "全国", "desc": "台风路径/暴雨寒潮大雾预警（全国口径）" },
-    { "name": "中国天气网-湖北", "url": "http://www.weather.com.cn/hubei/index.shtml", "scope": "湖北", "desc": "湖北天气实况/灾害性天气资讯" },
-    { "name": "中国地震台网", "url": "http://www.ceic.ac.cn/", "scope": "全国", "desc": "地震速报（关注湖北及周边震情）" },
-    { "name": "应急管理部", "url": "https://www.mem.gov.cn/", "scope": "全国", "desc": "安全事故/应急响应" },
-    { "name": "湖北交警", "url": "https://hb.122.gov.cn/", "scope": "湖北", "desc": "高速封路/交通管制" },
-    { "name": "湖北应急管理", "url": "https://yjgl.hubei.gov.cn/", "scope": "湖北", "desc": "省内突发事件/灾害预警" },
-    { "name": "国家消防救援局", "url": "https://www.119.gov.cn/", "scope": "全国", "desc": "火灾事故通报/消防安全整治" }
+    {
+      "name": "湖北气象",
+      "url": "http://hb.cma.gov.cn/",
+      "scope": "湖北",
+      "desc": "暴雨/暴雪/大雾预警信号"
+    },
+    {
+      "name": "中央气象台",
+      "url": "http://www.nmc.cn/",
+      "scope": "全国",
+      "desc": "台风路径/暴雨寒潮大雾预警（全国口径）"
+    },
+    {
+      "name": "中国天气网-湖北",
+      "url": "http://www.weather.com.cn/hubei/index.shtml",
+      "scope": "湖北",
+      "desc": "湖北天气实况/灾害性天气资讯"
+    },
+    {
+      "name": "中国地震台网",
+      "url": "http://www.ceic.ac.cn/",
+      "scope": "全国",
+      "desc": "地震速报（关注湖北及周边震情）"
+    },
+    {
+      "name": "应急管理部",
+      "url": "https://www.mem.gov.cn/",
+      "scope": "全国",
+      "desc": "安全事故/应急响应"
+    },
+    {
+      "name": "湖北交警",
+      "url": "https://hb.122.gov.cn/",
+      "scope": "湖北",
+      "desc": "高速封路/交通管制"
+    },
+    {
+      "name": "湖北应急管理",
+      "url": "https://yjgl.hubei.gov.cn/",
+      "scope": "湖北",
+      "desc": "省内突发事件/灾害预警"
+    },
+    {
+      "name": "国家消防救援局",
+      "url": "https://www.119.gov.cn/",
+      "scope": "全国",
+      "desc": "火灾事故通报/消防安全整治"
+    }
   ],
   "safetySearches": [
-    { "id": "typhoon", "query": "湖北 台风 暴雨 预警 快递 物流 影响 最新", "desc": "台风/极端天气对鄂西物流影响" },
-    { "id": "quake", "query": "湖北 地震 最新 震感", "desc": "湖北及周边震情" },
-    { "id": "contraband", "query": "快递 违禁品 寄递 查获 湖北 最新", "desc": "违禁品寄递/禁寄物品查获" },
-    { "id": "courier-accident", "query": "快递员 三轮车 交通事故 湖北 最新", "desc": "人员/车辆安全事件" },
-    { "id": "depot-fire", "query": "快递 网点 仓库 火灾 消防 隐患 湖北 最新", "desc": "网点/仓库消防安全" }
+    {
+      "id": "typhoon",
+      "query": "湖北 台风 暴雨 预警 快递 物流 影响 最新",
+      "desc": "台风/极端天气对鄂西物流影响"
+    },
+    {
+      "id": "quake",
+      "query": "湖北 地震 最新 震感",
+      "desc": "湖北及周边震情"
+    },
+    {
+      "id": "contraband",
+      "query": "快递 违禁品 寄递 查获 湖北 最新",
+      "desc": "违禁品寄递/禁寄物品查获"
+    },
+    {
+      "id": "courier-accident",
+      "query": "快递员 三轮车 交通事故 湖北 最新",
+      "desc": "人员/车辆安全事件"
+    },
+    {
+      "id": "depot-fire",
+      "query": "快递 网点 仓库 火灾 消防 隐患 湖北 最新",
+      "desc": "网点/仓库消防安全"
+    }
   ],
   "channels": {
     "资讯": "快递行业资讯（与现有 DATA 资讯流融合）",

@@ -107,12 +107,17 @@ function addNews(x, sort, warn) {
 const metaCache = new Map();
 async function spbMeta(url) {
   if (metaCache.has(url)) return metaCache.get(url);
-  let out = { pubDate: null, bodyDate: null, text: '' };
+  let out = { pubDate: null, bodyDate: null, text: '', title: null };
   try {
     const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) });
     const h = await r.text();
     const m = h.match(/<meta\s+name="PubDate"\s+content="(\d{4}-\d{2}-\d{2})/i);
     out.pubDate = m ? m[1] : null;
+    // 完整标题：列表页标题常被截断（「…专项...」），导致 NATIONAL_NOISE/ OUT_PROVINCE 等按标题
+    // 判定的过滤器失效（2026-09-07 踩坑：「省快递行业党委…"夏送清凉"专项...」因"慰问"二字被截掉
+    // 而绕过噪音过滤入站）。页面 <title> 形如「完整标题 - 湖北省邮政管理局」，去后缀即可回填。
+    const tm = h.match(/<title>([\s\S]*?)<\/title>/i);
+    if (tm) out.title = tm[1].replace(/[-|—]\s*[^-|—]*$/, '').trim();
     out.text = h.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, '').slice(0, 3000);
     // 正文「日期：YYYY-MM-DD」才是稿件真实日期；PubDate 是 CMS 批量发布时间（实测两篇不同日期的稿
     // 子 PubDate 同为 09-02 14:11，若盲信 PubDate 会把 09-01 的稿子错标成 09-02）。正文日期优先。
@@ -122,6 +127,16 @@ async function spbMeta(url) {
   } catch { /* 抓取失败：pubDate 留空，正文留空 → 辖区判定放行（宁可不误杀） */ }
   metaCache.set(url, out);
   return out;
+}
+
+// 标题补全：spb 列表页标题以「...」/「…」结尾即被截断。截断会让"慰问""党建"等噪音词、
+// 外省市名恰好落在省略号里，过滤器形同虚设。用页面 <title> 回填完整标题（与 spbMeta 共用缓存，零额外请求）。
+async function expandTitle(x) {
+  if (!isSpb(x.url)) return x;
+  if (!/\.\.\.|…\s*$/.test(x.title || '')) return x;
+  const m = await spbMeta(x.url);
+  if (m.title && m.title.length > x.title.replace(/\.\.\.|…/g, '').trim().length) x.title = m.title;
+  return x;
 }
 
 async function resolveSort(x) {
@@ -149,7 +164,9 @@ async function inScope(x) {
 let added = 0;
 // 仅处理 watch 通道新增（不回填历史 raw）
 for (const ch of ['news']) {
-  for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65 && inTarget(x.region, x.subRegion, x.url, x.title))) {
+  for (const x of staging[ch].filter(x => x.stage === 'watch' && x.score >= 65)) {
+    await expandTitle(x);
+    if (!inTarget(x.region, x.subRegion, x.url, x.title)) continue;
     if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
     if (!relevant(x.title, x.srcName, x.url)) continue;
     if (!(await inScope(x))) continue;
@@ -161,7 +178,9 @@ for (const ch of ['news']) {
 // 漏判兜底：score.mjs 对省局/国家局条目的 region 识别偏弱，湖北/鄂西信号常被误标"全国"而沉 lowValue。
 // 主动扫 lowValue 中「spb 源 + 标题含湖北/鄂西地域词」的高价值条目。
 const RESCUE = /湖北|鄂西|宜昌|恩施|荆州|荆门|潜江/;
-for (const x of (staging.lowValue || []).filter(x => x.stage === 'watch' && x.score >= 65 && isSpb(x.url) && RESCUE.test(x.title || ''))) {
+for (const x of (staging.lowValue || []).filter(x => x.stage === 'watch' && x.score >= 65 && isSpb(x.url))) {
+  await expandTitle(x);
+  if (!RESCUE.test(x.title || '')) continue;
   if (existUrls.has(x.url) || existTitles.has(x.title) || isDupEvent(x.title, x.url)) continue;
   if (!relevant(x.title, x.srcName, x.url)) continue;
   if (!(await inScope(x))) continue;
