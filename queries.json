@@ -1,17 +1,17 @@
 {
   "meta": {
-    "sourcesUpdatedAt": "2026-07-23"
+    "sourcesUpdatedAt": "2026-09-07"
   },
-  "generatedAt": "2026-07-23T12:20:27.185Z",
+  "generatedAt": "2026-09-08T00:10:28.738Z",
   "note": "信源清单驱动任务矩阵（core 直连 + counties 定向 + 专项源），替代 344 无差别组合。",
-  "totalQueries": 162,
+  "totalQueries": 163,
   "byType": {
-    "fetch": 13,
+    "fetch": 14,
     "search": 134,
     "fetch-or-search": 15
   },
   "byChannel": {
-    "资讯": 56,
+    "资讯": 57,
     "安全": 56,
     "电商": 50
   },
@@ -119,6 +119,14 @@
       "scope": "湖北媒体",
       "channel": "资讯",
       "label": "湖北本地快递事件"
+    },
+    {
+      "type": "fetch",
+      "source": "湖北省邮政管理局-各地动态",
+      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/common_list.shtml",
+      "scope": "湖北",
+      "channel": "资讯",
+      "label": "荆州/恩施/宜昌等市州局动态（首页仅取行业要闻栏，漏此栏=漏鄂西地市信号）"
     },
     {
       "type": "search",
