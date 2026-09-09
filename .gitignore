@@ -12,3 +12,4 @@ archive/search-batch-input-*.json
 archive/part*.json
 archive/search-cache.json
 archive/consumed/
+archive/_data-before-*.json
