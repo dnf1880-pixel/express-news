@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-09",
-  "note": "轻量补抓 2026-09-09（核心源看守）：仅并入 watch 新增高价值 0 条，保留既有条目。",
+  "updatedAt": "2026-09-08",
+  "note": "轻量补抓 2026-09-08（核心源看守）：仅并入 watch 新增高价值 1 条，保留既有条目。",
   "news": [
     {
       "level": "red",
@@ -2519,141 +2519,6 @@
     },
     {
       "level": "orange",
-      "cat": "行业",
-      "region": "全国",
-      "subRegion": "",
-      "channel": "资讯",
-      "src": "权威",
-      "srcName": "国家邮政局",
-      "title": "杭州局召开全市行业服务质量提升培训会",
-      "summary": "杭州局召开全市行业服务质量提升培训会",
-      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 3,
-        "B": 4,
-        "P": 4,
-        "C": 3,
-        "T": 5
-      },
-      "tags": [
-        "资讯"
-      ],
-      "date": "09月09日",
-      "sort": "2026-09-09",
-      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202609/3c91339bde214b60bbfb6f00f9622009.shtml",
-      "warn": false
-    },
-    {
-      "level": "orange",
-      "cat": "行业",
-      "region": "全国",
-      "subRegion": "",
-      "channel": "资讯",
-      "src": "权威",
-      "srcName": "国家邮政局",
-      "title": "滨州市副市长调研行业高质量发展工作",
-      "summary": "滨州市副市长调研行业高质量发展工作",
-      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 3,
-        "B": 4,
-        "P": 3,
-        "C": 3,
-        "T": 5
-      },
-      "tags": [
-        "资讯"
-      ],
-      "date": "09月09日",
-      "sort": "2026-09-09",
-      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202609/6c8fa1523e434f83bb943e9366db00be.shtml",
-      "warn": false
-    },
-    {
-      "level": "orange",
-      "cat": "宜昌",
-      "region": "宜昌",
-      "subRegion": "",
-      "channel": "资讯",
-      "src": "权威",
-      "srcName": "宜昌市邮政管理局",
-      "title": "靠前精准服务终结项目“停滞” 8500万国债赋能智慧物流建设",
-      "summary": "靠前精准服务终结项目“停滞” 8500万国债赋能智慧物流建设",
-      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 5,
-        "B": 3,
-        "P": 3,
-        "C": 3,
-        "T": 2
-      },
-      "tags": [
-        "资讯"
-      ],
-      "date": "09月09日",
-      "sort": "2026-09-09",
-      "url": "http://www.yichang.gov.cn/html/zhengwuyizhantong/zhengwuzixun/jinriyaowen/2026/0909/1079231.html",
-      "warn": false
-    },
-    {
-      "level": "orange",
-      "cat": "行业",
-      "region": "全国",
-      "subRegion": "",
-      "channel": "资讯",
-      "src": "权威",
-      "srcName": "国家邮政局",
-      "title": "行业多项工作被纳入浙江物流仓储赛道建设方案",
-      "summary": "行业多项工作被纳入浙江物流仓储赛道建设方案",
-      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 3,
-        "B": 3,
-        "P": 3,
-        "C": 3,
-        "T": 5
-      },
-      "tags": [
-        "资讯"
-      ],
-      "date": "09月09日",
-      "sort": "2026-09-09",
-      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100016/202609/7336417dbd514bbca12ce6a618df843b.shtml",
-      "warn": false
-    },
-    {
-      "level": "orange",
-      "cat": "行业",
-      "region": "全国",
-      "subRegion": "",
-      "channel": "资讯",
-      "src": "权威",
-      "srcName": "国家邮政局",
-      "title": "永州市政府研究邮政快递业具身智能机器人推广应用",
-      "summary": "永州市政府研究邮政快递业具身智能机器人推广应用",
-      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 3,
-        "B": 3,
-        "P": 3,
-        "C": 3,
-        "T": 5
-      },
-      "tags": [
-        "电商"
-      ],
-      "date": "09月09日",
-      "sort": "2026-09-09",
-      "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202609/8cdaceb0716b4ce69a4cfc11a52c4d3f.shtml",
-      "warn": false
-    },
-    {
-      "level": "orange",
       "cat": "荆州",
       "region": "荆州",
       "subRegion": "荆州",
@@ -2889,33 +2754,6 @@
       "date": "09月03日",
       "sort": "2026-09-03",
       "url": "https://www.spb.gov.cn/gjyzj/c100015/c100017/202609/95452f5895d4431e8a4a41f9c87f4187.shtml",
-      "warn": false
-    },
-    {
-      "level": "orange",
-      "cat": "荆州",
-      "region": "荆州",
-      "subRegion": "荆州",
-      "channel": "资讯",
-      "src": "权威",
-      "srcName": "湖北省邮政管理局",
-      "title": "荆州局召开全市快递工程技术人才职称评审工作宣贯推进会",
-      "summary": "荆州局召开全市快递工程技术人才职称评审工作宣贯推进会",
-      "reason": "最新监管/市场动态，建议纳入日常关注和网点通报。",
-      "action": "→ 关注后续进展，必要时通报网点。",
-      "s": {
-        "G": 5,
-        "B": 3,
-        "P": 4,
-        "C": 3,
-        "T": 2
-      },
-      "tags": [
-        "电商"
-      ],
-      "date": "09月03日",
-      "sort": "2026-09-03",
-      "url": "https://hb.spb.gov.cn/hubsyzglj/c100057/c100061/202609/27241edd9abb4b899e20f8beae680952.shtml",
       "warn": false
     },
     {
