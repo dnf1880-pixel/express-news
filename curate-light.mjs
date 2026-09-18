@@ -121,8 +121,10 @@ async function spbMeta(url) {
     out.text = h.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, '').slice(0, 3000);
     // 正文「日期：YYYY-MM-DD」才是稿件真实日期；PubDate 是 CMS 批量发布时间（实测两篇不同日期的稿
     // 子 PubDate 同为 09-02 14:11，若盲信 PubDate 会把 09-01 的稿子错标成 09-02）。正文日期优先。
-    // 该 CMS 的「日期：」字段位于正文前、约 1400 字符处（去标签后），窗口取 2000 才够得着
-    const bd = out.text.slice(0, 2000).match(/20\d{2}[-/年]\s?(\d{1,2})[-/月]\s?(\d{1,2})/);
+    // 该 CMS 的「日期：」字段位于正文前、约 1400 字符处（去标签后），窗口取 2000 才够得着。
+    // 排除「2026年1-8月」这类统计区间（末段数字后紧跟"月"）：标题文本「…1-8月邮政行业运行情况」
+    // 曾被误解析为 2026-01-08，落入窗口检查被剔（2026-09-18 实证，国家邮政局 1-8 月运行情况因此漏并）。
+    const bd = out.text.slice(0, 2000).match(/20\d{2}[-/年]\s?(\d{1,2})[-/月]\s?(\d{1,2})(?!\s*月)/);
     if (bd) out.bodyDate = `${bd[0].slice(0, 4)}-${bd[1].padStart(2, '0')}-${bd[2].padStart(2, '0')}`;
   } catch { /* 抓取失败：pubDate 留空，正文留空 → 辖区判定放行（宁可不误杀） */ }
   metaCache.set(url, out);
