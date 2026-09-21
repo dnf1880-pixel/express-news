@@ -14981,26 +14981,6 @@
       "level": "red"
     },
     {
-      "name": "周口临港开发区：通江达海千帆竞 枢纽赋能向海行",
-      "biz": "待核实",
-      "region": "荆州市",
-      "admin": "沙市区",
-      "tier": "区县",
-      "address": "待核实",
-      "contact": "待核实",
-      "reason": "(荆州市) 电商/产业带寄递线索，值得网点主动对接。",
-      "scale": "待核实",
-      "seasonal": "待核实",
-      "src": "荆州市邮政管理局",
-      "srcName": "荆州市邮政管理局",
-      "url": "https://www.toutiao.com/article/7685669443838247433",
-      "date": "09月20日",
-      "sort": "2026-09-20",
-      "warn": false,
-      "score": 94,
-      "level": "red"
-    },
-    {
       "name": "[点军]协商在一线 果香满桥边",
       "biz": "待核实",
       "region": "宜昌市",
@@ -15116,26 +15096,6 @@
       "url": "http://www.yuanan.gov.cn/zfxxgk/show.html?aid=11&id=161978",
       "date": "09月20日",
       "sort": "2026-09-20",
-      "warn": false,
-      "score": 90,
-      "level": "red"
-    },
-    {
-      "name": "关于进一步优化我县城乡供应链体系 助推县域经济高质量发展的意见建议",
-      "biz": "待核实",
-      "region": "宜昌市",
-      "admin": "兴山县",
-      "tier": "区县",
-      "address": "待核实",
-      "contact": "待核实",
-      "reason": "(宜昌市) 电商/产业带寄递线索，值得网点主动对接。",
-      "scale": "待核实",
-      "seasonal": "待核实",
-      "src": "宜昌市邮政管理局",
-      "srcName": "宜昌市邮政管理局",
-      "url": "http://www.xingshan.gov.cn/html/xzx/html/gsj/html/wyfc/2025/0926/1656.html",
-      "date": "09月26日",
-      "sort": "2025-09-26",
       "warn": false,
       "score": 90,
       "level": "red"
@@ -15691,24 +15651,6 @@
       ],
       "warn": false,
       "url": "http://www.jiangling.gov.cn/xwdt/dtyw/gzdt/202609/t20260915_1134463.shtml"
-    },
-    {
-      "title": "「再晚一步，黄金就没了！」新洲民警成功拦截150克黄金",
-      "summary": "武汉新洲警方接到线索后启动警企协作应急机制，对接快递企业拦截两个涉诈包裹，在快递网点配合下及时找到并暂扣包裹，内装受害人被骗购买的黄金共计150克。",
-      "reason": "影响 湖北 末端派送与干线时效，需预警网点。",
-      "subRegion": "湖北",
-      "region": "湖北",
-      "src": "安全专项-contraband",
-      "srcName": "安全专项-contraband",
-      "date": "09月15日",
-      "sort": "2026-09-15",
-      "score": 79,
-      "level": "red",
-      "tags": [
-        "资讯"
-      ],
-      "warn": false,
-      "url": "http://hb.news.cn/20260915/7f89cf2780044b51a2b99471d0568b8f/c.html"
     },
     {
       "title": "宜昌这些路段实施交通管制",
